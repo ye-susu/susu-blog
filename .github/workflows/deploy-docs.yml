@@ -23,7 +23,7 @@ jobs:
        - name: Setup Node.js environment
          uses: actions/setup-node@v1
          with:
-           node-version: "20"
+           node-version: "22"
            
        # 缓存 node_modules
        - name: Cache dependencies
@@ -43,7 +43,7 @@ jobs:
 
        # 生成静态文件
        - name: Build
-         run:  npm run build
+         run:  npm run docs:build
 
        # 部署到 GitHub Pages
        - name: Deploy
