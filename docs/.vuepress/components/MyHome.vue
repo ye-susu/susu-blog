@@ -4,9 +4,9 @@ import MyHomeFooter from "./MyHomeFooter.vue";
 import { ref } from "vue";
 
 const navImages = ref([
-  { src: "/images/article.png", link: "/articles/", alt: "articles" },
-  { src: "/images/project.png", link: "/projects/", alt: "projects" },
-  { src: "/images/about.png", link: "/about/", alt: "about" },
+  { src: "/susu-blog/images/article.png", link: "/articles/", alt: "articles" },
+  { src: "/susu-blog/images/project.png", link: "/projects/", alt: "projects" },
+  { src: "/susu-blog/images/about.png", link: "/about/", alt: "about" },
 ]);
 </script>
 
