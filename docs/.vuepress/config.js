@@ -15,7 +15,7 @@ export default defineUserConfig({
         sidebar: false
     }),
     // home
-    base: '/susu-blog/',
+    base: '/',
     lang: 'zh-CN',
     markdown: {
         anchor: false
