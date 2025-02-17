@@ -42,7 +42,7 @@
       <h2>联系方式</h2>
       <p><span>邮箱：</span>yepan1749@gmail.com</p>
       <p><span>微信：</span>15200899567</p>
-      <p><span>X：</span>@Yesusu</p>
+      <p><span>X：</span>@Yesusu6</p>
     </div>
   </div>
 </template>
