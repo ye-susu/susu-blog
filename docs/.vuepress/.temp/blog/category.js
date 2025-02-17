@@ -1,4 +1,4 @@
-export const categoriesMap = {};
+export const categoriesMap = JSON.parse("{}");
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept();

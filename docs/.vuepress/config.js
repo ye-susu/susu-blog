@@ -98,6 +98,12 @@ export default defineUserConfig({
         readingTimePlugin({
             wordPerMinute: 200
         }),
+        // [
+        //     '@vuepress/plugin-google-analytics',
+        //     {
+        //         id: 'G-TNS7EED85E', // 你的 Google Analytics ID
+        //     },
+        // ],
         googleAnalyticsPlugin({
             id: 'G-TNS7EED85E',
         }),
