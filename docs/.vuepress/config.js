@@ -100,12 +100,11 @@ export default defineUserConfig({
         }),
         // [
         //     '@vuepress/plugin-google-analytics',
-        //     {
-        //         id: 'G-TNS7EED85E', // 你的 Google Analytics ID
-        //     },
+        //     { id: 'G-TNS7EED85E' },
         // ],
         googleAnalyticsPlugin({
             id: 'G-TNS7EED85E',
+            debug: true,
         }),
     ],
     extendsPageOptions: (page) => {
