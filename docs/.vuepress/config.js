@@ -5,7 +5,6 @@ import { getDirname, path } from 'vuepress/utils'
 import { blogPlugin } from '@vuepress/plugin-blog'
 import { oml2dPlugin } from 'vuepress-plugin-oh-my-live2d'
 import { readingTimePlugin } from '@vuepress/plugin-reading-time'
-import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 
 
 
