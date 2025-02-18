@@ -9,6 +9,7 @@ import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 
 
 
+
 export default defineUserConfig({
     bundler: viteBundler(),
     theme: defaultTheme({
@@ -22,7 +23,15 @@ export default defineUserConfig({
     markdown: {
         anchor: false
     },
-    head: [['link', { rel: 'icon', href: '/images/logo.png' }]],
+    head: [['link', { rel: 'icon', href: '/images/logo.png' }],
+    ['script', { async: true, src: `https://www.googletagmanager.com/gtag/js?id=G-TNS7EED85E` }],
+    ['script', {}, `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TNS7EED85E');
+        `],
+    ],
     // replace components
     alias: {
         '@theme/VPHome.vue': path.resolve(
@@ -97,14 +106,6 @@ export default defineUserConfig({
         }),
         readingTimePlugin({
             wordPerMinute: 200
-        }),
-        // [
-        //     '@vuepress/plugin-google-analytics',
-        //     { id: 'G-TNS7EED85E' },
-        // ],
-        googleAnalyticsPlugin({
-            id: 'G-TNS7EED85E',
-            debug: true,
         }),
     ],
     extendsPageOptions: (page) => {
