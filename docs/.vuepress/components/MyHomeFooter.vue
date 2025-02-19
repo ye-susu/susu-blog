@@ -13,25 +13,29 @@ defineExpose({ isQRCodeVisible, showQRCode, hideQRCode });
   <div class="my-home-footer">
     <div class="footer-nav">
       <a href="https://www.zcool.com.cn/u/1072459"
-        ><img src="/images/zcool.png" alt="zcool" class="image-item"
+        ><img src="/images/zcool.webp" alt="zcool" class="image-item"
       /></a>
       <a href="#" @click.prevent="showQRCode"
-        ><img src="/images/wechat.png" alt="wechat" class="image-item"
+        ><img src="/images/wechat.webp" alt="wechat" class="image-item"
       /></a>
       <a href="https://www.instagram.com/yepan3/"
-        ><img src="/images/ins.png" alt="ins" class="image-item"
+        ><img src="/images/ins.webp" alt="ins" class="image-item"
       /></a>
       <a href="https://x.com/yesusu6"
-        ><img src="/images/x.png" alt="X" class="image-item"
+        ><img src="/images/x.webp" alt="X" class="image-item"
       /></a>
     </div>
     <div class="line">
-      <img src="/images/footerline.png" alt="footerline" />
+      <img src="/images/footerline.webp" alt="footerline" />
     </div>
     <div v-if="isQRCodeVisible" class="modal" @click.self="hideQRCode">
       <div class="modal-content">
         <span class="close-btn" @click="hideQRCode">&times;</span>
-        <img src="/images/qrcode.png" alt="WeChat QR Code" class="qrcode-img" />
+        <img
+          src="/images/qrcode.webp"
+          alt="WeChat QR Code"
+          class="qrcode-img"
+        />
       </div>
     </div>
   </div>

@@ -4,16 +4,16 @@ import MyHomeFooter from "./MyHomeFooter.vue";
 import { ref } from "vue";
 
 const navImages = ref([
-  { src: "/images/article.png", link: "/articles/", alt: "articles" },
-  { src: "/images/project.png", link: "/projects/", alt: "projects" },
-  { src: "/images/about.png", link: "/about/", alt: "about" },
+  { src: "/images/article.webp", link: "/articles/", alt: "articles" },
+  { src: "/images/project.webp", link: "/projects/", alt: "projects" },
+  { src: "/images/about.webp", link: "/about/", alt: "about" },
 ]);
 </script>
 
 <template>
   <div class="home-container">
     <div class="hero-image">
-      <img src="/images/hero.png" alt="heroImage" />
+      <img src="/images/hero.webp" alt="heroImage" />
     </div>
     <MyHomeNav :images="navImages" />
     <MyHomeFooter />

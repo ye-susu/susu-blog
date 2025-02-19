@@ -4,7 +4,7 @@
       <img src="/images/aboutme.png" alt="aboutme" />
     </header>
     <div class="portrait">
-      <img src="/images/portrait.png" alt="portrait" />
+      <img src="/images/portrait.webp" alt="portrait" />
     </div>
     <div class="content">
       <h2>关于我</h2>
