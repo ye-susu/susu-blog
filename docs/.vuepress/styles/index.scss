@@ -1,12 +1,16 @@
 :root {
     --vp-c-accent: rgb(60 60 67);
     ;
-    --content-width: 820px;
+    --content-width: 800px;
 }
 
 // page
 .vp-theme-container.no-navbar .vp-page {
     padding-top: 2rem;
+}
+
+.vp-theme-container.no-navbar [vp-content] h3 {
+    margin-top: 2rem;
 }
 
 .vp-page h1 {
@@ -19,7 +23,10 @@
 }
 
 .vp-page p {
-    line-height: 1.8;
+    line-height: 1.9;
+    text-align: justify;
+    margin-block-start: 1.25em;
+    margin-block-end: 1.25em;
 }
 
 .vp-page a {

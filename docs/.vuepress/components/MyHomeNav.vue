@@ -61,5 +61,8 @@ function navigateTo(link) {
   .image-link {
     width: 64%;
   }
+  .image-item:hover {
+    transform: scale(1);
+  }
 }
 </style>

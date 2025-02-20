@@ -79,6 +79,7 @@ const projects = useBlogType("projects");
 }
 .projects-heroimage {
   overflow: hidden;
+  border-radius: 0.5rem;
 }
 .projects-heroimage img {
   width: 100%;
