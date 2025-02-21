@@ -29,28 +29,25 @@
 <p>2014 年 9 月苹果发布了 Apple Watch，使用了新的系统字体 SF Compact（San Francisco 的子家族），产品的 Logotype 也使用了相同的字体。次年 6 月苹果推出了音乐流媒体服务 Apple Music，Logotype 依然使用了 SF Compact。其实从 Myriad 时期苹果就是大一统的品牌策略，它不可能在不同产品间使用两种品牌字体的（这一时期其他产品依然使用的 Myriad），Apple Watch 和 Apple Music 的 Logotype 已经预示了苹果品牌字体不久将迎来替换，于是从 2016 年开始不同产品线的 Logotype 开始替换为 San Francisco（iPhone、iPad 等使用的是 SF 子家族）。</p>
 <p>2017 年初苹果官网的大部分字体也替换为 San Francisco，同时 <a href="https://www.webdesignmuseum.org/gallery/apple-2017" target="_blank" rel="noopener noreferrer">官网的排版风格</a>也发生了改变，少了 Myriad 时代的极简主义特征，信息的传达更为直接与粗暴。有人批评这样的处理方式丢失了苹果那种可以让人细细品味的气质，也有人说这是苹果审美从乔布斯时代向库克时代的转变，因为乔布斯重视设计，而库克只懂得营销。从功能角度来讲，这样的方式是没有任何问题的，在这样一个信息冗余的时代，只有直接的触达才能唤起用户的注意。</p>
 <p>纵观苹果三十多年来品牌字体的变迁貌似一部浓缩的字体设计发展史，从传统衬线体到人文主义无衬线体，再到如今的新式异风衬线体，品牌的表达也越来越现代，只是就字体风格而言已经没有更新的选择。苹果这些年也一直在丰富 San Francisco 的功能和样式，2017 年推出 SF Pro，2020 年推出可变字体，2022 年新增样式。对比以往的字体，San Francisco 已然是位集大成者，所以我也时常在想 San Francisco 是否已是苹果最终的归宿？</p>
-<p>参考资料：</p>
+<p><strong>参考资料：</strong></p>
 <ol>
 <li>
-<p>Typography of Apple Inc.：<a href="https://en-academic.com/dic.nsf/enwiki/503500" target="_blank" rel="noopener noreferrer">https://en-academic.com/dic.nsf/enwiki/503500</a></p>
+<p><a href="https://en-academic.com/dic.nsf/enwiki/503500" target="_blank" rel="noopener noreferrer">Typography of Apple Inc.</a></p>
 </li>
 <li>
-<p>The Apple Logo’s Story and Symbolism：<a href="https://looka.com/blog/apple-logo/" target="_blank" rel="noopener noreferrer">https://looka.com/blog/apple-logo/</a></p>
+<p><a href="https://looka.com/blog/apple-logo/" target="_blank" rel="noopener noreferrer">The Apple Logo’s Story and Symbolism</a></p>
 </li>
 <li>
-<p>Othmar Motter：<a href="https://id.wikipedia.org/wiki/Othmar_Motter" target="_blank" rel="noopener noreferrer">https://id.wikipedia.org/wiki/Othmar_Motter</a></p>
+<p><a href="https://www.thetype.com/2010/05/2382/" target="_blank" rel="noopener noreferrer">人人都恨 ITC Garamond</a></p>
 </li>
 <li>
-<p>人人都恨 ITC Garamond: <a href="https://www.thetype.com/2010/05/2382/" target="_blank" rel="noopener noreferrer">https://www.thetype.com/2010/05/2382/</a></p>
+<p><a href="https://www.thetype.com/2009/12/1704/#more-1704" target="_blank" rel="noopener noreferrer">Myriad 的故事</a></p>
 </li>
 <li>
-<p>Myriad 的故事: <a href="https://www.thetype.com/2009/12/1704/#more-1704" target="_blank" rel="noopener noreferrer">https://www.thetype.com/2009/12/1704/#more-1704</a></p>
+<p><a href="https://webflow.com/blog/apple-homepage-history" target="_blank" rel="noopener noreferrer">Homepage history: Apple.com</a></p>
 </li>
 <li>
-<p>Homepage history: Apple.com: <a href="https://webflow.com/blog/apple-homepage-history" target="_blank" rel="noopener noreferrer">https://webflow.com/blog/apple-homepage-history</a></p>
-</li>
-<li>
-<p>The evolution of Apple’s website：<a href="https://www.webdesignmuseum.org/gallery/apple-2001" target="_blank" rel="noopener noreferrer">https://www.webdesignmuseum.org/gallery/apple-2001</a></p>
+<p><a href="https://www.webdesignmuseum.org/gallery/apple-2001" target="_blank" rel="noopener noreferrer">The evolution of Apple’s website</a></p>
 </li>
 </ol>
 </div></template>

@@ -46,19 +46,19 @@
 <p>字体排印有着巨大的知识范畴，笔者文中聊到的部分也只是沧海一粟，如对西文字体排印有更多兴趣，可关注以下参考资料。</p>
 <ol>
 <li>
-<p>巴特里克的字体排印指南：<a href="https://practicaltypography.com/" target="_blank" rel="noopener noreferrer">https://practicaltypography.com/</a></p>
+<p><a href="https://practicaltypography.com/" target="_blank" rel="noopener noreferrer">巴特里克的字体排印指南</a></p>
 </li>
 <li>
-<p>字谈字畅（一个介绍西文字体排印的中文播客）：<a href="https://www.xiaoyuzhoufm.com/podcast" target="_blank" rel="noopener noreferrer">https://www.xiaoyuzhoufm.com/podcast</a></p>
+<p><a href="https://www.xiaoyuzhoufm.com/podcast" target="_blank" rel="noopener noreferrer">字谈字畅（一个介绍西文字体排印的中文播客）</a></p>
 </li>
 <li>
-<p>The Type（字体排印的专业网站）：<a href="https://www.thetype.com/" target="_blank" rel="noopener noreferrer">https://www.thetype.com/</a></p>
+<p><a href="https://www.thetype.com/" target="_blank" rel="noopener noreferrer">The Type（字体排印的专业网站）</a></p>
 </li>
 <li>
-<p>Material Design 的字体排印章节：<a href="https://m2.material.io/design/typography" target="_blank" rel="noopener noreferrer">https://m2.material.io/design/typography</a></p>
+<p><a href="https://m2.material.io/design/typography" target="_blank" rel="noopener noreferrer">Material Design 的字体排印章节</a></p>
 </li>
 <li>
-<p>IOS 人机交互指南中的字体排印章节：<a href="https://developer.apple.com/design" target="_blank" rel="noopener noreferrer">https://developer.apple.com/design</a></p>
+<p><a href="https://developer.apple.com/design" target="_blank" rel="noopener noreferrer">IOS 人机交互指南中的字体排印章节</a></p>
 </li>
 </ol>
 </div></template>

@@ -6,6 +6,7 @@ import MyHome from './components/MyHome.vue'
 import MyHomeNav from './components/MyHomeNav.vue'
 import MyHomeFooter from './components/MyHomeFooter.vue'
 import ReadingTime from './components/ReadingTime.vue'
+
 export default defineClientConfig({
     layouts: {
         ArticleList, ProjectList, AboutMe

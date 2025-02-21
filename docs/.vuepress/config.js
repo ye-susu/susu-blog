@@ -13,8 +13,10 @@ export default defineUserConfig({
     bundler: viteBundler(),
     theme: defaultTheme({
         navbar: false,
-        sidebar: false,
+        sidebar: true,
         colorModeSwitch: false,
+        lastUpdatedText: '最后更新',
+        contributorsText: '作者',
     }),
     // home
     base: '/',
@@ -31,7 +33,8 @@ export default defineUserConfig({
         gtag('config', 'G-TNS7EED85E', {
             cookie_flags: 'SameSite=None; Secure'
         });
-        `],
+        `
+    ],
     ],
     // replace components
     alias: {

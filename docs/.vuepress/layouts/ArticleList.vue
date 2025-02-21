@@ -55,9 +55,9 @@ const articles = useBlogType("articles");
 .atricles-container {
   display: flex;
   flex-direction: column;
-  padding: 4.75rem 1.25rem 1.25rem;
+  padding: 4.75rem 2.5rem 2.5rem;
   box-sizing: border-box;
-  max-width: 53.75rem;
+  max-width: 52.5rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -111,7 +111,7 @@ const articles = useBlogType("articles");
   color: #6e6e75;
 }
 .articles-info h1 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin: 0;
   line-height: normal;
 }

@@ -61,18 +61,16 @@ Myriad 设计时参考了 Adrian Frtuiger 的 [Frutiger](http://www.identifont.c
 
 纵观苹果三十多年来品牌字体的变迁貌似一部浓缩的字体设计发展史，从传统衬线体到人文主义无衬线体，再到如今的新式异风衬线体，品牌的表达也越来越现代，只是就字体风格而言已经没有更新的选择。苹果这些年也一直在丰富 San Francisco 的功能和样式，2017 年推出 SF Pro，2020 年推出可变字体，2022 年新增样式。对比以往的字体，San Francisco 已然是位集大成者，所以我也时常在想 San Francisco 是否已是苹果最终的归宿？
 
-参考资料：
+**参考资料：**
 
-1. Typography of Apple Inc.：<https://en-academic.com/dic.nsf/enwiki/503500>
+1. [Typography of Apple Inc.](https://en-academic.com/dic.nsf/enwiki/503500)
 
-2. The Apple Logo’s Story and Symbolism：<https://looka.com/blog/apple-logo/>
+2. [The Apple Logo’s Story and Symbolism](https://looka.com/blog/apple-logo/)
 
-3. Othmar Motter：<https://id.wikipedia.org/wiki/Othmar_Motter>
+3. [人人都恨 ITC Garamond](https://www.thetype.com/2010/05/2382/)
 
-4. 人人都恨 ITC Garamond: <https://www.thetype.com/2010/05/2382/>
+4. [Myriad 的故事](https://www.thetype.com/2009/12/1704/#more-1704)
 
-5. Myriad 的故事: <https://www.thetype.com/2009/12/1704/#more-1704>
+5. [Homepage history: Apple.com](https://webflow.com/blog/apple-homepage-history)
 
-6. Homepage history: Apple.com: <https://webflow.com/blog/apple-homepage-history>
-
-7. The evolution of Apple’s website：<https://www.webdesignmuseum.org/gallery/apple-2001>
+6. [The evolution of Apple’s website](https://www.webdesignmuseum.org/gallery/apple-2001)

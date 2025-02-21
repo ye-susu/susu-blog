@@ -82,12 +82,12 @@ Readability 译作“可读性”，指文本组织是否清晰可读，属于�
 ### 五、结语
 字体排印有着巨大的知识范畴，笔者文中聊到的部分也只是沧海一粟，如对西文字体排印有更多兴趣，可关注以下参考资料。
 
-1. 巴特里克的字体排印指南：<https://practicaltypography.com/>
+1. [巴特里克的字体排印指南](https://practicaltypography.com/)
 
-2. 字谈字畅（一个介绍西文字体排印的中文播客）：<https://www.xiaoyuzhoufm.com/podcast>
+2. [字谈字畅（一个介绍西文字体排印的中文播客）](https://www.xiaoyuzhoufm.com/podcast)
 
-3. The Type（字体排印的专业网站）：<https://www.thetype.com/>
+3. [The Type（字体排印的专业网站）](https://www.thetype.com/)
 
-4. Material Design 的字体排印章节：<https://m2.material.io/design/typography>
+4. [Material Design 的字体排印章节](https://m2.material.io/design/typography)
 
-5. IOS 人机交互指南中的字体排印章节：<https://developer.apple.com/design>
+5. [IOS 人机交互指南中的字体排印章节](https://developer.apple.com/design)

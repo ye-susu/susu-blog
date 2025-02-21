@@ -41,9 +41,9 @@ const projects = useBlogType("projects");
 
 <style scoped>
 .projects-container {
-  padding: 5rem 1.25rem 1.25rem;
+  padding: 5rem 2.5rem 2.5rem;
   box-sizing: border-box;
-  max-width: 53.75rem;
+  max-width: 52.5rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -67,7 +67,7 @@ const projects = useBlogType("projects");
   margin-block-end: 0;
 }
 .projects-info h1 {
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   line-height: normal;
   margin-top: 1.4rem;
 }
