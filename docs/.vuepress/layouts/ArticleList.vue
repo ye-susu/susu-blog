@@ -129,7 +129,7 @@ const articles = useBlogType("articles");
 }
 @media (max-width: 768px) {
   .atricles-container {
-    padding-top: 2rem;
+    padding: 2rem 1.5rem 1.5rem;
   }
   .atricles-title .divider {
     height: 0.75rem;
