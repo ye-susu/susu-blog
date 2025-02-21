@@ -91,7 +91,7 @@ const projects = useBlogType("projects");
 }
 @media (max-width: 768px) {
   .projects-container {
-    padding: 2rem 1.5rem 1.5rem;
+    padding: 2rem 1.25rem 1.25rem;
   }
   .projects-title img {
     margin: 1rem 0 1.75rem;
