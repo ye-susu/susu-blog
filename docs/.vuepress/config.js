@@ -3,26 +3,35 @@ import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { getDirname, path } from 'vuepress/utils'
 import { blogPlugin } from '@vuepress/plugin-blog'
-import { oml2dPlugin } from 'vuepress-plugin-oh-my-live2d'
 import { readingTimePlugin } from '@vuepress/plugin-reading-time'
-
-
-
 
 export default defineUserConfig({
     bundler: viteBundler(),
     theme: defaultTheme({
-        navbar: false,
-        sidebar: true,
+        // navbar: false,
         colorModeSwitch: false,
-        lastUpdatedText: '最后更新',
-        contributorsText: '作者',
+        lastUpdated: false,
+        contributors: false,
+        navbar: [
+            {
+                text: "博客",
+                link: "/articles/",
+            },
+            {
+                text: "项目",
+                link: "/projects/",
+            },
+            {
+                text: "关于我",
+                link: "/about/",
+            }
+        ],
     }),
     // home
+    title: "yesusu.top",
     base: '/',
     lang: 'zh-CN',
     markdown: {
-        anchor: false
     },
     head: [['link', { rel: 'icon', href: '/images/logo.webp' }],
     ['script', { async: true, src: `https://www.googletagmanager.com/gtag/js?id=G-TNS7EED85E` }],
@@ -91,23 +100,7 @@ export default defineUserConfig({
                 return !frontmatter.description;
             },
         }),
-        oml2dPlugin({
-            mobileDisplay: true,
-            primaryColor: '#2E2E2E',
-            models: [
-                {
-                    path: "https://model.oml2d.com/cat-black/model.json",
-                    scale: 0.15,
-                    position: [20, 20],
-                    stageStyle: {
-                        width: 350
-                    }
-                }
-            ],
-            menus: {
-                disable: true
-            }
-        }),
+
         readingTimePlugin({
             wordPerMinute: 200
         }),

@@ -1,12 +1,36 @@
 :root {
     --vp-c-accent: rgb(60 60 67);
     ;
-    --content-width: 760px;
+    --content-width: 756px;
+}
+
+// navbar
+.vp-navbar {
+    width: 50.25rem;
+    border-bottom: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    height: 4.375rem;
+    margin: 0 auto;
+}
+
+.vp-navbar-items-wrapper {
+    top: 1.125rem;
+    font-size: 1rem;
+    max-width: 720px !important;
+}
+
+.vp-site-name {
+    font-size: 1.5rem;
+}
+
+.vp-toggle-sidebar-button {
+    top: 1rem;
 }
 
 // page
-.vp-theme-container.no-navbar .vp-page {
-    padding-top: 2rem;
+.vp-page {
+    padding-top: 4rem !important;
 }
 
 .vp-theme-container.no-navbar [vp-content] h3 {
@@ -21,9 +45,12 @@
     font-size: 2.5rem;
 }
 
+.vp-theme-container.no-navbar [vp-content] h2 {
+    margin-top: 2.5rem;
+}
+
 .vp-page h2 {
-    border-bottom: 0;
-    font-size: 2.25rem;
+    border: 0;
 }
 
 .vp-page p {
@@ -37,6 +64,21 @@
     font-weight: bold;
 }
 
+.vp-page thead tr {
+    background-color: #F6F6F6;
+}
+
+.vp-page tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.vp-page th,
+td {
+    border-color: #EBEBEB;
+    width: 10%;
+    padding: 1rem;
+}
+
 .vp-back-to-top-button {
     color: rgb(60 60 67);
 }
@@ -45,8 +87,57 @@
     color: rgb(0, 0, 0);
 }
 
-@media (max-width: 768px) {
+// sidebar
+.vp-sidebar {
+    border: 0;
+    left: calc(50% + var(--content-width) / 2 + 4rem);
+
+}
+
+.vp-sidebar-items {
+    padding: 0 2rem;
+    margin: 16.5rem 0;
+    border-left: 1px solid #EBEBEB;
+    font-size: 0.875rem;
+}
+
+.vp-sidebar-item.vp-sidebar-heading {
+    display: none;
+}
+
+.vp-sidebar-item.auto-link {
+    padding: 0 0 0.75rem 0;
+    border-left: 0;
+}
+
+
+.vp-sidebar-children li:last-child .auto-link {
+    padding-bottom: 0;
+}
+
+.vp-page {
+    padding-left: 0;
+}
+
+.vp-theme-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: flex-start;
+}
+
+@media (max-width: 720px) {
     .vp-theme-container.no-navbar .vp-page {
         padding-top: 0.5rem;
+    }
+
+    .vp-sidebar {
+        left: 0;
+        border-right: 1px solid #E2E2E3;
+    }
+
+    .vp-sidebar-items {
+        margin: 1.5rem 0;
+        padding-left: 1.5rem;
     }
 }

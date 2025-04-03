@@ -1,1 +1,1 @@
-export const store = JSON.parse("[\"/articles/brand-fonts/\",\"/articles/system-fonts/\",\"/articles/typography/\",\"/articles/colors3/\",\"/articles/colors2/\",\"/articles/colors1/\",\"/projects/test1/\",\"/projects/test2/\",\"/projects/test3/\",\"/projects/test4/\",\"/projects/test5/\"]");
+export const store = JSON.parse("[\"/articles/brand-fonts/\",\"/articles/system-fonts/\",\"/articles/typography/\",\"/articles/colors3/\",\"/articles/colors2/\",\"/articles/colors1/\",\"/projects/test5/\",\"/projects/goswak/\"]");

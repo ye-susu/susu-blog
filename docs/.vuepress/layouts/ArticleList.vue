@@ -1,61 +1,70 @@
 <script setup>
 import { useBlogType } from "@vuepress/plugin-blog/client";
 import { usePageFrontmatter } from "vuepress/client";
+import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
+
 const articles = useBlogType("articles");
 </script>
 <template>
-  <div class="atricles-container">
-    <header class="atricles-title">
-      <div class="title">
-        <span>设计经验</span>
-        <div class="divider"></div>
-        <span>知识沉淀</span>
-        <div class="divider"></div>
-        <span>分享文稿</span>
-      </div>
-      <img src="/images/articles.png" alt="atricles" />
-    </header>
-    <div v-if="articles.items?.length" class="articles-wrapper">
-      <article
-        v-for="{ info, path } in articles.items"
-        :key="path"
-        class="articles-item"
-        @click="$router.push(path)"
-      >
-        <div class="articles-info">
-          <h1 class="title">
-            {{ info.title }}
-          </h1>
-          <p v-if="info.description" class="description">
-            {{ info.description }}
-          </p>
+  <ParentLayout>
+    <template #page>
+      <div class="atricles-container">
+        <header class="atricles-title">
+          <div class="title">
+            <span>设计经验</span>
+            <div class="divider"></div>
+            <span>知识沉淀</span>
+            <div class="divider"></div>
+            <span>分享文稿</span>
+          </div>
+        </header>
+        <div v-if="articles.items?.length" class="articles-wrapper">
+          <article
+            v-for="{ info, path } in articles.items"
+            :key="path"
+            class="articles-item"
+            @click="$router.push(path)"
+          >
+            <div class="articles-info">
+              <h1 class="title">
+                {{ info.title }}
+              </h1>
+              <p v-if="info.description" class="description">
+                {{ info.description }}
+              </p>
 
-          <p v-if="info.date" class="date">
-            发布于
-            {{
-              new Date(info.date).toLocaleDateString("zh-CN", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })
-            }}
-          </p>
-          <p v-if="info.excerpt" class="excerpt" v-html="info.excerpt" />
+              <p v-if="info.date" class="date">
+                发布于
+                {{
+                  new Date(info.date).toLocaleDateString("zh-CN", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                }}
+              </p>
+              <p v-if="info.excerpt" class="excerpt" v-html="info.excerpt" />
+            </div>
+            <div class="ariticles-hero">
+              <img
+                v-if="info.heroImage"
+                :src="info.heroImage"
+                alt="heroImage"
+              />
+            </div>
+          </article>
         </div>
-        <div class="ariticles-hero">
-          <img v-if="info.heroImage" :src="info.heroImage" alt="heroImage" />
-        </div>
-      </article>
-    </div>
-    <div v-else>Nothing in here.</div>
-  </div>
+        <div v-else>Nothing in here.</div>
+      </div>
+    </template>
+  </ParentLayout>
 </template>
 
 <style scoped>
 .atricles-container {
   display: flex;
   flex-direction: column;
-  padding: 4.75rem 2.5rem 2.5rem;
+  padding: 6rem 2.5rem 2.5rem;
   box-sizing: border-box;
   max-width: 52.5rem;
   width: 100%;

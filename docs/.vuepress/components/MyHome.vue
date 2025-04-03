@@ -23,7 +23,7 @@ const navImages = ref([
 .home-container {
   padding: 8rem 1.25rem 1.25rem;
   box-sizing: border-box;
-  max-width: 53.75rem;
+  max-width: 50rem;
   width: 100%;
   margin: 0 auto;
 }

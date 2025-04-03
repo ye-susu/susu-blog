@@ -1,47 +1,53 @@
 <script setup>
 import { useBlogType } from "@vuepress/plugin-blog/client";
+import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
 
 const projects = useBlogType("projects");
 </script>
 <template>
-  <div class="projects-container">
-    <header class="projects-title">
-      <img src="/images/projects.png" alt="projects" />
-    </header>
-    <div v-if="projects.items?.length" class="projects-item">
-      <div
-        v-for="{ info, path } in projects.items"
-        :key="path"
-        class="projects"
-        @click="$router.push(path)"
-      >
-        <div class="projects-heroimage">
-          <img v-if="info.heroImage" :src="info.heroImage" alt="heroImage" />
+  <ParentLayout>
+    <template #page>
+      <div class="projects-container">
+        <div v-if="projects.items?.length" class="projects-item">
+          <div
+            v-for="{ info, path } in projects.items"
+            :key="path"
+            class="projects"
+            @click="$router.push(path)"
+          >
+            <div class="projects-heroimage">
+              <img
+                v-if="info.heroImage"
+                :src="info.heroImage"
+                alt="heroImage"
+              />
+            </div>
+            <div class="projects-info">
+              <h1 class="title">
+                {{ info.title }}
+              </h1>
+              <p v-if="info.date" class="date">
+                发布于
+                {{
+                  new Date(info.date).toLocaleDateString("zh-CN", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                }}
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="projects-info">
-          <h1 class="title">
-            {{ info.title }}
-          </h1>
-          <p v-if="info.date" class="date">
-            发布于
-            {{
-              new Date(info.date).toLocaleDateString("zh-CN", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })
-            }}
-          </p>
-        </div>
+        <div v-else>Nothing in here.</div>
       </div>
-    </div>
-    <div v-else>Nothing in here.</div>
-  </div>
+    </template>
+  </ParentLayout>
 </template>
 
 <style scoped>
 .projects-container {
-  padding: 5rem 2.5rem 2.5rem;
+  padding: 6rem 2.5rem 2.5rem;
   box-sizing: border-box;
   max-width: 52.5rem;
   width: 100%;
