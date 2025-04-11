@@ -53,12 +53,6 @@ const projects = useBlogType("projects");
   width: 100%;
   margin: 0 auto;
 }
-.projects-title img {
-  width: 23.875rem;
-  height: 10rem;
-  margin-bottom: 2.5rem;
-  display: block;
-}
 .projects-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -86,6 +80,9 @@ const projects = useBlogType("projects");
 .projects-heroimage {
   overflow: hidden;
   border-radius: 0.5rem;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #f6f6f6;
 }
 .projects-heroimage img {
   width: 100%;
@@ -95,16 +92,15 @@ const projects = useBlogType("projects");
 .projects-heroimage img:hover {
   transform: scale(1.05);
 }
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .projects-container {
-    padding: 2rem 1.25rem 1.25rem;
+    padding: 4.5rem 1.25rem 1.25rem;
   }
-  .projects-title img {
-    margin: 1rem 0 1.75rem;
-    display: block;
-    width: 16.875rem;
-    height: 7.0625rem;
+
+  .projects-heroimage img:hover {
+    transform: scale(1);
   }
+
   .projects-item {
     display: flex;
     flex-direction: column;

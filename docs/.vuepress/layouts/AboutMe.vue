@@ -57,17 +57,18 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
   box-sizing: border-box;
   max-width: 49.75rem;
   width: 100%;
-  margin: 0 auto 4rem;
+  margin: 0 auto 2rem;
 }
-.about-title img {
-  width: 23.875rem;
-  height: 10rem;
-  margin-bottom: 3rem;
-  display: block;
-}
-.portrait img {
+
+.portrait {
   width: 10rem;
-  /* margin-bottom: 1rem; */
+  aspect-ratio: 1 / 1;
+  background-color: #f6f6f6;
+}
+
+.portrait img {
+  display: block;
+  width: 10rem;
 }
 .content h2,
 .content p {
@@ -99,15 +100,12 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
   text-underline-offset: 3px;
   text-decoration-thickness: 1.5px;
 }
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .about-container {
-    padding-top: 2rem;
+    padding-top: 6rem;
   }
-  .about-title img {
-    margin: 1rem 0 1.5rem;
-    display: block;
-    width: 16.875rem;
-    height: 7.0625rem;
+  .portrait {
+    width: 8rem;
   }
   .portrait img {
     width: 8rem;
@@ -115,7 +113,7 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
   }
   .content h2 {
     font-size: 1.625rem;
-    margin: 2.825rem 0 0.825rem;
+    margin: 2.5rem 0 0.825rem;
   }
   .content p {
     font-size: 0.9375rem;

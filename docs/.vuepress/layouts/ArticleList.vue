@@ -9,15 +9,6 @@ const articles = useBlogType("articles");
   <ParentLayout>
     <template #page>
       <div class="atricles-container">
-        <header class="atricles-title">
-          <div class="title">
-            <span>设计经验</span>
-            <div class="divider"></div>
-            <span>知识沉淀</span>
-            <div class="divider"></div>
-            <span>分享文稿</span>
-          </div>
-        </header>
         <div v-if="articles.items?.length" class="articles-wrapper">
           <article
             v-for="{ info, path } in articles.items"
@@ -64,36 +55,13 @@ const articles = useBlogType("articles");
 .atricles-container {
   display: flex;
   flex-direction: column;
-  padding: 6rem 2.5rem 2.5rem;
+  padding: 3rem 2.5rem 2.5rem;
   box-sizing: border-box;
   max-width: 52.5rem;
   width: 100%;
   margin: 0 auto;
 }
-.atricles-title img {
-  width: 23.875rem;
-  height: 10rem;
-  margin: 1rem 0;
-}
-.atricles-title .title {
-  display: flex;
-  align-items: center;
-}
-.atricles-title span {
-  font-size: 1.25rem;
-  padding: 0 1.13rem;
-}
-.atricles-title span:first-child {
-  padding-left: 0;
-}
-.atricles-title span:last-child {
-  padding-right: 0;
-}
-.atricles-title .divider {
-  background-color: #dbdbdb;
-  width: 0.0625rem;
-  height: 1.125rem;
-}
+
 .articles-item {
   display: flex;
   align-items: center;
@@ -104,13 +72,13 @@ const articles = useBlogType("articles");
 .ariticles-hero {
   flex-shrink: 0;
   width: 15rem;
-  height: 8.4375rem;
+  aspect-ratio: 16 / 9;
   border-radius: 0.5rem;
+  background-color: #f6f6f6;
   overflow: hidden;
 }
 .ariticles-hero img {
   width: 100%;
-  object-fit: cover;
   display: block;
 }
 .articles-info {
@@ -136,22 +104,11 @@ const articles = useBlogType("articles");
   text-overflow: ellipsis;
   word-break: break-word; /* 防止长单词超出 */
 }
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .atricles-container {
-    padding: 2rem 1.25rem 1.25rem;
+    padding: 3rem 1.25rem 1.25rem;
   }
-  .atricles-title .divider {
-    height: 0.75rem;
-  }
-  .atricles-title span {
-    font-size: 0.9375rem;
-    padding: 0 0.75rem;
-  }
-  .atricles-title img {
-    margin-bottom: 0.75rem;
-    width: 16.875rem;
-    height: 7.0625rem;
-  }
+
   .articles-info {
     padding: 0;
   }
@@ -166,7 +123,6 @@ const articles = useBlogType("articles");
   }
   .ariticles-hero {
     width: 100%;
-    height: 100%;
   }
   .articles-item {
     align-items: flex-start;
