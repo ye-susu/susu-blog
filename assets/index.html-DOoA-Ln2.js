@@ -1,0 +1,1 @@
+import{_ as t,c as e,o}from"./app-CGfzL38P.js";const r={};function a(c,n){return o(),e("div")}const i=t(r,[["render",a]]),s=JSON.parse('{"path":"/blog/article/","title":"","lang":"zh-CN","frontmatter":{"blog":{"type":"type","key":"blog"},"layout":"ArtList"},"git":{},"filePathRelative":null,"excerpt":"","readingTime":{"minutes":0,"words":0}}');export{i as comp,s as data};
