@@ -1,9 +1,10 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
-import { getDirname, path } from 'vuepress/utils'
+import { path } from 'vuepress/utils'
 import { blogPlugin } from '@vuepress/plugin-blog'
 import { readingTimePlugin } from '@vuepress/plugin-reading-time'
+import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 
 export default defineUserConfig({
     bundler: viteBundler(),
@@ -15,7 +16,7 @@ export default defineUserConfig({
         navbar: [
             {
                 text: "博客",
-                link: "/articles/",
+                link: "/blog/?cate=art",
             },
             {
                 text: "项目",
@@ -70,16 +71,32 @@ export default defineUserConfig({
             },
             type: [
                 {
-                    key: 'articles',
-                    filter: ({ filePathRelative }) => filePathRelative && filePathRelative.startsWith('articles/') &&
-                        filePathRelative !== 'articles/README.md',
-                    path: '/articles/',
-                    layout: 'ArticleList',
+                    key: 'blog',
+                    filter: ({ filePathRelative }) => filePathRelative && filePathRelative.startsWith('blog/article/') &&
+                        filePathRelative !== 'blog/article/README.md'
+                        &&
+                        filePathRelative !== 'blog/article/articlelist/README.md',
+                    path: '/blog/article/',
+                    layout: 'ArtList',
                     sorter: (pageA, pageB) => {
                         const dateA = new Date(pageA.frontmatter.date || 0);
                         const dateB = new Date(pageB.frontmatter.date || 0);
                         return dateB - dateA;
-                    }
+                    },
+                },
+                {
+                    key: 'experience',
+                    filter: ({ filePathRelative }) => filePathRelative && filePathRelative.startsWith('blog/experience/') &&
+                        filePathRelative !== 'blog/experience/README.md'
+                        &&
+                        filePathRelative !== 'blog/experience/experiencelist/README.md',
+                    path: '/blog/experience/',
+                    layout: 'ExperienceList',
+                    sorter: (pageA, pageB) => {
+                        const dateA = new Date(pageA.frontmatter.date || 0);
+                        const dateB = new Date(pageB.frontmatter.date || 0);
+                        return dateB - dateA;
+                    },
                 },
                 {
                     key: 'projects',
@@ -99,6 +116,10 @@ export default defineUserConfig({
             excerptFilter: ({ frontmatter }) => {
                 return !frontmatter.description;
             },
+        }),
+
+        mediumZoomPlugin({
+            selector: '[vp-content] img:not(.no-zoom)',
         }),
 
         readingTimePlugin({

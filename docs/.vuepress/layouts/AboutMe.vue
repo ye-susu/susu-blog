@@ -18,9 +18,10 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
           <p>
             <a href="/projects/goswak/">Goswak</a>
             是我参与的第一个国际化项目，期间我完成了竞品调研、视觉风格设定、主要界面输出、设计规范建立等工作。通过此项目使我习得了海外产品的设计经验，并输出了<a
-              href=""
-              >《国际化产品界面设计指南》</a
-            >，为团队成员的工作提供参考。
+              href="/blog/?cate=share#《多语言设计指南》"
+              >《多语言设计指南》</a
+            >
+            ，为团队成员的工作提供参考。
           </p>
           <p>
             21年负责了公司主要产品

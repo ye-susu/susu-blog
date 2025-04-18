@@ -3,7 +3,7 @@ import { useBlogType } from "@vuepress/plugin-blog/client";
 import { usePageFrontmatter } from "vuepress/client";
 import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
 
-const articles = useBlogType("articles");
+const articles = useBlogType("blog");
 </script>
 <template>
   <ParentLayout>
