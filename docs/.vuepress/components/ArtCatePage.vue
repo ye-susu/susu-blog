@@ -10,7 +10,7 @@
     </ul>
   </div>
   <div class="art-list">
-    <Content :path="listPath" />
+    <Content v-if="listPath && listPath !== $route.path" :path="listPath" />
   </div>
 </template>
 
