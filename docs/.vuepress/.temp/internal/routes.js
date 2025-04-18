@@ -4,9 +4,9 @@ export const routes = Object.fromEntries([
   ["/", { loader: () => import(/* webpackChunkName: "index.html" */"/Users/yesusu/Desktop/work-space/susu-blog/docs/.vuepress/.temp/pages/index.html.js"), meta: {"title":"耶稣稣的博客"} }],
   ["/about/", { loader: () => import(/* webpackChunkName: "about_index.html" */"/Users/yesusu/Desktop/work-space/susu-blog/docs/.vuepress/.temp/pages/about/index.html.js"), meta: {"_blog":{"author":"","title":"关于我 | 耶稣稣的博客","heroImage":"","description":"这是关于我的描述","date":null,"excerpt":""},"title":"关于我 | 耶稣稣的博客"} }],
   ["/blog/", { loader: () => import(/* webpackChunkName: "blog_index.html" */"/Users/yesusu/Desktop/work-space/susu-blog/docs/.vuepress/.temp/pages/blog/index.html.js"), meta: {"_blog":{"author":"","title":"博客","heroImage":"","description":"","date":null,"excerpt":""},"title":"博客"} }],
+  ["/blog/share/", { loader: () => import(/* webpackChunkName: "blog_share_index.html" */"/Users/yesusu/Desktop/work-space/susu-blog/docs/.vuepress/.temp/pages/blog/share/index.html.js"), meta: {"_blog":{"author":"","title":"分享文稿","heroImage":"","description":"","date":null,"excerpt":"<br>\n<h6>《多语言设计指南》</h6>\n<br>\n<iframe style=\"border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; aspect-ratio: 16 / 10.06; \" src=\"https://embed.figma.com/deck/qFwMNOpHwiKYk8ZpRcOCBE/%E5%A4%9A%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97?node-id=1-1582&amp;viewport=-204%2C-221%2C1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;embed-host=share\" allowfullscreen=\"\"></iframe>"},"title":"分享文稿"} }],
   ["/projects/goswak/", { loader: () => import(/* webpackChunkName: "projects_goswak_index.html" */"/Users/yesusu/Desktop/work-space/susu-blog/docs/.vuepress/.temp/pages/projects/goswak/index.html.js"), meta: {"_blog":{"author":"","title":"GoSwak - Online Group Buying","heroImage":"https://image.yesusu.top/PicGo/goswak-01.png","description":"Online group buying","date":"2025-03-04T00:00:00.000Z","excerpt":""},"title":"GoSwak - Online Group Buying"} }],
   ["/projects/test5/", { loader: () => import(/* webpackChunkName: "projects_test5_index.html" */"/Users/yesusu/Desktop/work-space/susu-blog/docs/.vuepress/.temp/pages/projects/test5/index.html.js"), meta: {"_blog":{"author":"","title":"这是项目test5的标题","heroImage":"https://image.yesusu.top/PicGo/goswak-01.png","description":"这是test2的的描述","date":"2025-09-27T00:00:00.000Z","excerpt":""},"title":"这是项目test5的标题"} }],
-  ["/blog/share/", { loader: () => import(/* webpackChunkName: "blog_share_index.html" */"/Users/yesusu/Desktop/work-space/susu-blog/docs/.vuepress/.temp/pages/blog/share/index.html.js"), meta: {"_blog":{"author":"","title":"分享文稿","heroImage":"","description":"","date":null,"excerpt":"<br>\n<h6>《多语言设计指南》</h6>\n<br>\n<iframe style=\"border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; aspect-ratio: 16 / 10.06; \" src=\"https://embed.figma.com/deck/qFwMNOpHwiKYk8ZpRcOCBE/%E5%A4%9A%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97?node-id=1-1582&amp;viewport=-204%2C-221%2C1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;embed-host=share\" allowfullscreen=\"\"></iframe>"},"title":"分享文稿"} }],
   ["/blog/article/articlelist/", { loader: () => import(/* webpackChunkName: "blog_article_articlelist_index.html" */"/Users/yesusu/Desktop/work-space/susu-blog/docs/.vuepress/.temp/pages/blog/article/articlelist/index.html.js"), meta: {"_blog":{"author":"","title":"文章目录","heroImage":"","description":"","date":null,"excerpt":""},"title":"文章目录"} }],
   ["/blog/article/brand-fonts/", { loader: () => import(/* webpackChunkName: "blog_article_brand-fonts_index.html" */"/Users/yesusu/Desktop/work-space/susu-blog/docs/.vuepress/.temp/pages/blog/article/brand-fonts/index.html.js"), meta: {"_blog":{"author":"","title":"苹果品牌字体变迁史","heroImage":"https://image.yesusu.top/PicGo/brandfonts-01.png","description":"苹果三十多年来品牌字体的变迁貌似一部浓缩的字体设计发展史","date":"2025-02-27T00:00:00.000Z","excerpt":""},"title":"苹果品牌字体变迁史"} }],
   ["/blog/article/colors1/", { loader: () => import(/* webpackChunkName: "blog_article_colors1_index.html" */"/Users/yesusu/Desktop/work-space/susu-blog/docs/.vuepress/.temp/pages/blog/article/colors1/index.html.js"), meta: {"_blog":{"author":"","title":"产品配色那些事1-学会色彩管理","heroImage":"https://image.yesusu.top/PicGo/color-01.png","description":"聊产品配色之前，笔者深感有必要专门花一章先来说说“色彩管理”。","date":"2025-02-17T00:00:00.000Z","excerpt":""},"title":"产品配色那些事1-学会色彩管理"} }],
@@ -22,3 +22,20 @@ export const routes = Object.fromEntries([
   ["/blog/experience/", { loader: () => import(/* webpackChunkName: "blog_experience_index.html" */"/Users/yesusu/Desktop/work-space/susu-blog/docs/.vuepress/.temp/pages/blog/experience/index.html.js"), meta: {"title":""} }],
   ["/projects/", { loader: () => import(/* webpackChunkName: "projects_index.html" */"/Users/yesusu/Desktop/work-space/susu-blog/docs/.vuepress/.temp/pages/projects/index.html.js"), meta: {"title":"项目 | 耶稣稣的博客"} }],
 ]);
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateRoutes) {
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+  }
+  if (__VUE_HMR_RUNTIME__.updateRedirects) {
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ routes, redirects }) => {
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  })
+}

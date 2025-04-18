@@ -28,6 +28,7 @@
 }
 
 // page
+
 .vp-page {
     padding-top: 4.5rem;
 }
@@ -131,5 +132,12 @@ td {
     .vp-sidebar-items {
         margin: 1.5rem 0;
         padding-left: 1.5rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .vp-page [vp-content] {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
 }
