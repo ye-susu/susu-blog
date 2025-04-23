@@ -49,7 +49,7 @@ const experArt = useBlogType("experience");
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2.5rem;
+  padding: 1.25rem 0;
   cursor: pointer;
 }
 .experArt-info {
@@ -87,7 +87,7 @@ const experArt = useBlogType("experience");
   }
   .experArt-item {
     align-items: flex-start;
-    margin-top: 2rem;
+    padding: 1rem 0;
     flex-direction: column-reverse;
   }
 }

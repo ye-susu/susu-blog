@@ -1,46 +1,48 @@
 <script setup>
-import MyHomeNav from "./MyHomeNav.vue";
-import MyHomeFooter from "./MyHomeFooter.vue";
-import { ref } from "vue";
-
-const navImages = ref([
-  { src: "/images/article.webp", link: "/articles/", alt: "articles" },
-  { src: "/images/project.webp", link: "/projects/", alt: "projects" },
-  { src: "/images/about.webp", link: "/about/", alt: "about" },
-]);
+import ProjectList from "../layouts/ProjectList.vue";
 </script>
-
+  
 <template>
-  <div class="home-container">
+  <div class="home">
     <div class="hero-image">
-      <img src="/images/hero.webp" alt="heroImage" />
+      <img src="https://image.yesusu.top/PicGo/homeHero2.png" alt="heroImage" />
     </div>
-    <MyHomeNav :images="navImages" />
-    <MyHomeFooter />
+    <ArtList :homeShow="true" listTitle="文章" moreLink="/blog/?cate=art" />
+
+    <ProjectList
+      :homeShow="true"
+      listTitle="项目"
+      moreLink="/projects/"
+      :paddingShow="false"
+      scene="home"
+    />
   </div>
 </template>
 <style scoped>
-.home-container {
-  padding: 8rem 1.25rem 1.25rem;
+.home {
+  padding: 6rem 1.25rem;
   box-sizing: border-box;
   max-width: 50rem;
   width: 100%;
   margin: 0 auto;
 }
 .hero-image {
-  margin-bottom: 3.625rem;
+  margin-bottom: 4.5rem;
+  aspect-ratio: 1.94 / 1;
   text-align: center;
+  border-radius: 0.75rem;
+  border: 1px solid #ebebeb;
   overflow: hidden;
 }
 .hero-image img {
-  width: 86%;
+  width: 100%;
 }
-@media (max-width: 768px) {
-  .home-container {
-    padding: 3rem 0.5rem 0.5rem;
+@media (max-width: 720px) {
+  .home {
+    padding: 5rem 1.25rem 0;
   }
   .hero-image {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
   .hero-image img {
     width: 100%;

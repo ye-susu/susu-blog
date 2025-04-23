@@ -46,8 +46,7 @@ const listPath = computed(() => {
 
 <style scoped>
 .cate-list {
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  margin: 1.5rem 0;
   display: flex;
   gap: 1.25rem;
   padding: 0;
@@ -75,7 +74,7 @@ const listPath = computed(() => {
 @media (max-width: 720px) {
   .cate-list {
     gap: 0.75rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 1rem;
   }
   .title {
     font-size: 1rem;

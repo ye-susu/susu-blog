@@ -1,8 +1,7 @@
 import { defineClientConfig } from '@vuepress/client'
-import ArticleList from './layouts/ArticleList.vue'
+import AboutMe from './layouts/AboutMe.vue'
 import ProjectList from './layouts/ProjectList.vue'
 import ArtCatePage from './components/ArtCatePage.vue'
-import AboutMe from './layouts/AboutMe.vue'
 import MyHome from './components/MyHome.vue'
 import MyHomeNav from './components/MyHomeNav.vue'
 import MyHomeFooter from './components/MyHomeFooter.vue'
@@ -13,7 +12,7 @@ import ExperienceList from './components/ExperienceList.vue'
 
 export default defineClientConfig({
     layouts: {
-        ArticleList, ProjectList, AboutMe
+        AboutMe, ProjectList
     },
     enhance({ app }) {
         app.component('MyHome', MyHome)

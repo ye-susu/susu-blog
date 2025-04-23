@@ -1,14 +1,45 @@
 <script setup>
 import { useBlogType } from "@vuepress/plugin-blog/client";
-import { usePageFrontmatter } from "vuepress/client";
+import { computed } from "vue";
 
-const articles = useBlogType("blog");
+const props = defineProps({
+  homeShow: {
+    type: Boolean,
+    default: false,
+  },
+  listTitle: {
+    type: String,
+    default: "",
+  },
+  moreLink: {
+    type: String,
+    default: "",
+  },
+});
+const blogData = useBlogType("blog");
+
+const listShow = computed(() => {
+  const listContent = blogData.value.items;
+  return props.homeShow ? listContent.slice(0, 3) : listContent;
+});
 </script>
+
 <template>
   <div class="atricles-list">
-    <div v-if="articles.items?.length" class="articles-wrapper">
+    <div v-if="listTitle || moreLink" class="list-header">
+      <h2 class="list-title">{{ listTitle }}</h2>
+      <a
+        v-if="moreLink"
+        :href="moreLink"
+        class="more-link"
+        aria-label="查看更多"
+      >
+        <img src="/images/icon-more.svg" alt="more" />
+      </a>
+    </div>
+    <div v-if="listShow.length" class="articles-wrapper">
       <article
-        v-for="{ info, path } in articles.items"
+        v-for="{ info, path } in listShow"
         :key="path"
         class="articles-item"
         @click="$router.push(path)"
@@ -48,6 +79,18 @@ const articles = useBlogType("blog");
 </template>
 
 <style scoped>
+.list-header {
+  margin-bottom: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+.list-title {
+  border: none;
+  font-size: 1.675rem;
+  line-height: 2rem;
+  margin: 0;
+  padding: 0;
+}
 .atricles-list {
   display: flex;
   flex-direction: column;
@@ -57,8 +100,11 @@ const articles = useBlogType("blog");
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2.5rem;
+  padding: 1.25rem 0;
   cursor: pointer;
+}
+.articles-item:last-child {
+  padding-bottom: 0;
 }
 .ariticles-hero {
   flex-shrink: 0;
@@ -67,6 +113,9 @@ const articles = useBlogType("blog");
   border-radius: 0.5rem;
   background-color: #f6f6f6;
   overflow: hidden;
+}
+.ariticles-hero img {
+  width: 100%;
 }
 .articles-info {
   padding-right: 2rem;
@@ -90,6 +139,15 @@ const articles = useBlogType("blog");
   text-overflow: ellipsis;
 }
 @media (max-width: 720px) {
+  .list-header {
+    margin-bottom: 0;
+  }
+  .list-title {
+    font-size: 1.375rem;
+  }
+  .more-link img {
+    width: 2.75rem;
+  }
   .articles-info {
     padding: 1.125rem 0 0;
   }
@@ -106,7 +164,7 @@ const articles = useBlogType("blog");
   }
   .articles-item {
     align-items: flex-start;
-    margin-top: 1.5rem;
+    padding: 0.75rem 0;
     flex-direction: column-reverse;
   }
 }
