@@ -2,7 +2,6 @@
 title: 苹果系统字体变迁史
 description: 从苹果第一台图形界面计算机聊聊系统字体
 date: 2025-02-25 
-category: 专题文章
 heroImage: https://image.yesusu.top/PicGo/systemfonts-01.png
 ---
 # 苹果系统字体变迁史
@@ -53,7 +52,7 @@ Espy Sans 拥有两种字重 Regular 和 Bold，当时 Newton OS 提供了 5 种
 
 Charcoal 无疑是一款优秀的字体，它拥有极佳的易读性，也为 MacOS 赋予了新的视觉特征。奈何这一时期 macOS 正处于低估，市场份额被其他操作系统不断蚕食，乔布斯回归苹果后开始了新的系统研发。新系统采用了全新的视觉设计，也更换了新的系统字体，而 Charcoal 仅仅使用了 MacOS 8、9 两个版本，也被称为苹果历史上服役最短的系统字体。
 
-### 四、为屏幕而生的 Lucida Grande
+### 五、为屏幕而生的 Lucida Grande
 乔布斯回归苹果后开始了新系统的研发，并于 2000 年发布了 [Mac OS X 开发者预览版 3](https://guidebookgallery.org/screenshots/macosxdp3)，这一版本系统采用了全新的视觉设计，系统字体也由 Charcoal 改为了 [Lucida Grande](http://www.identifont.com/find?font=Lucida+Grande&q=Go)。这款字体来自一个巨大的字体家族 Lucida，它拥有衬线体、无衬线体、哥特体等数十种变体，是专门为屏幕显示而设计的，在早期大颗粒像素屏上有着极高的易读性。而它同样出自设计 Truetype 版 Chicago 和 Geneva 的字体工作室 Bigelow & Holmes。
 
 Lucida Grande 是变体 Lucida Sans 的修改版本，是为专门 MacOS 定制的 。这款字体共有四种字重 Light、Regular、Bold 和 Black，而 MacOS 中只发布了 Regular 和 Bold。刚提到 Lucida 整个家族是专门为屏幕显示设计的，那 Lucida Grande 在设计中都有哪些优化呢？
@@ -72,7 +71,7 @@ Lucida Grande 是变体 Lucida Sans 的修改版本，是为专门 MacOS 定制�
 
 Lucida Grande 从 Mac OS X 开发者预览版 3 到 OS X Mavericks 一共服役了 16 年，在这期间受到了用户的大量好评，最为大家津津乐道的就是其易读性。
 
-### 四、传奇字体 Helvetica
+### 六、传奇字体 Helvetica
 时间来到 2007 年，这一年的 6 月 29 日，苹果发布了第一代智能手机 iPhone，搭载了 [iPhone OS 1](https://www.versionmuseum.com/history-of/ios) 操作系统，这一时期 iOS 开始使用 [Helvetica](http://www.identifont.com/find?font=Helvetica&q=Go) 作为系统字体。
 
 Helvetica 是一款新异风无衬线体，由字体设计师 Max Miedinger 和当时铸字厂主管 EduardHoffmann 共同完成。20 世纪 50 年代 Eduard Hoffmann 在瑞士哈斯铸字厂工作，这一时期哈斯的字体销量开始下滑，Eduard Hoffmann 委托字体设计师 Max Miedinger 希望可以设计一款新的无衬线字体可以和市场上流行的 Akzidenz Grotesk 进行竞争。1957 年他们完成了字体的设计工作，并取名“Neue Haas Grotesk”（拉丁文“哈斯的新无衬线体”）。后来哈斯铸字厂的母公司 Stempel 为了国际市场考虑，希望将字体名称改为“Helvetia”（拉丁文“瑞士”），不过 Eduard Hoffmann 认为用一个国家的名称去称呼一款字体是不合适的，最终改名为“Helvetica”（拉丁文“瑞士的”）。Helvetica 推出之后便迅速席卷欧美市场，它简约、理性的气质深受设计师们的青睐，随后一段时间不管是品牌杂志、广告路牌、甚至大街小巷都可以看到它的存在。随着这款字体的大量使用，大家对他的评价也开始出现两极分化。喜欢它的人认为 Helvetica 充满理性、注重功能，代表了现代字体设计。不喜欢它的人认为 Helvetica 过于呆板，没有任何情感色彩，在小字号下表现不佳。德国字体设计师 Erik Spiekermann 就曾在纪录片[《传奇字体 Helvetica》](https://www.bilibili.com/video/BV1nJ411E7QU?t=7.8)中表达过对这款字体的不满，他认为字体设计的最终目的是表现字体的个性化，而 Helvetica 的设计理念不鼓励任何个人主义，这使字体看起来像是机械的军队。虽然他不太认可 Helvetica 的设计理念，但有意思的是，他曾经担任了 Helvetica 升级版本 Neue Helvetica 的设计顾问。
@@ -87,7 +86,7 @@ Helvetica 诞生的年代是瑞士风格开始盛行的时期，字形上自然�
 
 3. **大字号的使用**：如果对比过 MacOS 和 iOS 的字体规范，可以发现同等使用场景下 iOS 字号通常大于 MacOS 几个量级。这是因为触控操作需要更大的点击范围，具体到界面设计中就必须使用更大的字号。虽然上文说到 Helvetica 小字号下表现欠佳，但奈何 iOS 开始使用更大的字号，这在一定程度上对 Helvetica 的使用创造了条件。
 
-### 五、迈向统一 Helvetica Neue
+### 七、迈向统一 Helvetica Neue
 2010 年 6 月 7 日苹果发布了 iPhone 4，同年 7 月 21 日又发布了 [iOS 4](https://photos5.appleinsider.com/archive/ios4.002.jpg)，从这一版本开始系统名称正式从 iPhone OS 改为 iOS，系统字体也从 Helvetica 升级为 [Helvetica Neue](http://www.identifont.com/find?font=neue+Helvetica+&q=Go)。
 
 Helvetica Neue 对比 Helvetica 主要做了以下优化：
@@ -106,7 +105,7 @@ Helvetica Neue 对比 Helvetica 主要做了以下优化：
 
 我们再来看看 MacOS 的情况，2014 年 6 月苹果发布了 [OS X Yosemite](https://zh.wikipedia.org/wiki/OS_X_Yosemite)，这一版本系统字体由 Lucida Grande 改为了 Helvetica Neue。当然 Retina 屏幕的使用为这一切提供了条件，但更为重要的原因是从这一版本起 MacOS 和 iOS 开始了“系统连接”。用户可以直接在 Mac 上收发短信和接听电话，也可以通过 AirDrop 和 iPhone 互传资料。为了保持用户切换设备时体验的一致性，Yosemite 使用了大量 iOS7 的设计语言，图标趋于扁平，视觉更加一致，系统字体也替换为 Helvetica Neue，从这一时期起苹果的系统字体开始迈向统一。
 
-### 六、集大成者 San Francisco
+### 八、集大成者 San Francisco
 [San Francisco](https://developer.apple.com/fonts/) 初次和大家见面是在 2014 年的 Apple Watch 发布会上，虽然发布会并未提及任何有关系统字体的事情，但细心的用户透过现场幻灯片发现 Apple Watch 的界面貌似使用了新的字体，此事还引起了设计师和字体爱好者的强烈讨论，纷纷猜测这是什么字体？直到同年 11 月 18 日苹果发布了 Watchkit 的开发工具包，大家才在包里发现了命名为“San Francisco” 的系统字体。
 
 [次年 WWDC](https://youtu.be/OpveNRh-jXU)，苹果字体设计师 Antonio Cavedoni 正式跟大家介绍了这款字体，不过 San Francisco 并不是新字体的名称，而是整个字体家族的名称。该家族下还有两个字家族 SF 和 SFCompact，SF 用于 iOS、MacOS 等，SF Compact 用于 Watch OS。SF 字形两侧偏向圆润，SF Compact 则更加垂直，字母之间也有更大空间，在狭小的屏幕上拥有更高的易读性。

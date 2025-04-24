@@ -180,20 +180,20 @@
   ]
 ]" />
 <p><strong>字体排印：</strong> 使用系统字体，定义合适的字母间距与行高。</p>
-<p><img src="https://image.yesusu.top/PicGo/GoSwak-01.png" alt=""></p>
+<p><img src="https://image.yesusu.top/PicGo/GoSwak-01.png" alt="" loading="lazy"></p>
 <p><strong>图标：</strong> 运营图标-造型风格统一 / 表意清晰易用。功能图标-跟随品牌调性 / 线性断点处理。</p>
-<p><img src="https://image.yesusu.top/PicGo/GoSwak-02.png" alt=""></p>
+<p><img src="https://image.yesusu.top/PicGo/GoSwak-02.png" alt="" loading="lazy"></p>
 <h4 id="_2-多语言设计" tabindex="-1"><a class="header-anchor" href="#_2-多语言设计"><span>2. 多语言设计</span></a></h4>
 <p><strong>布局选择：</strong> ✅ 通栏布局、✅ 自适应布局、✅ 纵向布局</p>
-<p><img src="https://image.yesusu.top/PicGo/GoSwak-03.png" alt=""></p>
+<p><img src="https://image.yesusu.top/PicGo/GoSwak-03.png" alt="" loading="lazy"></p>
 <p><strong>文本处理：</strong> 1️⃣ 优先精简翻译、2️⃣ 不影响语义情况下...显示、3️⃣ 使用动态字号</p>
-<p><img src="https://image.yesusu.top/PicGo/GoSwak-04.png" alt=""></p>
+<p><img src="https://image.yesusu.top/PicGo/GoSwak-04.png" alt="" loading="lazy"></p>
 <h4 id="_3-差异化设计" tabindex="-1"><a class="header-anchor" href="#_3-差异化设计"><span>3. 差异化设计</span></a></h4>
 <p>对于不同玩法，活动首页和商详腰带进行了不同的色彩处理，帮助用户提升视觉记忆，打造用户心智。</p>
-<p><img src="https://image.yesusu.top/PicGo/GoSwak-05.png" alt=""></p>
+<p><img src="https://image.yesusu.top/PicGo/GoSwak-05.png" alt="" loading="lazy"></p>
 <h4 id="_4-缺醒页插画" tabindex="-1"><a class="header-anchor" href="#_4-缺醒页插画"><span>4. 缺醒页插画</span></a></h4>
 <p>缺醒页插画使用了年轻女性形象，契合目标用户，可提升产品好感度。</p>
-<p><img src="https://image.yesusu.top/PicGo/GoSwak-06.png" alt=""></p>
+<p><img src="https://image.yesusu.top/PicGo/GoSwak-06.png" alt="" loading="lazy"></p>
 <h2 id="提升本地化设计" tabindex="-1"><a class="header-anchor" href="#提升本地化设计"><span>提升本地化设计</span></a></h2>
 <h4 id="_0元购" tabindex="-1"><a class="header-anchor" href="#_0元购"><span>0元购</span></a></h4>
 <p><strong>需求背景</strong> - 东南亚用户对“零元购”相对陌生，设计上无法直接照搬国内模式，需要根据本地用户做出适时调整。</p>
@@ -220,17 +220,17 @@
 <p><strong>强化利益点</strong> - 对于不熟悉玩法的用户，“免费领取”最能激发用户欲望，除此之外重点突出PO价格。</p>
 </li>
 </ol>
-<p><img src="https://image.yesusu.top/PicGo/GoSwak-07.png" alt=""></p>
+<p><img src="https://image.yesusu.top/PicGo/GoSwak-07.png" alt="" loading="lazy"></p>
 <h2 id="建立组件库提升效率" tabindex="-1"><a class="header-anchor" href="#建立组件库提升效率"><span>建立组件库提升效率</span></a></h2>
 <p><strong>需求背景：</strong> 随着项目深入，设计侧已提炼出一套设计组件库，为提升产研效率，我们需要将其转换为开发组件库。</p>
 <ol>
 <li><strong>构建组件</strong> - 不同场景对组件类型和样式有不同要求，构建组件前我们梳理了可能的场景，确保组件满足使用。</li>
 </ol>
-<p><img src="https://image.yesusu.top/PicGo/GoSwak-08.png" alt=""></p>
+<p><img src="https://image.yesusu.top/PicGo/GoSwak-08.png" alt="" loading="lazy"></p>
 <ol start="2">
 <li><strong>说明文档</strong> - 说明文档包含组件定义、属性说明、编号样式及使用规范，助力设计师快速了解，正确使用组件库。</li>
 </ol>
-<p><img src="https://image.yesusu.top/PicGo/GoSwak-09.png" alt=""></p>
+<p><img src="https://image.yesusu.top/PicGo/GoSwak-09.png" alt="" loading="lazy"></p>
 <ol start="3">
 <li><strong>协同方式</strong> - 为解决与开发的协同问题，我们枚举了组件的所有样式，并为其编写了唯一编号。开发只需按照设计师的标注调用编号即可。</li>
 </ol>
