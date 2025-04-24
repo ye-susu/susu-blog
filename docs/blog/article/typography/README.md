@@ -2,7 +2,6 @@
 title: 西文字体排印的基础知识
 description: 在“西文”语境下分享字体排印的相关知识
 date: 2025-02-21
-category: 专题文章
 heroImage: https://image.yesusu.top/PicGo/typography-01.png
 ---
 # 西文字体排印的基础知识

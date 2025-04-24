@@ -14,7 +14,7 @@
 <p>在界面设计中会制定文字规范，针对不同场景进行字号、字重、行高等设定，每种场景的设定都是一套同一造型和尺寸的文字集，所以此处的文字规范也可称为 Font。</p>
 <h4 id="_3-排版-typesetting" tabindex="-1"><a class="header-anchor" href="#_3-排版-typesetting"><span>3. 排版（Typesetting）</span></a></h4>
 <p>印刷时代设计师在完成板面设计（Layout）后，排字工人（Typesetter）会在设定好的版面内摆放铅字，摆放铅字这一过程被称为排版（Typesetting）。但随着数字时代来临，设计工作具有了所见即所得的特性，设计师在版面设计中可以自己完成文字的摆放，至此排版（Typesetting）的内涵也发生了变化。从单指摆放铅字到涵盖版面设计，也是由于这一原因排字工人这一职业也消失在了历史长河中。</p>
-<p><img src="https://image.yesusu.top/PicGo/typography-02.png" alt=""></p>
+<p><img src="https://image.yesusu.top/PicGo/typography-02.png" alt="" loading="lazy"></p>
 <h4 id="_4-印刷-printing" tabindex="-1"><a class="header-anchor" href="#_4-印刷-printing"><span>4. 印刷（Printing）</span></a></h4>
 <p>印刷时代，字体排印中的“印”单指印刷（Printing），但随着数字技术的发展，其内涵也得到拓展，如今的“印”也指呈现方式，如数字时代文字呈现在屏幕上，了解呈现方式可以倒逼我们做出更好的设计。早期印刷活动中，油墨质量参差不齐，最终呈现效果会出现油墨外溢的情况，小字场景下会严重影响文本可读性。为了解决这一问题设计师针对不同字号进行了特殊处理，如小写字母“i”圆点和竖线间的距离，小字号相比大字号会预留更多。数字时代也面临类似情况，早期显示设备分辨率较低，小字显示会直接糊掉，为了应对这种情况设计师创造了点阵字体，虽然损失了字体细节，但却保留了字体的易认性。</p>
 <h3 id="三、字体排印的基础知识" tabindex="-1"><a class="header-anchor" href="#三、字体排印的基础知识"><span>三、字体排印的基础知识</span></a></h3>
@@ -27,7 +27,7 @@
 <h4 id="_3-行距和行高-leading-line-height" tabindex="-1"><a class="header-anchor" href="#_3-行距和行高-leading-line-height"><span>3. 行距和行高（Leading &amp; Line height）</span></a></h4>
 <p>行距和行高是很多设计师经常搞混的两个概念，工作中时常听到有设计师将行距称为行高，或将行高称为行距。在印刷时代想要调整行与行之间的距离，排字工人会在铅字行与行之间插入铅条，铅条的英文是“Lead”，所以“Leading”后续引申为行距，是指行与行的间距。数字时代设计师使用电脑软件进行排版，此时行距的定义又发生了改变，指的是文本基线与基线之间的间距。</p>
 <p>行高（Line height）是 CSS 中的概念，指的是文本行的高度。两者区别在于计算方式不同，行高是取行高与字号的差值除以 2，分别加到文本行的顶部和底部。行距是取行距与字号差值，加到文本行的底部。如字号 16px 的文本将行高设置为 24px，它会在文本行上下分别加 4px，如果字号 16px 的文本将行距设置成 24px，它会在文本行底部加 8px，最终的视觉效果设置行高的文本会比设置行距的文本下移 4px（如下图所示）。留心观察的话可以发现 Ps 和 Ai 中采用的是行距的计算方式，Sketch 和 Figma 采用的是行高的计算方式。</p>
-<p><img src="https://image.yesusu.top/PicGo/typography-03.png" alt=""></p>
+<p><img src="https://image.yesusu.top/PicGo/typography-03.png" alt="" loading="lazy"></p>
 <p>行距和行高如何设置？巴特里克的字体排印指南（Butterick's Practical Typography）给到建议，提倡使用字号的 1.2-1.45 倍。</p>
 <h4 id="_4-段落间距-paragraph-spacing" tabindex="-1"><a class="header-anchor" href="#_4-段落间距-paragraph-spacing"><span>4. 段落间距（Paragraph spacing）</span></a></h4>
 <p>行文过程中为了方便用户理解语义，会进行分段处理，而段落间距（Paragraph spacing）是对这一分段操作所进行的视觉标记。除段落间距外，还可以使用 ¶ （分段符）、缩进进行标记。¶ 类似一种标点符号，可以在连续的行文内部标记出段落分割点。缩进通常被认为是对 ¶ （分段符）的省略，只保留其占据的空间，由此形成视觉缩进。</p>
@@ -37,11 +37,11 @@
 <p>工作中看到最多的问题就是使用默认字母间距、行高进行排版，默认参数只能确保排版不会犯错，但要想追求更好的效果必须学会如何进行设置。其实 <a href="https://m3.material.io/styles/typography/type-scale-tokens#a734c6ed-634c-4abb-adb2-35daf0aed06a" target="_blank" rel="noopener noreferrer">Material Design</a> 和 <a href="https://developer.apple.com/design/human-interface-guidelines/typography#Tracking-values" target="_blank" rel="noopener noreferrer">IOS 人机交互指南</a>已经告诉我们答案，在字体排印这一章节提供了其系统字母间距和行高参数，我们只需要按照此参数进行设置即可。当然也有人认为规范给出的参数未必适合自身项目，此时可参考规范参数，然后结合项目实际情况进行设置。设置完成后可在软件中定义为文本样式，在后续设计中直接调用即可。</p>
 <h4 id="_2-段落间距错误的实现方式" tabindex="-1"><a class="header-anchor" href="#_2-段落间距错误的实现方式"><span>2. 段落间距错误的实现方式</span></a></h4>
 <p>记得有次在看同事设计稿时，他是这样实现段落间距的，每段文字建立一个文本框，然后文本框之间设置间距拼接出整个段落。我心中不免疑惑难道不应该是使用软件排版功能去实现吗？当然也有人认为最终的视觉效果相差无几，使用哪种方式都可以。但是作为界面设计师需要明白一点我们的设计是需要落地屏幕的，若使用拼接方式，那么前端还原设计稿时就不会设置段落间距这个参数（设计侧没有设置开发在参数面板看不到），此时刚好使用的文本是后台返回的，前端又没有设置段落间距，那么最终的显示效果将是不忍直视的。</p>
-<p><img src="https://image.yesusu.top/PicGo/typography-04.png" alt=""></p>
+<p><img src="https://image.yesusu.top/PicGo/typography-04.png" alt="" loading="lazy"></p>
 <h4 id="_3-列表样式错误的实现方式" tabindex="-1"><a class="header-anchor" href="#_3-列表样式错误的实现方式"><span>3. 列表样式错误的实现方式</span></a></h4>
 <p>行文中需要展示不同文本项目时，常使用有序列表和无序列表。而在界面设计中很少设计师使用这个功能，他们大多有着自己的方式来实现列表样式。如有序列表设计师会自己输入列表序号，无序列表会自己绘制出文本前面的圆点，但这样的实现方式都会造成样式上的差错。正确的有序列表，文本换行后是和序号后的文本居左对齐的，但上述方式文本换行后是和序号对齐的。还有正确的无序列表，小圆点的前方都会空出一部分间距，但常有设计师自己绘制圆点，为了追求绝对的视觉对齐，选择拿掉本应空出的这部分间距。Figma 和 Sketch 都提供了相应的列表功能，作为设计师应该使用对应功能来实现以上样式。</p>
-<p><img src="https://image.yesusu.top/PicGo/typography-05.png" alt=""></p>
-<p><img src="https://image.yesusu.top/PicGo/typography-06.png" alt=""></p>
+<p><img src="https://image.yesusu.top/PicGo/typography-05.png" alt="" loading="lazy"></p>
+<p><img src="https://image.yesusu.top/PicGo/typography-06.png" alt="" loading="lazy"></p>
 <h3 id="五、结语" tabindex="-1"><a class="header-anchor" href="#五、结语"><span>五、结语</span></a></h3>
 <p>字体排印有着巨大的知识范畴，笔者文中聊到的部分也只是沧海一粟，如对西文字体排印有更多兴趣，可关注以下参考资料。</p>
 <ol>

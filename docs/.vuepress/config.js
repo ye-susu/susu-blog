@@ -5,11 +5,12 @@ import { path } from 'vuepress/utils'
 import { blogPlugin } from '@vuepress/plugin-blog'
 import { readingTimePlugin } from '@vuepress/plugin-reading-time'
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
+import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
+import { seoPlugin } from '@vuepress/plugin-seo'
 
 export default defineUserConfig({
     bundler: viteBundler(),
     theme: defaultTheme({
-        // navbar: false,
         colorModeSwitch: false,
         lastUpdated: false,
         contributors: false,
@@ -125,14 +126,23 @@ export default defineUserConfig({
         readingTimePlugin({
             wordPerMinute: 200
         }),
+
+        markdownImagePlugin({
+            lazyload: true,
+        }),
+
+        seoPlugin({
+            hostname: 'https://yesusu.top',
+            author: {
+                name: '耶稣稣',
+                url: 'https://yesusu.top',
+                email: 'yepan1749@gmail.com',
+            },
+        }),
     ],
     extendsPageOptions: (page) => {
-        if (page.path === '/articles/') {
-            page.frontmatter.title = '文章 | 耶稣稣的博客';
-            page.frontmatter.description = '设计经验，知识沉淀，分享文稿';
-        }
         if (page.path === '/projects/') {
-            page.frontmatter.title = '项目 | 耶稣稣的博客';
+            page.frontmatter.title = '项目';
             page.frontmatter.description = '耶稣稣的设计项目介绍';
         }
     },

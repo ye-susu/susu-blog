@@ -18,9 +18,14 @@
 }
 
 .vp-navbar-item>.route-link.auto-link:hover {
-    border: none;
     background-color: #F6F6F6;
     border-radius: 0.25rem;
+    border: none;
+
+}
+
+.vp-navbar-item>.auto-link.route-link-active {
+    border: none;
 }
 
 .vp-navbar-item {
