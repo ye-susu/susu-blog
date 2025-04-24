@@ -12,9 +12,25 @@
     margin: 0 auto;
 }
 
+.vp-navbar-item>.route-link.auto-link {
+    padding: 0.375rem 0.75rem;
+
+}
+
+.vp-navbar-item>.route-link.auto-link:hover {
+    border: none;
+    background-color: #F6F6F6;
+    border-radius: 0.25rem;
+}
+
+.vp-navbar-item {
+    margin-left: 0.25rem;
+}
+
 .vp-navbar-items-wrapper {
     top: 0.9rem;
     font-size: 1rem;
+    right: 0.75rem;
     max-width: 720px !important;
 }
 
@@ -133,6 +149,15 @@ td {
     .vp-sidebar-items {
         margin: 1.5rem 0;
         padding-left: 1.5rem;
+    }
+
+    // navbar
+    .vp-navbar-item>.route-link.auto-link {
+        padding: 0
+    }
+
+    .vp-navbar-item {
+        margin-left: 0;
     }
 }
 
