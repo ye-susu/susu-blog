@@ -6,6 +6,7 @@ import { blogPlugin } from '@vuepress/plugin-blog'
 import { readingTimePlugin } from '@vuepress/plugin-reading-time'
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { seoPlugin } from '@vuepress/plugin-seo'
+import { sitemapPlugin } from '@vuepress/plugin-sitemap'
 import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
 
 export default defineUserConfig({
@@ -139,6 +140,11 @@ export default defineUserConfig({
                 email: 'yepan1749@gmail.com',
             },
         }),
+
+        sitemapPlugin({
+            hostname: 'https://yesusu.top',
+            extraUrls: ['/projects/', '/blog/article/', '/blog/experience/']
+        })
     ],
     extendsPageOptions: (page) => {
         if (page.path === '/projects/') {
