@@ -6,6 +6,7 @@ import { blogPlugin } from '@vuepress/plugin-blog'
 import { readingTimePlugin } from '@vuepress/plugin-reading-time'
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { seoPlugin } from '@vuepress/plugin-seo'
+import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
 
 export default defineUserConfig({
     bundler: viteBundler(),
@@ -126,6 +127,9 @@ export default defineUserConfig({
             wordPerMinute: 200
         }),
 
+        markdownImagePlugin({
+            lazyload: true,
+        }),
 
         seoPlugin({
             hostname: 'https://yesusu.top',
