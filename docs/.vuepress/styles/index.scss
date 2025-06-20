@@ -75,6 +75,10 @@
     border: 0;
 }
 
+.vp-page h4 {
+    font-size: 1.35rem;
+}
+
 .vp-page p {
     line-height: 1.9;
     text-align: justify;
@@ -92,6 +96,10 @@
 
 .vp-page tbody tr:nth-child(odd) {
     background-color: #fff;
+}
+
+.vp-page tr td:not(:first-child) {
+    vertical-align: top;
 }
 
 .vp-page th,
@@ -118,7 +126,7 @@ td {
 
 .vp-sidebar-items {
     padding: 0 2rem;
-    margin: 16.75rem 0;
+    margin: 18rem 0;
     border-left: 1px solid #EBEBEB;
     font-size: 0.875rem;
 }

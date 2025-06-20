@@ -25,7 +25,7 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
           </p>
           <p>
             21年负责了公司主要产品
-            <a href="">Akulaku</a>
+            <a href="/projects/akulaku/">Akulaku</a>
             改版，主动挖取机会点，提供设计策略，并输出了设计方案。上线后成功达成业务目标，各主要模块数据均有提升。
           </p>
           <p>

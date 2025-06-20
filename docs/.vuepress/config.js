@@ -34,8 +34,6 @@ export default defineUserConfig({
     title: "yesusu.top",
     base: '/',
     lang: 'zh-CN',
-    markdown: {
-    },
     head: [['link', { rel: 'icon', href: '/images/logo.webp' }],
     ['script', { async: true, src: `https://www.googletagmanager.com/gtag/js?id=G-TNS7EED85E` }],
     ['script', {}, `
