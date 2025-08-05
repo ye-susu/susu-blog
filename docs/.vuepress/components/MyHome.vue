@@ -20,7 +20,7 @@ import ProjectList from "../layouts/ProjectList.vue";
 </template>
 <style scoped>
 .home {
-  padding: 6rem 1.25rem;
+  padding: 6rem 1.25rem 2rem;
   box-sizing: border-box;
   max-width: 50rem;
   width: 100%;

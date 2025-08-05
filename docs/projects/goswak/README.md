@@ -2,7 +2,7 @@
 title: GoSwak - Online Group Buying 
 description: Online group buying 
 date: 2025-03-04
-heroImage: https://image.yesusu.top/PicGo/goswak-01.png
+heroImage: https://image.yesusu.top/PicGo/goswak-cover.png
 ---
 # GoSwak - Online Group Buying
 <ReadingTime/>

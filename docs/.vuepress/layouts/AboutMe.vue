@@ -29,10 +29,14 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
             改版，主动挖取机会点，提供设计策略，并输出了设计方案。上线后成功达成业务目标，各主要模块数据均有提升。
           </p>
           <p>
-            22年独立负责 <a href="">Akulaku Mitra</a> 与
-            <a href="">SA</a> 的设计工作，该项目拓展了我 B
+            23年负责
+            <a href="/projects/akulaku sa/">Akulaku SA</a>
+            销售管理系统的设计工作，该项目拓展了我 B
             端产品的设计经验，期间输出了
-            <a href="">《B端产品视觉特征分析》</a> 并向团队分享。
+            <a href="/blog/?cate=share#《商户端竟品视觉调研》"
+              >《商户端竟品视觉调研》</a
+            >
+            并向团队分享。
           </p>
           <p>
             24年完成了
@@ -48,17 +52,18 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
           <p><span>微信：</span>15200899567</p>
           <p><span>X：</span>@Yesusu6</p>
         </div>
+        <Footer />
       </div>
     </template>
   </ParentLayout>
 </template>
 <style scoped>
 .about-container {
-  padding: 6rem 1.25rem 1.25rem;
+  padding: 6rem 1.25rem 2rem;
   box-sizing: border-box;
   max-width: 49.75rem;
   width: 100%;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
 }
 
 .portrait {
@@ -104,6 +109,7 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
 @media (max-width: 720px) {
   .about-container {
     padding-top: 6rem;
+    padding-bottom: 1.25rem;
   }
   .portrait {
     width: 8rem;

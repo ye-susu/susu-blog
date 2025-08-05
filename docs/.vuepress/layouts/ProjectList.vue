@@ -85,6 +85,7 @@ const listShow = computed(() => {
           </div>
         </div>
         <div v-else>Nothing in here.</div>
+        <Footer />
       </div>
     </template>
   </ParentLayout>
@@ -150,7 +151,7 @@ const listShow = computed(() => {
 }
 @media (max-width: 720px) {
   .projects-container {
-    margin: 4rem 0;
+    margin: 4rem 0 1.25rem;
   }
   .scene-home {
     margin-top: 2rem;
