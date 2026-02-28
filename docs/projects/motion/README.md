@@ -2,7 +2,7 @@
 title: 交互动效合集
 description: 交互动效合集 
 date: 2025-03-02
-heroImage: https://image.yesusu.top/PicGo/motion-cover.png
+heroImage: https://image.yesusu.top/PicGo/project-motion-cover.png
 ---
 # 交互动效合集
 

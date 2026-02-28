@@ -1,8 +1,8 @@
 ---
-title: GoSwak - Online Group Buying 
+title: GoSwak 东南亚社交电商
 description: Online group buying 
 date: 2025-03-04
-heroImage: https://image.yesusu.top/PicGo/goswak-cover.png
+heroImage: https://image.yesusu.top/PicGo/project-goswak-cover.png
 ---
 # GoSwak - Online Group Buying
 <ReadingTime/>

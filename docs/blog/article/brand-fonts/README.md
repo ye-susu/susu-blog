@@ -3,7 +3,7 @@ title: 苹果品牌字体变迁史
 description: 苹果三十多年来品牌字体的变迁貌似一部浓缩的字体设计发展史
 date: 2025-02-27
 category: 专题文章
-heroImage: https://image.yesusu.top/PicGo/brandfonts-01.png
+heroImage: https://image.yesusu.top/PicGo/art-cover-brand-font.png
 ---
 # 苹果品牌字体变迁史
 <ReadingTime/>

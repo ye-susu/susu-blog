@@ -2,7 +2,7 @@
 title: 产品配色那些事3-我的配色实践
 description: 本章介绍项目的选色逻辑、配色过程、使用到的工具及如何建立色彩系统。
 date: 2025-02-20
-heroImage: https://image.yesusu.top/PicGo/color3-01.webp
+heroImage: https://image.yesusu.top/PicGo/art-cover-color-practice.png
 ---
 # 产品配色那些事3-我的配色实践
 <ReadingTime/>

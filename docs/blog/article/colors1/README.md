@@ -2,7 +2,7 @@
 title: 产品配色那些事1-学会色彩管理
 description: 聊产品配色之前，笔者深感有必要专门花一章先来说说“色彩管理”。
 date: 2025-02-17
-heroImage: https://image.yesusu.top/PicGo/color-01.png
+heroImage: https://image.yesusu.top/PicGo/art-cover-color-manager.png
 ---
 # 产品配色那些事1-学会色彩管理
 <ReadingTime/>

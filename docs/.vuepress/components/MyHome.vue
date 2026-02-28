@@ -20,7 +20,7 @@ import ProjectList from "../layouts/ProjectList.vue";
 </template>
 <style scoped>
 .home {
-  padding: 6rem 1.25rem 2rem;
+  padding: 6rem 1.25rem 0;
   box-sizing: border-box;
   max-width: 50rem;
   width: 100%;
@@ -31,7 +31,7 @@ import ProjectList from "../layouts/ProjectList.vue";
   aspect-ratio: 1.94 / 1;
   text-align: center;
   border-radius: 0.75rem;
-  border: 1px solid #ebebeb;
+  border: 1px solid #f0f0f0;
   overflow: hidden;
 }
 .hero-image img {

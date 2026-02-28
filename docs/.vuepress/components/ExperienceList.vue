@@ -52,6 +52,9 @@ const experArt = useBlogType("experience");
   padding: 1.25rem 0;
   cursor: pointer;
 }
+.experArt-item:last-child {
+  padding-bottom: 0;
+}
 .experArt-info {
   padding-right: 2rem;
 }

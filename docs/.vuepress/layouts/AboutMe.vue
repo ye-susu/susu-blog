@@ -40,10 +40,10 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
           </p>
           <p>
             24年完成了
-            <a href="">UI 3.0</a>
-            设计系统的搭建，此设计系统搭建之初旨在解决团队重复造轮子的问题，一套设计系统可供多项目使用。期间输出了<a
-              href=""
-              >《关于设计系统的搭建思考》</a
+            <a href="/projects/3.0 components/">UI 3.0 Flutter 组件库</a>
+            的搭建，此设计系统搭建之初旨在解决团队重复造轮子的问题，一套设计系统可供多项目使用。期间输出了<a
+              href="/blog/?cate=share#《UI 3.0 Flutter 组件库的设计思考》"
+              >《关于 UI 3.0 Flutter 组件库的设计思考》</a
             >
             ，并向团队分享。
           </p>
@@ -117,6 +117,9 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
   .portrait img {
     width: 8rem;
     margin: 0;
+  }
+  .content {
+    padding-bottom: 1rem;
   }
   .content h2 {
     font-size: 1.625rem;

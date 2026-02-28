@@ -105,7 +105,7 @@ const listShow = computed(() => {
 .projects-container {
   box-sizing: border-box;
   max-width: 47.5rem;
-  margin: 4.5rem auto 0;
+  margin: 4.5rem auto 2rem;
 }
 .projects-item {
   display: grid;
@@ -113,9 +113,16 @@ const listShow = computed(() => {
   column-gap: 1.5rem;
 }
 .projects-item .projects {
+  position: relative;
   cursor: pointer;
   padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
+}
+.projects-info {
+  position: absolute;
+  top: 2.25rem;
+  left: 2rem;
+  right: 2rem;
+  z-index: 1;
 }
 .projects-info .title,
 .projects-info .date {
@@ -123,23 +130,27 @@ const listShow = computed(() => {
   margin-block-end: 0;
 }
 .projects-info .title {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   line-height: normal;
   margin-top: 1.4rem;
   padding: 0;
 }
 .projects-info .date {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 1.75rem;
   margin-top: 0.6rem;
   color: #6e6e75;
 }
 .projects-heroimage {
   overflow: hidden;
-  border-radius: 0.5rem;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background-color: #f6f6f6;
+  border-radius: 0.75rem;
+  aspect-ratio: 23 / 29;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to bottom, #f0f0f0, rgba(240, 240, 240, 0));
+  background-repeat: no-repeat;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  border: 1px solid transparent;
 }
 .projects-heroimage img {
   width: 100%;
@@ -173,21 +184,19 @@ const listShow = computed(() => {
     transform: scale(1);
   }
   .projects-item .projects {
-    padding: 0.75rem 0;
+    padding: 0.75rem 0 0.5rem;
   }
   .projects-item {
     display: flex;
     flex-direction: column;
     gap: 0;
   }
-
-  .projects-info .title {
-    margin-top: 1.13rem;
-    font-size: 1.25rem;
+  .projects-info {
+    top: 1.25rem;
+    left: 1.75rem;
+    right: 1.75rem;
   }
   .projects-info .date {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
     margin-top: 0.5rem;
   }
 }

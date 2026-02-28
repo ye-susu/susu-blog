@@ -108,7 +108,7 @@ const listShow = computed(() => {
 }
 .ariticles-hero {
   flex-shrink: 0;
-  width: 15rem;
+  width: 14.875rem;
   aspect-ratio: 16 / 9;
   border-radius: 0.5rem;
   background-color: #f6f6f6;
@@ -160,6 +160,7 @@ const listShow = computed(() => {
     margin-top: 0.5rem;
   }
   .ariticles-hero {
+    border-radius: 0.75rem;
     width: 100%;
   }
   .articles-item {
