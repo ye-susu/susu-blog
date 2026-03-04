@@ -1,4 +1,5 @@
 import { defineClientConfig } from '@vuepress/client'
+
 import AboutMe from './layouts/AboutMe.vue'
 import Layout from './layouts/Layout.vue'
 import ProjectList from './layouts/ProjectList.vue'
@@ -9,6 +10,7 @@ import ColorPalette from './components/ColorPalette.vue'
 import ArtList from './components/ArtList.vue'
 import ExperienceList from './components/ExperienceList.vue'
 import Footer from './components/Footer.vue'
+import FigmaEmbed from './components/FigmaEmbed.vue'
 
 export default defineClientConfig({
     layouts: {
@@ -22,5 +24,7 @@ export default defineClientConfig({
         app.component('ArtList', ArtList)
         app.component('ExperienceList', ExperienceList)
         app.component('Footer', Footer)
+        app.component('FigmaEmbed', FigmaEmbed)
+
     },
 })

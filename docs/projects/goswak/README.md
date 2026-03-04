@@ -243,11 +243,17 @@ heroImage: https://image.yesusu.top/PicGo/project-goswak-cover.png
 
 Goswak 是我参与的第一个国际化项目，期间我完成了竞品调研、风格设定、主要界面输出、组件库建立等工作。通过此项目使我获得了海外产品的设计经验，并输出了《多语言设计指南》，也为团队成员的工作提供参考。
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; aspect-ratio: 16 / 10.06; " src="https://embed.figma.com/deck/qFwMNOpHwiKYk8ZpRcOCBE/%E5%A4%9A%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97?node-id=1-1582&viewport=-204%2C-221%2C1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
+<FigmaEmbed 
+  iframeSrc="https://embed.figma.com/deck/qFwMNOpHwiKYk8ZpRcOCBE/%E5%A4%9A%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97?node-id=1-1582&viewport=-204%2C-221%2C1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share"
+  coverImg=https://image.yesusu.top/PicGo/ppt-cover-multilingual-design-guidelines.png
+  ratio="16 / 10.06" 
+/>
 
 <br>
 
-## 直接看 GoWask PPT 版
-
-<br>
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; aspect-ratio: 16 / 10.06; " src="https://embed.figma.com/deck/fT62OPUrnaxvEgbeGnfsBH/GoSwak---Online-group-buying?node-id=6-800&viewport=-82%2C-24%2C0.41&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
+## 直接看 PPT 版
+<FigmaEmbed 
+  iframeSrc="https://embed.figma.com/deck/fT62OPUrnaxvEgbeGnfsBH/GoSwak---Online-group-buying?node-id=6-800&viewport=-82%2C-24%2C0.41&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share"
+  coverImg=https://image.yesusu.top/PicGo/ppt-cover-project-goswak.png
+  ratio="16 / 10.06" 
+/>

@@ -18,7 +18,7 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
           <p>
             <a href="/projects/goswak/">Goswak</a>
             是我参与的第一个国际化项目，期间我完成了竞品调研、视觉风格设定、主要界面输出、设计规范建立等工作。通过此项目使我习得了海外产品的设计经验，并输出了<a
-              href="/blog/?cate=share#《多语言设计指南》"
+              href="/blog/share/index.html#multilingual-design-guidelines"
               >《多语言设计指南》</a
             >
             ，为团队成员的工作提供参考。
@@ -33,7 +33,7 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
             <a href="/projects/akulaku sa/">Akulaku SA</a>
             销售管理系统的设计工作，该项目拓展了我 B
             端产品的设计经验，期间输出了
-            <a href="/blog/?cate=share#《商户端竟品视觉调研》"
+            <a href="/blog/share/index.html#merchant-visual-research"
               >《商户端竟品视觉调研》</a
             >
             并向团队分享。
@@ -41,8 +41,8 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
           <p>
             24年完成了
             <a href="/projects/3.0 components/">UI 3.0 Flutter 组件库</a>
-            的搭建，此设计系统搭建之初旨在解决团队重复造轮子的问题，一套设计系统可供多项目使用。期间输出了<a
-              href="/blog/?cate=share#《UI 3.0 Flutter 组件库的设计思考》"
+            的搭建，此组件库搭建之初旨在解决团队重复造轮子的问题，一套设计系统可供多项目使用。期间输出了<a
+              href="/blog/share/index.html#ui-30-flutter-component-design"
               >《关于 UI 3.0 Flutter 组件库的设计思考》</a
             >
             ，并向团队分享。
@@ -83,7 +83,7 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
   margin-block-end: 0;
 }
 .content h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: normal;
   margin: 3rem 0 1.5rem;
   padding: 0;

@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import { computed } from "vue"; // ★ 修改点 2：删掉了没用到的 ref
+import { computed } from "vue";
 import { usePageData } from "@vuepress/client";
 import { useRouter, useRoute } from "vue-router";
 
@@ -28,10 +28,9 @@ const router = useRouter();
 const route = useRoute();
 
 const cateList = computed(() => {
-  return pageData.value.frontmatter.cates || []; //增加 || []
+  return pageData.value.frontmatter.cates || [];
 });
 
-// 新增计算属性 currentActiveCate
 const currentActiveCate = computed(() => {
   const queryCate = route.query.cate;
   if (queryCate) return queryCate;

@@ -80,8 +80,9 @@ heroImage: https://image.yesusu.top/PicGo/project-component-cover.png
 
 常规需求效率提升 **18.8%**。
 
-<br/>
-
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; aspect-ratio: 16 / 10.06; " src="https://embed.figma.com/design/TQwv7I7pKT3qQMdcQPYS7x/Components?node-id=414-5616&embed-host=share" allowfullscreen></iframe>
-
+<FigmaEmbed 
+  iframeSrc="https://embed.figma.com/design/TQwv7I7pKT3qQMdcQPYS7x/Components?node-id=414-5616&embed-host=share"
+  coverImg=https://image.yesusu.top/PicGo/ppt-cover-project-3.0-components.png
+  ratio="16 / 10.06" 
+/>
 
