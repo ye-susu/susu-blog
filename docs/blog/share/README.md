@@ -2,6 +2,13 @@
 title: 分享文稿
 sidebar: false
 ---
+<h5 id="apple-system-font-histroy">《苹果系统字体变迁史》</h5>
+<FigmaEmbed 
+  iframeSrc="https://embed.figma.com/deck/ClLhQWeNlsVi203M5eGVaL/%E8%8B%B9%E6%9E%9C%E7%B3%BB%E7%BB%9F%E5%AD%97%E4%BD%93%E5%8F%98%E8%BF%81%E5%8F%B2?node-id=1-1384&viewport=-178%2C-158%2C0.81&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share"
+  coverImg=https://image.yesusu.top/PicGo/ppt-cover-apple-system-font.png
+  ratio="16 / 10.06" 
+/>
+<br>
 <h5 id="multilingual-design-guidelines">《多语言设计指南》</h5>
 <FigmaEmbed 
   iframeSrc="https://embed.figma.com/deck/qFwMNOpHwiKYk8ZpRcOCBE/%E5%A4%9A%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97?node-id=1-1582&viewport=-204%2C-221%2C1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share"
@@ -20,6 +27,13 @@ sidebar: false
 <FigmaEmbed 
   iframeSrc="https://embed.figma.com/deck/4SR7QjOHUVflBhz4YZiYGS/UI-3.0-Flutter-%E7%BB%84%E4%BB%B6%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83?node-id=2-160&viewport=-140%2C-34%2C0.65&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share"
   coverImg=https://image.yesusu.top/PicGo/ppt-cover-3.0-flutter-component.png
+  ratio="16 / 10.06" 
+/>
+<br>
+<h5 id="western-typography">《西文字体排印的基础知识》</h5>
+<FigmaEmbed 
+  iframeSrc="https://embed.figma.com/deck/VO2S40XWAriQ6oDVwmP7mX/%E8%A5%BF%E6%96%87%E5%AD%97%E4%BD%93%E6%8E%92%E5%8D%B0%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86?node-id=1-95&viewport=-86%2C44%2C0.42&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share"
+  coverImg=https://image.yesusu.top/PicGo/ppt-cover-western-typography.png
   ratio="16 / 10.06" 
 />
 <br>
