@@ -13,7 +13,7 @@ cates:
       path: /blog/experience/experiencelist/
     - title: 分享稿件
       cate: share
-      count: 共 4 篇
+      count: 共 6 篇
       path: /blog/share/
 ---
 <ArtCatePage/>
