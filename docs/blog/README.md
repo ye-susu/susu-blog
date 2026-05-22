@@ -9,7 +9,7 @@ cates:
       path: /blog/article/articlelist/
     - title: 经验总结
       cate: experience
-      count: 共 2 篇
+      count: 共 1 篇
       path: /blog/experience/experiencelist/
     - title: 分享稿件
       cate: share

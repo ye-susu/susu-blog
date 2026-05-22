@@ -3,6 +3,15 @@ import { useBlogType } from "@vuepress/plugin-blog/client";
 import { usePageFrontmatter } from "vuepress/client";
 
 const experArt = useBlogType("experience");
+
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+
+  return `${year}-${month}-${day}`;
+};
 </script>
 <template>
   <div class="experArt-list">
@@ -23,13 +32,14 @@ const experArt = useBlogType("experience");
 
           <p v-if="info.date" class="date">
             发布于
-            {{
+            {{ formatDate(info.date) }}
+            <!-- {{
               new Date(info.date).toLocaleDateString("zh-CN", {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
               })
-            }}
+            }} -->
           </p>
           <p v-if="info.excerpt" class="excerpt" v-html="info.excerpt" />
         </div>

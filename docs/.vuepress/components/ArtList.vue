@@ -22,6 +22,15 @@ const listShow = computed(() => {
   const listContent = blogData.value.items;
   return props.homeShow ? listContent.slice(0, 3) : listContent;
 });
+
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+
+  return `${year}-${month}-${day}`;
+};
 </script>
 
 <template>
@@ -54,13 +63,14 @@ const listShow = computed(() => {
 
           <p v-if="info.date" class="date">
             发布于
-            {{
+            {{ formatDate(info.date) }}
+            <!-- {{
               new Date(info.date).toLocaleDateString("zh-CN", {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
               })
-            }}
+            }} -->
           </p>
           <p v-if="info.excerpt" class="excerpt" v-html="info.excerpt" />
         </div>

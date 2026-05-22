@@ -1,6 +1,6 @@
 ---
 title: 为什么欧美的产品设计很简约？
-description: 本文会先介绍这种“简约”的设计是如何产生的，然后结合国内外情况，从审美、商业、文字角度来回答这个问题。
+description: 本文将从审美、商业、文字角度来回答这个问题。
 date: 2026-04-13
 heroImage: https://image.yesusu.top/PicGo/art-cover-minimalist-design.png
 ---
