@@ -1,11 +1,14 @@
 <script setup>
+import { ClientOnly } from "@vuepress/client";
 import ProjectList from "../layouts/ProjectList.vue";
 </script>
   
 <template>
   <div class="home">
     <div class="hero-image">
-      <img src="https://image.yesusu.top/PicGo/homeHero2.png" alt="heroImage" />
+      <ClientOnly>
+        <LottieHero src="/lottie/home-hero.lottie" />
+      </ClientOnly>
     </div>
     <ArtList :homeShow="true" listTitle="文章" moreLink="/blog/?cate=art" />
 
@@ -28,10 +31,9 @@ import ProjectList from "../layouts/ProjectList.vue";
 }
 .hero-image {
   margin-bottom: 4.5rem;
-  aspect-ratio: 1.94 / 1;
+  aspect-ratio: 1.9 / 1;
   text-align: center;
-  border-radius: 0.75rem;
-  border: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
   overflow: hidden;
 }
 .hero-image img {
@@ -42,7 +44,8 @@ import ProjectList from "../layouts/ProjectList.vue";
     padding: 5rem 1.25rem 0;
   }
   .hero-image {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    aspect-ratio: 1.3 / 1;
   }
   .hero-image img {
     width: 100%;

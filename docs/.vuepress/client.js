@@ -11,6 +11,7 @@ import ArtList from './components/ArtList.vue'
 import ExperienceList from './components/ExperienceList.vue'
 import Footer from './components/Footer.vue'
 import FigmaEmbed from './components/FigmaEmbed.vue'
+import LottieHero from './components/LottieHero.vue'
 
 export default defineClientConfig({
     layouts: {
@@ -25,6 +26,7 @@ export default defineClientConfig({
         app.component('ExperienceList', ExperienceList)
         app.component('Footer', Footer)
         app.component('FigmaEmbed', FigmaEmbed)
+        app.component('LottieHero', LottieHero)
 
     },
 })

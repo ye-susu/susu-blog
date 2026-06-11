@@ -175,7 +175,7 @@ const formatDate = (dateString) => {
     margin: 4rem 0 1.25rem;
   }
   .scene-home {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
   .projects-container.with-padding {
     padding-left: 1.25rem;
