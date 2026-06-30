@@ -105,6 +105,9 @@ const formatDate = (dateString) => {
 .list-header {
   display: flex;
   justify-content: space-between;
+  margin-top:5rem;
+  margin-bottom:0.25rem
+  
 }
 .list-title {
   border: none;
@@ -182,7 +185,7 @@ const formatDate = (dateString) => {
     padding-right: 1.25rem;
   }
   .list-header {
-    margin-bottom: 0;
+    margin-top:3rem;
   }
   .list-title {
     font-size: 1.375rem;

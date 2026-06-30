@@ -90,7 +90,7 @@ const formatDate = (dateString) => {
 
 <style scoped>
 .list-header {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
 }
@@ -150,7 +150,7 @@ const formatDate = (dateString) => {
 }
 @media (max-width: 720px) {
   .list-header {
-    margin-bottom: 0;
+    margin-bottom: 0.25rem;
   }
   .list-title {
     font-size: 1.375rem;

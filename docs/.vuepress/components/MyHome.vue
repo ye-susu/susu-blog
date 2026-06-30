@@ -30,7 +30,7 @@ import ProjectList from "../layouts/ProjectList.vue";
   margin: 0 auto;
 }
 .hero-image {
-  margin-bottom: 4.5rem;
+  margin-bottom: 5rem;
   aspect-ratio: 1.9 / 1;
   text-align: center;
   border-bottom: 1px solid #f0f0f0;
@@ -44,7 +44,7 @@ import ProjectList from "../layouts/ProjectList.vue";
     padding: 5rem 1.25rem 0;
   }
   .hero-image {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     aspect-ratio: 1.3 / 1;
   }
   .hero-image img {
