@@ -15,6 +15,9 @@ export default defineUserConfig({
         colorModeSwitch: false,
         lastUpdated: false,
         contributors: false,
+        themePlugins: {
+            mediumZoom: false,
+          },
         navbar: [
             {
                 text: "博客",

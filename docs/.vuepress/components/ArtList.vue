@@ -110,7 +110,7 @@ const formatDate = (dateString) => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 0;
+  padding: 1.125rem 0;
   cursor: pointer;
 }
 .articles-item:last-child {
@@ -144,6 +144,7 @@ const formatDate = (dateString) => {
 .articles-info .description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   -webkit-line-clamp: 2; /* 限制最多显示 2 行 */
   overflow: hidden; /* 必须设置为 hidden */
   text-overflow: ellipsis;
