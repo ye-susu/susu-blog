@@ -171,33 +171,33 @@ heroImage: https://image.yesusu.top/PicGo/project-goswak-cover.png
 
 **字体排印：** 使用系统字体，定义合适的字母间距与行高。
 
-![](https://image.yesusu.top/PicGo/GoSwak-01.png)
+![|1920x1080](https://image.yesusu.top/PicGo/GoSwak-01.png)
 
 **图标：** 运营图标-造型风格统一 / 表意清晰易用。功能图标-跟随品牌调性 / 线性断点处理。
 
-![](https://image.yesusu.top/PicGo/GoSwak-02.png)
+![|1920x840](https://image.yesusu.top/PicGo/GoSwak-02.png)
 
 #### 2. 多语言设计
 
 **布局选择：** ✅ 通栏布局、✅ 自适应布局、✅ 纵向布局
 
-![](https://image.yesusu.top/PicGo/GoSwak-03.png)
+![|1920x1080](https://image.yesusu.top/PicGo/GoSwak-03.png)
 
 **文本处理：** 1️⃣ 优先精简翻译、2️⃣ 不影响语义情况下...显示、3️⃣ 使用动态字号
 
-![](https://image.yesusu.top/PicGo/GoSwak-04.png)
+![|1920x1080](https://image.yesusu.top/PicGo/GoSwak-04.png)
 
 #### 3. 差异化设计
 
 对于不同玩法，活动首页和商详腰带进行了不同的色彩处理，帮助用户提升视觉记忆，打造用户心智。
 
-![](https://image.yesusu.top/PicGo/GoSwak-05.png)
+![|1920x1080](https://image.yesusu.top/PicGo/GoSwak-05.png)
 
 #### 4. 缺醒页插画
 
 缺醒页插画使用了年轻女性形象，契合目标用户，可提升产品好感度。
 
-![](https://image.yesusu.top/PicGo/GoSwak-06.png)
+![|1920x1080](https://image.yesusu.top/PicGo/GoSwak-06.png)
 
 ## 提升本地化设计
 
@@ -223,7 +223,7 @@ heroImage: https://image.yesusu.top/PicGo/project-goswak-cover.png
 
 3. **强化利益点** - 对于不熟悉玩法的用户，“免费领取”最能激发用户欲望，除此之外重点突出PO价格。
 
-![](https://image.yesusu.top/PicGo/GoSwak-07.png)
+![|1920x1080](https://image.yesusu.top/PicGo/GoSwak-07.png)
 
 ## 建立组件库提升效率
 
@@ -231,11 +231,11 @@ heroImage: https://image.yesusu.top/PicGo/project-goswak-cover.png
 
 1. **构建组件** - 不同场景对组件类型和样式有不同要求，构建组件前我们梳理了可能的场景，确保组件满足使用。
 
-![](https://image.yesusu.top/PicGo/GoSwak-08.png)
+![|1920x1080](https://image.yesusu.top/PicGo/GoSwak-08.png)
 
 2. **说明文档** - 说明文档包含组件定义、属性说明、编号样式及使用规范，助力设计师快速了解，正确使用组件库。
 
-![](https://image.yesusu.top/PicGo/GoSwak-09.png)
+![|1920x1080](https://image.yesusu.top/PicGo/GoSwak-09.png)
 
 3. **协同方式** - 为解决与开发的协同问题，我们枚举了组件的所有样式，并为其编写了唯一编号。开发只需按照设计师的标注调用编号即可。
 

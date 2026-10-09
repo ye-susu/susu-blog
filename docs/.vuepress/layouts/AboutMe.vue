@@ -5,12 +5,12 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
 <template>
   <ParentLayout>
     <template #page>
-      <div class="about-container">
+      <main class="about-container">
         <div class="portrait">
           <img src="/images/portrait.webp" alt="portrait" />
         </div>
         <div class="content">
-          <h2>关于我</h2>
+          <h1>关于我</h1>
           <p>
             Hi，我是<span>耶稣稣</span>，呆过设计公司，混过企业。目前从事海外金融及电商的设计工作，具有设计系统搭建、产品改版升级、国际化项目的设计经验。
           </p>
@@ -18,9 +18,7 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
           <p>
             <a href="/projects/goswak/">Goswak</a>
             是我参与的第一个国际化项目，期间我完成了竞品调研、视觉风格设定、主要界面输出、设计规范建立等工作。通过此项目使我习得了海外产品的设计经验，并输出了<a
-              href="/blog/share/index.html#multilingual-design-guidelines"
-              >《多语言设计指南》</a
-            >
+              href="/blog/share/index.html#multilingual-design-guidelines">《多语言设计指南》</a>
             ，为团队成员的工作提供参考。
           </p>
           <p>
@@ -33,18 +31,14 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
             <a href="/projects/akulaku sa/">Akulaku SA</a>
             销售管理系统的设计工作，该项目拓展了我 B
             端产品的设计经验，期间输出了
-            <a href="/blog/share/index.html#merchant-visual-research"
-              >《商户端竟品视觉调研》</a
-            >
+            <a href="/blog/share/index.html#merchant-visual-research">《商户端竟品视觉调研》</a>
             并向团队分享。
           </p>
           <p>
             24年完成了
             <a href="/projects/3.0 components/">UI 3.0 Flutter 组件库</a>
             的搭建，此组件库搭建之初旨在解决团队重复造轮子的问题，一套设计系统可供多项目使用。期间输出了<a
-              href="/blog/share/index.html#ui-30-flutter-component-design"
-              >《关于 UI 3.0 Flutter 组件库的设计思考》</a
-            >
+              href="/blog/share/index.html#ui-30-flutter-component-design">《关于 UI 3.0 Flutter 组件库的设计思考》</a>
             ，并向团队分享。
           </p>
           <h2>联系方式</h2>
@@ -53,7 +47,7 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
           <p><span>X：</span>@Yesusu6</p>
         </div>
         <Footer />
-      </div>
+      </main>
     </template>
   </ParentLayout>
 </template>
@@ -76,61 +70,84 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
   display: block;
   width: 10rem;
 }
+
+.content h1,
 .content h2,
 .content p {
   border: 0;
   margin-block-start: 0;
   margin-block-end: 0;
 }
+
 .content h2 {
   font-size: 1.75rem;
   line-height: normal;
   margin: 3rem 0 1.5rem;
   padding: 0;
 }
+
+.content h1,
+.content h2 {
+  font-size: 1.75rem;
+  line-height: normal;
+  margin: 3rem 0 1.5rem;
+  padding: 0;
+}
+
 .content p {
   font-size: 1rem;
   line-height: 1.75rem;
   margin-bottom: 1.75rem;
   text-align: justify;
 }
+
 .content p:nth-last-child(-n + 3) {
   margin: 0;
 }
+
 .content a,
 .content span {
   font-weight: 600;
 }
+
 .content a {
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1.5px;
 }
+
 @media (max-width: 720px) {
   .about-container {
     padding-top: 6rem;
     padding-bottom: 1.25rem;
   }
+
   .portrait {
     width: 8rem;
   }
+
   .portrait img {
     width: 8rem;
     margin: 0;
   }
+
   .content {
     padding-bottom: 1rem;
   }
+
+  .content h1,
   .content h2 {
     font-size: 1.625rem;
     margin: 2.5rem 0 0.825rem;
   }
+
   .content p {
     font-size: 0.9375rem;
     line-height: 1.625rem;
     margin-bottom: 1.5rem;
     text-align: left;
   }
+
   .content a {
     text-decoration-thickness: 1px;
   }

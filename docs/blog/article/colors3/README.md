@@ -11,7 +11,7 @@ heroImage: https://image.yesusu.top/PicGo/art-cover-color-practice.png
 #### 项目背景
 21 年我司进行业务调整，原保险业务从当前产品中独立出去，作为一家全新平台为印尼用户提供保险选购及理赔服务，为此我们提供了新的产品设计和配色。
 
-![](https://image.yesusu.top/PicGo/color3-02.webp)
+![|1200x720](https://image.yesusu.top/PicGo/color3-02.webp)
 
 ### 一、定义主色
 #### 1. 选择色相
@@ -20,33 +20,33 @@ heroImage: https://image.yesusu.top/PicGo/art-cover-color-practice.png
 #### 2. 确定色调
 明确了主色色相，但同一色相会有冷暖、深浅之别，给到用户的心里感受也略有差异。具体到本次项目中，暖绿有温暖、活泼、欢快的感觉，冷绿则带给用户冷静、平和的情绪。对于本次项目，冷绿更加符合产品定位。
 
-![](https://image.yesusu.top/PicGo/color3-03.png)
+![|1200x720](https://image.yesusu.top/PicGo/color3-03.png)
 
 #### 3. 调整饱和度、明度
 饱和度控制色彩的艳丽程度，明度控制色彩的明暗变化，这两项参数直接影响色彩的最终效果，所以需要同步交替调整，直到选出最合适的。考虑到主色常用于按钮或重要文本，所以需要注意色彩的对比度，确保文本在界面中的可读性。在本次项目中，“绿色”本身属于对比度较小的颜色，为了获得合适的对比度，需要调整更大的饱和度和更低的明度。经调整之后，我们测试了色彩的对比度为 3:1，满足 W3C 中给到的色彩对比度建议。
 
-![](https://image.yesusu.top/PicGo/color3-04.webp)
+![|1200x720](https://image.yesusu.top/PicGo/color3-04.webp)
 
 ### 二、推导辅助色
 #### 1. 匹配色相
 根据辅助色定义，我们匹配到了不同色相的辅助色，但并不是所有颜色都是我们需要的，需要根据经验做出一定删减。如同类色中的两个绿色，色相上与主色过于接近，使用过程中会造成视觉混淆，所以我们剔除这组颜色。再如中差色与对比色中都有黄色，为了与橙色区分更加明显，我们删除对比色中的黄色。经过一系列删减后，留下来的便是我们需要的色彩。此时也可以对色相进一步调整，如类似色中的蓝色偏向湖蓝，为了尽量和主色拉开差别，我们选择色相向右偏移。
 
-![](https://image.yesusu.top/PicGo/color3-05.png)
+![|1200x720](https://image.yesusu.top/PicGo/color3-05.png)
 
 #### 2. 视觉感官校准
 以上色彩只确定了色相，没有进行饱和度、明度调整，视觉上并不属于同一层级。为了获取更加统一的配色，需要对其进行调整，这一过程被称为视觉感官校准。如何校准？有人通过给色彩叠加黑色，对比色彩亮度进行校准。但不同颜色本身亮度不同，强行调整一致会导致部分颜色失衡。所以此种方法可作为参考，但不具备太大可靠性，实际工作中还需依靠自身经验进行调整，确保视觉上和谐统一。以下为完成校准后的配色。
 
-![](https://image.yesusu.top/PicGo/color3-06.png)
+![|1200x720](https://image.yesusu.top/PicGo/color3-06.png)
 
 ### 三、推导中性色
 第二章提到中性色可通过调整明度或透明度得到，本项目使用场景比较固定，所以决定调整明度来得到中性色。考虑到主色为“冷绿”，与偏蓝的中性色搭配可保证色彩调性一致，于是我们取蓝色色相值，调整饱合度获得最终色彩。需要注意的是随中性色明度依次降低，饱和度需要逐级增加。最后确保主要用色符合无障碍设计指南，我们对一级、二级、三级文字用色进行了对比度测试，符合无障碍设计要求。
 
-![](https://image.yesusu.top/PicGo/color3-07.png)
+![|1200x720](https://image.yesusu.top/PicGo/color3-07.png)
 
 ### 四、生成梯度色板
 梯度色板可以提供更多配色，覆盖更多使用场景，避免后续新增颜色的烦恼。早期为了获得梯度色板需要设计师利用公式计算，现在可以直接使用在线工具生成。如 [Ant design](https://ant.design/docs/spec/colors)的色板生成工具，[Material design](https://materialpalettes.com/) 的色板生成工具，[Eva Design System](https://colors.eva.design/) 的色版生成工具。由于不同平台算法不同，生成的色版效果也存在差异，这里首推 Ant design，对比其他平台色相变化更丰富、颜色更均匀、色阶也更明确。
 
-![](https://image.yesusu.top/PicGo/color3-08.webp)
+![|1200x720](https://image.yesusu.top/PicGo/color3-08.webp)
 
 ### 五、建立色彩系统
 #### 1. 如何理解色彩系统？
@@ -66,7 +66,7 @@ heroImage: https://image.yesusu.top/PicGo/art-cover-color-practice.png
 
 按照两位作者的观点，笔者对本次色彩系统进行了 design token 命名，如下所示：
 
-![](https://image.yesusu.top/PicGo/color3-11.png)
+![|1200x552](https://image.yesusu.top/PicGo/color3-11.png)
 
 ②建立样式库
 
@@ -74,15 +74,15 @@ heroImage: https://image.yesusu.top/PicGo/art-cover-color-practice.png
 
 local style：figma 支持将色彩定义为全局样式，并对样式进行命名。设计在调用样式后，开发便可以在查看面板看到对应 token，基本实现了样式库的作用。但 local style 不支持 token 的层级嵌套，只能实现单层级 token。如果你的项目刚好使用了单层级 token，那么建议你使用此功能。
 
-![](https://image.yesusu.top/PicGo/color3-12.webp)
+![|1200x720](https://image.yesusu.top/PicGo/color3-12.webp)
 
 local variables：在今年 6 月份的 config 大会中，figma 发布了变量功能，虽然 CEO Dylan Field 先生说不会推出 design tokens，但变量功能却完美实现了 token 的作用。它支持将色彩定义为变量，且可以实现层级嵌套，开发在查看面板也可以方便的看到变量名称，算是解决了 figma 在 design token 方面的缺陷。
 
-![](https://image.yesusu.top/PicGo/color3-13.png)
+![|1200x720](https://image.yesusu.top/PicGo/color3-13.png)
 
 Figma token：一款定义 design token 的插件，且支持 token 的层级嵌套。开发查看 token 名称目前有两种方式：1.可在 Figma token 的 inspect 面板进行查看，但插件需要在编辑模式下使用，意味着你需要给到开发编辑权限，这无疑会增加团队成本。2.插件支持将 token 转化为 figma 样式和变量，并保持当前的 token 名称，此时开发可以在 figma 的 inspect 面板查看 token，建议使用此种方式，经济实惠。
 
-![](https://image.yesusu.top/PicGo/color3-14.png)
+![|1200x720](https://image.yesusu.top/PicGo/color3-14.png)
 
 ③输出说明文档及团队推进
 

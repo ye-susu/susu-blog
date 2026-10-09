@@ -1,15 +1,12 @@
 <template>
   <div>
     <ul class="cate-list">
-      <li v-for="item in cateList" :key="item.id">
-        <div
-          class="cate-list-item"
-          :class="{ active: activeCate === item.cate }"
-          @click="goCate(item.cate)"
-        >
+      <li v-for="item in cateList" :key="item.cate">
+        <button type="button" class="cate-list-item" :class="{ active: activeCate === item.cate }"
+          :aria-pressed="activeCate === item.cate" @click="goCate(item.cate)">
           <span class="title">{{ item.title }}</span>
           <span class="count">{{ item.count }}</span>
-        </div>
+        </button>
       </li>
     </ul>
   </div>
@@ -19,60 +16,77 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { usePageData } from "@vuepress/client";
 import { useRouter, useRoute } from "vue-router";
+import { useBlogType } from "@vuepress/plugin-blog/client";
+import { shareItems } from "../data/shareItems.js";
 
 const pageData = usePageData();
 const router = useRouter();
 const route = useRoute();
+const articles = useBlogType("blog");
+const experiences = useBlogType("experience");
 
 const cateList = computed(() => {
-  return pageData.value.frontmatter.cates || [];
+  const counts = {
+    art: articles.value.items.length,
+    experience: experiences.value.items.length,
+    share: shareItems.length,
+  };
+
+  return (pageData.value.frontmatter.cates || []).map((item) => ({
+    ...item,
+    count:
+      counts[item.cate] !== undefined
+        ? `共 ${counts[item.cate]} 篇`
+        : item.count,
+  }));
 });
 
-// 1. 将计算属性改为响应式变量 ref
-// 初始值给一个空或者服务器端一致的默认值
-const activeCate = ref("");
+// 保持静态 HTML 与客户端首次渲染一致
+const mounted = ref(false);
 
-// 2. 在挂载后获取真正的 URL 参数
 onMounted(() => {
-  const queryCate = route.query.cate;
-  if (queryCate) {
-    activeCate.value = queryCate;
-  } else if (cateList.value.length > 0) {
-    activeCate.value = cateList.value[0].cate;
-  }
+  mounted.value = true;
 });
 
-// 3. 监听路由变化，确保点击后不仅 URL 变了，变量也跟着变
-watch(
-  () => route.query.cate,
-  (newCate) => {
-    if (newCate) {
-      activeCate.value = newCate;
-    }
-  }
-);
+// 选中分类只由 URL 决定
+const activeCate = computed(() => {
+  const defaultCate = cateList.value[0]?.cate || "";
 
+  // 构建静态 HTML、客户端首次渲染时，都显示默认分类
+  if (!mounted.value) return defaultCate;
+
+  // 挂载后，再根据 URL 切换到指定分类
+  const queryCate = route.query.cate;
+  const isValid =
+    typeof queryCate === "string" &&
+    cateList.value.some((item) => item.cate === queryCate);
+
+  return isValid ? queryCate : defaultCate;
+});
+
+// 点击时只更新 URL，不再直接修改 activeCate
 const goCate = (cate) => {
-  // 立即更新本地状态，提升响应速度
-  activeCate.value = cate;
+  if (!cateList.value.some((item) => item.cate === cate)) return;
+  if (route.query.cate === cate) return;
+
   router.push({
     path: pageData.value.path,
-    query: { cate },
+    query: { ...route.query, cate },
   });
 };
 
 const listPath = computed(() => {
-  // 如果 activeCate 还没初始化（SSR阶段），先不计算路径
   if (!activeCate.value) return "";
 
-  const currentPath = pageData.value.path;
   const cateItem = cateList.value.find(
-    (item) => item.cate === activeCate.value && item.path !== currentPath
+    (item) => item.cate === activeCate.value
   );
-  return cateItem?.path || "";
+
+  const path = cateItem?.path || "";
+  return path === pageData.value.path ? "" : path;
 });
 </script>
 
@@ -83,10 +97,12 @@ const listPath = computed(() => {
   gap: 1.25rem;
   padding: 0;
 }
+
 .cate-list li {
   list-style: none;
   width: 100%;
 }
+
 .cate-list-item {
   cursor: pointer;
   border-radius: 0.5rem;
@@ -96,25 +112,36 @@ const listPath = computed(() => {
   flex-direction: column;
   border: 1px solid #e9e9eb;
   box-sizing: border-box;
+  width: 100%;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
 }
+
 .cate-list-item.active {
   border-color: #3c3c45;
 }
+
 .title {
   font-size: 1.125rem;
   font-weight: bold;
 }
+
 @media (max-width: 720px) {
   .cate-list {
     gap: 0.75rem;
     margin-bottom: 1rem;
   }
+
   .title {
     font-size: 1rem;
   }
+
   .count {
     font-size: 0.875rem;
   }
+
   .cate-list-item {
     padding: 0.75rem 1rem;
   }

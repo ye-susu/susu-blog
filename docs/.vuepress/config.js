@@ -10,6 +10,9 @@ import { sitemapPlugin } from '@vuepress/plugin-sitemap'
 import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
 
 export default defineUserConfig({
+    // 开发服务只允许本机访问，避免暴露到局域网。
+    host: '127.0.0.1',
+    shouldPrefetch: (file) => !file.includes("LottieHero-"),
     bundler: viteBundler(),
     theme: defaultTheme({
         colorModeSwitch: false,
@@ -51,6 +54,7 @@ export default defineUserConfig({
     ],
     // replace components
     alias: {
+        '@share-items': path.resolve(__dirname, './data/shareItems.js'),
         '@theme/VPHome.vue': path.resolve(
             __dirname,
             './components/MyHome.vue',
@@ -79,8 +83,7 @@ export default defineUserConfig({
                         filePathRelative !== 'blog/article/README.md'
                         &&
                         filePathRelative !== 'blog/article/articlelist/README.md',
-                    path: '/blog/article/',
-                    layout: 'ArtList',
+                        path: false,
                     sorter: (pageA, pageB) => {
                         const dateA = new Date(pageA.frontmatter.date || 0);
                         const dateB = new Date(pageB.frontmatter.date || 0);
@@ -93,8 +96,7 @@ export default defineUserConfig({
                         filePathRelative !== 'blog/experience/README.md'
                         &&
                         filePathRelative !== 'blog/experience/experiencelist/README.md',
-                    path: '/blog/experience/',
-                    layout: 'ExperienceList',
+                        path: false,
                     sorter: (pageA, pageB) => {
                         const dateA = new Date(pageA.frontmatter.date || 0);
                         const dateB = new Date(pageB.frontmatter.date || 0);
@@ -131,6 +133,7 @@ export default defineUserConfig({
 
         markdownImagePlugin({
             lazyload: true,
+            obsidianSize: true,
         }),
 
         seoPlugin({
@@ -144,7 +147,6 @@ export default defineUserConfig({
 
         sitemapPlugin({
             hostname: 'https://yesusu.top',
-            extraUrls: ['/projects/', '/blog/article/', '/blog/experience/']
         })
     ],
     extendsPageOptions: (page) => {

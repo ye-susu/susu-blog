@@ -15,18 +15,18 @@ heroImage: https://image.yesusu.top/PicGo/art-cover-system-font.png
 
 “System”字重较粗，系统只包含了 12 Point 字号。这款字体给到用户最深刻的印象就是 W 和 V 的设计，一般字体 W 和 V 的两侧笔画都是倾斜的，但 System 却打破了常规，左侧笔画完全成垂直，右侧笔画则使用了更大的斜度。这款字体后期释出了 True Type 版本，也有了正式名称，被称为“Twiggy”。设计上保留了原始位图版本的像素感，独特的复古风格很容易让人想起早期计算机时代。
 
-![](https://image.yesusu.top/PicGo/systemfonts-02.png)
+![|800x450](https://image.yesusu.top/PicGo/systemfonts-02.png)
 
 “Icon Name”系统只提供了 9 Point 字号。不同时期小写字母的字形有较大差异，如 Lisa OS1.0、2.0 时期小写字母“i”“j”“l”是带有衬线的，而到了 3.0 时期却拿掉了衬线。再如 1.0、2.0 时期的小写字母“p”“b”笔画更加几何化，而到了 3.0 时期却更具书法特征，左右笔画连接处各增加了一处缺口，还原了常规“p”“b”的字形特征，类似的还有小写字母“m”“n”等。
 
-![](https://image.yesusu.top/PicGo/systemfonts-03.png)
+![|800x450](https://image.yesusu.top/PicGo/systemfonts-03.png)
 
 ## 二、早期经典 Chicago 和 Geneva
 Apple Lisa 面世的第二年，乔布斯发布了苹果早期历史上最重要的计算机 [Macintosh](https://zh.wikipedia.org/wiki/%E9%BA%A5%E9%87%91%E5%A1%94)，搭载了 [System 1](https://guidebookgallery.org/screenshots/macos11) 操作系统。同 Apple Lisa 一样用户界面使用了两种字体，分别是用于系统菜单、窗口标题、对话框等场景的 [Chicago](https://www.typeroom.eu/assets/original/2022/06/29/apple%20fonts%209.jpeg) 和用于图标名称的 [Geneva](https://image.yesusu.top/PicGo/system%20fonts-geneva.png)。
 
 Chicago 是第一款为 Macintosh 开发的字体，具有较粗的字重，系统只包含了 12 Point 字号。整体字形采用横平竖直的结构，减少了倾斜笔画的使用，如大写字母“A”“W”“X”倾斜的笔画完全被设计成垂直的。以今天的眼光来看，Chicago 并不算一款易读性高的字体，但早期系统字体除了传递信息外，还承担着品牌塑造的作用，所以在这种语境下 Chicago 是适用的。后来这款字体还被用在 iPod 的用户界面上，不过这都是 2000 年后的事情了，当时还引起了不少 Macintosh 用户的缅怀。
 
-![](https://image.yesusu.top/PicGo/systemfonts-04.png)
+![|800x450](https://image.yesusu.top/PicGo/systemfonts-04.png)
 
 Geneva 的设计灵感来自 Helvetica，属于新异风无衬线体。当时系统提供了四种字号，9 Point、12 Point、18 Point 和 24 Point，9Point 应用于图标名称。Geneva 与 Apple Lisa 的 Icon Name 一样，小写字母“i”“j”“l”等带有衬线。字母“y”则同 Chicago 一样采用了垂直的笔画设计，大写字母“M”的中心顶点偏高，数字“3”的顶部是水平的。
 
@@ -36,11 +36,11 @@ Geneva 的设计灵感来自 Helvetica，属于新异风无衬线体。当时系
 
 至 80 年代末位图版 Chicago 已在 Mac 系统上运行多年，给用户留下了深刻的印象，这款字体也早已成为系统的重要标志，所以设计之初苹果提出的诉求是希望可以尽量还原位图版 Chicago 的字形，太大的字形变化可能会导致 Mac 系统外观发生改变。位图版字体无法使用曲线，只有像素状锯齿，转换轮廓字体如何处理曲线是最大的难点。设计师调研之后发现早期位图字体打印时，打开“文本平滑选项”就可以得到平滑后类似圆形的效果。Truetype 版 Chicago 在设计时参考了这种特征，将笔画拐角处的曲线处理成四分之一正圆，将字怀内部的曲线处理成二分之一正圆，整个造型有种罗马石柱与拱门的感觉。除此之外还在字形上增加了一些其它细节，如小写字母“m”“n”“h”等，在竖画与拱形笔画连接处增加了一处缺口，这个缺口可以帮助用户更好的区分“n”和“o”的顶部造形，提升字体的识别性。
 
-![](https://image.yesusu.top/PicGo/systemfonts-05.png)
+![|800x450](https://image.yesusu.top/PicGo/systemfonts-05.png)
 
 上文说到 Geneva 是一款新异风无衬线体，Truetype 版在设计上也遵循了这一风格特征。字符宽度略微收窄，笔画粗细更加统一，大写字母更加几何化。除此之外，Truetype 版 Geneva 也有一些自身特征，如字怀开口对比一般新异风体会更加开放，字母“m”“n”“h”的笔画连接处有更深的切口，这些都使它具有更好的易读性。还有重要的一点 Truetype 版本拿掉了小写字母“i”“j”“l”的衬线，小写字母“y”也变成了倾斜的笔画。作为系统字体 Geneva 的使用时间久于 Chicago，大约 16 年左右，在这期间备受用户好评，这款字体至今依旧内置在 Mac OS 系统中。
 
-![](https://image.yesusu.top/PicGo/systemfonts-06.png)
+![|800x450](https://image.yesusu.top/PicGo/systemfonts-06.png)
 
 ## 三、曾经的备胎 Espy Sans
 [Espy Sans](https://lowendmac.com/wp-content/uploads/espy-sans.png) 最初是作为 [Apple Newton](https://en.wikipedia.org/wiki/Newton_OS) 的系统字体开发的，期间也被用于苹果的在线服务 eWorld。之所以说 Espy Sans 是备胎，是因为苹果也有考虑将 Espy Sans 作为 Mac OS 的系统字体，用来代替 Chicago，并且在后续的版本 System 7.5 中内置了这款字体。时间来到 1997 年，苹果发布了新版系统 Mac OS 8.0，但新系统字体却并不是 Espy Sans。为此网络上还出现了一份请愿书吸引了将近 2,500 名支持者，希望可以扭转苹果的决定，但苹果明确表示不会在 Mac os 8.0 中使用 Espy Sans。
@@ -61,13 +61,13 @@ Lucida Grande 是变体 Lucida Sans 的修改版本，是为专门 MacOS 定制�
 
 2. **开放的字怀**：早期大颗粒显示屏在渲染字体时，尤其是小字号会出现像素溢出的问题，这时候对于字怀开口较小的字体会产生笔画黏连，导致部分字母识别不清。如字母“C”与字母“O”，字母“S”与数字“8”，为了解决这些问题 Lucida Grande 在设计时采用了更加开放的字怀。
 
-![](https://image.yesusu.top/PicGo/systemfonts-07.png)
+![|800x450](https://image.yesusu.top/PicGo/systemfonts-07.png)
 
 3. **宽松的字母间距**：同样的像素溢出问题，在多文本显示下字母更容易黏连在一起，为了提升易读性，此时需要更加宽松的字母间距，Lucida Grande 在设计时考虑到了这一点，提供了大于多数现代字体的默认字母间距。
 
 4. **其他细节处理**：除了以上主要特征外，Lucida Grande 还有一些其它细节上的处理。如加深了小写字母“m”“n”“h”等笔画连接处的切口，使用了更加易读的单宫“g”，而非人文主义体的双宫“g”，增高了大写字母的上行线，以更好的区分大写字母“I”和小写字母“l”等等。
 
-![](https://image.yesusu.top/PicGo/systemfonts-08.png)
+![|800x450](https://image.yesusu.top/PicGo/systemfonts-08.png)
 
 Lucida Grande 从 Mac OS X 开发者预览版 3 到 OS X Mavericks 一共服役了 16 年，在这期间受到了用户的大量好评，最为大家津津乐道的就是其易读性。
 
@@ -93,11 +93,11 @@ Helvetica Neue 对比 Helvetica 主要做了以下优化：
 
 1. **增强易读性**：Helvetica Neue 增加了文本默认行高，在多文本显示下不会过于拥挤，更加清晰易读。并加宽了部分字母宽度，以增强字母的辨识度，如大写字母“M”，小写字母“t”“f”等。
 
-![](https://image.yesusu.top/PicGo/systemfonts-09.png)
+![|800x450](https://image.yesusu.top/PicGo/systemfonts-09.png)
 
 2. **改善字形**：在 Helvetica 中随着字重增加，X 字高和大写字母高度都有明显的变化，Helvetica Neue 中优化了这点，不同字重下 X 字高和大写字母保持了相同的高度，确保了整体字形的一致。
 
-![](https://image.yesusu.top/PicGo/systemfonts-10.png)
+![|800x450](https://image.yesusu.top/PicGo/systemfonts-10.png)
 
 3. **提升易用性**：通过对比基础家族可以发现 Helvetica Neue 增加了很多字重，加上其他变体共有 59 种样式，而 Helvetica 只有 36 种。新增的样式可以满足更多使用场景，为字体排印提供更多视觉效果。
 
@@ -110,11 +110,11 @@ Helvetica Neue 对比 Helvetica 主要做了以下优化：
 
 [次年 WWDC](https://youtu.be/OpveNRh-jXU)，苹果字体设计师 Antonio Cavedoni 正式跟大家介绍了这款字体，不过 San Francisco 并不是新字体的名称，而是整个字体家族的名称。该家族下还有两个字家族 SF 和 SFCompact，SF 用于 iOS、MacOS 等，SF Compact 用于 Watch OS。SF 字形两侧偏向圆润，SF Compact 则更加垂直，字母之间也有更大空间，在狭小的屏幕上拥有更高的易读性。
 
-![](https://image.yesusu.top/PicGo/systemfonts-11.png)
+![|800x450](https://image.yesusu.top/PicGo/systemfonts-11.png)
 
 两种字家族各自还有两种不同的视觉字号 Dispaly 和 Text，主要在字形和字母间距上有所差异。Display 的字怀开口偏小，拥有更加紧密的字母间距，主要用于标题。Text 字怀开口偏大，字母间距稍显宽松，适合多文本展示，主要用于正文。两种视觉字号以 20 Point 为界，大于等于 20 Point 使用 Display，小于 20 Point 使用 Text。在具体开发中，工程师无需选择对应的视觉字号，苹果提供了完善的 API，只需要输入字号，系统会自动匹配对应的视觉字号。
 
-![](https://image.yesusu.top/PicGo/systemfonts-12.png)
+![|800x450](https://image.yesusu.top/PicGo/systemfonts-12.png)
 
 时间来到 2017 年，苹果在 iOS11 和 MacOS High Sierra 中推出了 SF Pro，它是 SF 的升级版。主要对 Display 的字形进行了调整，X 字高和小写字母的高度都有所降低，而且新增了近 1000 种字形，支持更多语言。
 

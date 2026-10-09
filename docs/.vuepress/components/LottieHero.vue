@@ -1,5 +1,12 @@
 <script setup>
-import { computed, onMounted, onBeforeUnmount, ref } from "vue";
+import {
+  computed,
+  onMounted,
+  onBeforeUnmount,
+  ref,
+  watch,
+  nextTick,
+} from "vue";
 import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
 
 const props = defineProps({
@@ -8,6 +15,58 @@ const props = defineProps({
 
 const wrapperRef = ref(null);
 const playerRef = ref(null);
+const emit = defineEmits(["loading", "ready", "error"]);
+
+watch(
+  playerRef,
+  async (component, _previous, onCleanup) => {
+    if (!component) return;
+
+    emit("loading");
+
+    let cancelled = false;
+    let instance = null;
+    let timer;
+
+    const onRender = () => {
+      clearTimeout(timer);
+      instance?.removeEventListener("render", onRender);
+      emit("ready");
+    };
+
+    const onError = () => {
+      clearTimeout(timer);
+      emit("error");
+    };
+
+    onCleanup(() => {
+      cancelled = true;
+      clearTimeout(timer);
+      instance?.removeEventListener("render", onRender);
+      instance?.removeEventListener("loadError", onError);
+      instance?.removeEventListener("renderError", onError);
+    });
+
+    await nextTick();
+    if (cancelled) return;
+
+    instance = component.getDotLottieInstance?.();
+
+    if (!instance) {
+      emit("error");
+      return;
+    }
+
+    // 实际绘制出画面后，才隐藏封面
+    instance.addEventListener("render", onRender);
+    instance.addEventListener("loadError", onError);
+    instance.addEventListener("renderError", onError);
+
+    // 长时间没有画面时，退回静态封面
+    timer = setTimeout(onError, 15000);
+  },
+  { flush: "post" }
+);
 const isMobile = ref(false);
 let mq;
 let ro;
@@ -51,15 +110,8 @@ onBeforeUnmount(() => {
 
 <template>
   <div ref="wrapperRef" class="lottie-hero" :class="{ mobile: isMobile }">
-    <DotLottieVue
-      :key="playerKey"
-      ref="playerRef"
-      :src="src"
-      autoplay
-      loop
-      :layout="currentLayout"
-      class="lottie-player"
-    />
+    <DotLottieVue :key="playerKey" ref="playerRef" :src="src" autoplay loop :layout="currentLayout"
+      class="lottie-player" />
   </div>
 </template>
 
@@ -81,6 +133,7 @@ onBeforeUnmount(() => {
 
 /* 移动端放大一点，超出部分裁掉 */
 .lottie-hero.mobile .lottie-player {
-  transform: scale(1.1); /* 1.1~1.3 自行微调 */
+  transform: scale(1.1);
+  /* 1.1~1.3 自行微调 */
 }
 </style>

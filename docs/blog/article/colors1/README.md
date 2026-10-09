@@ -17,29 +17,29 @@ heroImage: https://image.yesusu.top/PicGo/art-cover-color-manager.png
 #### 1. NTSC
 上世纪 50 年代彩色电视技术在美国趋于成熟，为了制作标准的彩色电视节目，美国电视委员会制定了彩色电视广播标准（NTSC），其中建立的色彩空间被称为 NTCS 色彩空间。当前 NTSC 色彩空间已经不再使用，更多出现在描述显示设备的参数上，例如我们购买显示器时经常看到色域支持 72%NTSC 这样的描述。
 
-![](https://image.yesusu.top/PicGo/color1-02.png)
+![|1000x600](https://image.yesusu.top/PicGo/color1-02.png)
 
 #### 2. SRGB
 SRGB 色彩空间是 1996 年惠普和微软开发完成的，其目的是为了建立一种用于显示器、打印机和互联网的通用色彩空间，也是当前主流使用的色彩空间，如 windows 系统默认使用 SRGB，浏览器上我们看到的所有图片和色彩也都是基于 SRGB 渲染的。
 
-![](https://image.yesusu.top/PicGo/color1-03.png)
+![|1000x600](https://image.yesusu.top/PicGo/color1-03.png)
 
 #### 3. Adobe RGB
 SRGB 是显示器、打印机和互联网的通用色彩空间，但是在彩色印刷行业中，SRGB 覆盖的色域范围比较小，部份色彩在显示设备中不能很好的显示。所以 1998 年 Adobe 公司建立了 Adobe RGB 色彩空间，旨在使计算机显示设备囊括更多的颜色满足印刷行业的需求。
 
-![](https://image.yesusu.top/PicGo/color1-04.png)
+![|1000x600](https://image.yesusu.top/PicGo/color1-04.png)
 
 #### 4. DCI-P3 和 Display P3
 DCI-P3 是 2005 年美国电影行业推出的一种色彩空间，是数字电影播放设备的色彩标准之一，它的色域面积比 SRGB 大了 25%。2015 年苹果公司推出了广色域屏幕的 iMac 产品，使用了全新的色彩空间，并称之为 Display P3，两种 P3 色彩空间在色域大小上没有区别，只是在一些调教参数上存在差异。
 
-![](https://image.yesusu.top/PicGo/color1-05.png)
+![|1000x600](https://image.yesusu.top/PicGo/color1-05.png)
 
 ### 二、理解色彩管理的逻辑
 通过以上了解，我们可以尝试回答开篇的问题，为什么会出现实际界面与设计稿色彩不一致的情况？简单来说就是界面显示设备与设计稿显示设备色彩管理不一致导致的。如我们使用苹果电脑制作设计稿，其默认使用的色彩空间是 Display P3，而实际界面的显示设备支持的色彩空间是 SRGB，因为 Display P3 的色域范围远大于 SRGB，这就导致部分颜色无法在 SRGB 的设备上正常显示，所以我们看到的界面和设计稿是存在差异的。以上我们可以发现正确的色彩管理不关乎使用哪种色彩空间，而是整个色彩管理链路是否统一？上述例子，如果实际显示设备支持的是 Display P3 色彩空间，那么你将看到和设计稿完全一致的色彩。
 
 要做到整个色彩管理链路统一，我们需要清楚了解所有环节，以下将通过图示进行说明：
 
-![](https://image.yesusu.top/PicGo/color1-06.png)
+![|1000x600](https://image.yesusu.top/PicGo/color1-06.png)
 
 1. 输出屏幕：了解输出屏幕支持什么样的色彩空间，如苹果的显示屏幕可以覆盖到 100%Display P3，其他显示设备在购买时也会有相关参数描述。
 2. 系统设置：不同系统默认色彩空间可能不同，如 MacOS 默认 Display P3，Windows 默认 SRGB。系统色彩空间也支持不同配置，例如可以将 MacOS 的色彩空间更改为 SRGB。
@@ -50,7 +50,7 @@ DCI-P3 是 2005 年美国电影行业推出的一种色彩空间，是数字电�
 
 面对这复杂的情况，我们应该选取什么色彩空间呢？笔者根据实际显示场景给到以下建议：
 
-![](https://image.yesusu.top/PicGo/color1-07.png)
+![|1000x600](https://image.yesusu.top/PicGo/color1-07.png)
 
 #### 1. 浏览器
 如果你的设计最终在浏览器上显示（如网页设计），那么可以选择 SRGB，上文有提到 SRGB 作为互联网通用的色彩空间，浏览器上的所有色彩都是基于 SRGB 渲染的。
@@ -74,32 +74,32 @@ Sketch 为我们提供了两种色彩管理方式：
 
 可在 Sketch 的 Preferences 中找到 Canvas 选项，然后在 Color Profile 中选择要使用的色彩空间，设置后我们新建的所有文件都将采用新的色彩空间。
 
-![](https://image.yesusu.top/PicGo/color1-08.png)
+![|1000x600](https://image.yesusu.top/PicGo/color1-08.png)
 
 ②文件设置：
 
 可在 Sketch 的 File 菜单中找到 Document Setting 选项，点击后在 Color Profile 中选择要使用的色彩空间，该设置只影响当前文件。
 
-![](https://image.yesusu.top/PicGo/color1-09.png)
+![|1000x600](https://image.yesusu.top/PicGo/color1-09.png)
 
 需要注意的是当我们打开 Color Profile 下拉框后，除 SRGB 和 Display P3 选项外，还有一个叫做 Unmanaged 的选项，翻译过来的意思是无托管，选择该选项即为使用系统色彩管理方案。如需要将工作色彩空间调整为 SRGB，我们可以直接在 Color Profile 下拉框中选择 SRGB，也可以选择 Unmanaged，然后将系统色彩管理方案设置为 SRGB 即可。
 
 #### 2. Figma
 Figma 的 Color Profile 提供了 Unmanaged 和 SRGB 两种选项，即只能使用系统色彩管理方案和 SRGB 色彩空间，且仅支持在客户端版本中进行选择。浏览器版本不支持色彩管理，默认使用 SRGB 色彩空间，原因上文已提及到浏览器上的色彩是基于 SRGB 进行渲染的。
 
-![](https://image.yesusu.top/PicGo/color1-10.png)
+![|1000x600](https://image.yesusu.top/PicGo/color1-10.png)
 
 #### 3. Photoshop
 当我们在 Photoshop 中新建文件时可看到“高级选项”下的“色彩配置文件”，点击此处可选择想要使用的色彩空间。除此之外还可以在“编辑”菜单中的“色彩设置”选项中找到“工作空间”模块，在“RGB”选项中选择需要使用的色彩空间，该设置作为一种常用的工作空间存在。完成设置后我们便可以在新建文件时，选择“工作中的色彩空间”进行使用。
 
-![](https://image.yesusu.top/PicGo/color1-11.png)
+![|1000x600](https://image.yesusu.top/PicGo/color1-11.png)
 
-![](https://image.yesusu.top/PicGo/color1-12.png)
+![|1000x600](https://image.yesusu.top/PicGo/color1-12.png)
 
 #### 4. After Effects
 在 AE 中我们可以在“文件”菜单下找到“项目设置”，点击后在“颜色”菜单下找到“工作空间”选项，此处可设置想要使用的颜色空间。
 
-![](https://image.yesusu.top/PicGo/color1-13.png)
+![|1000x600](https://image.yesusu.top/PicGo/color1-13.png)
 
 最后色彩管理属于比较复杂的知识模块，本篇文章介绍的并不全面，只是将和我们工作相关的部份进行了梳理。希望这篇文章可以帮助大家明白色彩管理背后的逻辑，学会正确的色彩管理。
 

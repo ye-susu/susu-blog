@@ -26,29 +26,29 @@ heroImage: https://image.yesusu.top/PicGo/project-sa-cover2.png
 ##### 1. 如何线上化？
 参考线下作业流程，制定销售作业 SOP。围绕销售作业 SOP，建设产品基础能力。寻找关键过程指标，验证产品效果。
 
-![](https://image.yesusu.top/PicGo/akusa-thinking-online.png)
+![|1872x836](https://image.yesusu.top/PicGo/akusa-thinking-online.png)
 
 ##### 2. 如何系统化？
 通过4大管理域建设产品能力：客户管理域、工具管理域、过程管理域、策略管理域。
 
-![](https://image.yesusu.top/PicGo/akusa-thinking-systematize.png)
+![|1872x826](https://image.yesusu.top/PicGo/akusa-thinking-systematize.png)
 
 通过首页、工作台、个人中心3个菜单进行功能架构，功能入口按照管理域进行色彩区分。
 
-![](https://image.yesusu.top/PicGo/akusa-thinking-systematize02.png)
+![|1872x802](https://image.yesusu.top/PicGo/akusa-thinking-systematize02.png)
 
 ##### 3. 如何提升销售效率？
 提升产品操作效率（ 精简操作步骤、支持批量操作、提供操作引导 ）
 
-![](https://image.yesusu.top/PicGo/akusa-thinking-efficiency01.png)
+![|1872x802](https://image.yesusu.top/PicGo/akusa-thinking-efficiency01.png)
 
 提升任务完成率（ 任务进度提示、设置任务倒计时、及时反馈与认可 ）
 
-![](https://image.yesusu.top/PicGo/akusa-thinking-efficiency02.png)
+![|1872x802](https://image.yesusu.top/PicGo/akusa-thinking-efficiency02.png)
 
 提升作业积极性（ 销售目标看板、业绩榜单公示 ）
 
-![](https://image.yesusu.top/PicGo/akusa-thinking-efficiency03.png)
+![|1872x802](https://image.yesusu.top/PicGo/akusa-thinking-efficiency03.png)
 
 ## 设计过程
 
@@ -68,7 +68,7 @@ heroImage: https://image.yesusu.top/PicGo/project-sa-cover2.png
 
 <br/>
 
-![](https://image.yesusu.top/PicGo/akusa-design-icon.png)
+![|1490x362](https://image.yesusu.top/PicGo/akusa-design-icon.png)
 
 <br/>
 
@@ -100,27 +100,27 @@ heroImage: https://image.yesusu.top/PicGo/project-sa-cover2.png
 
 **字体排印** ：使用系统字体，系统字体聚焦信息本身。采用梳排风格，提升信息识别效率。
 
-![](https://image.yesusu.top/PicGo/akusa-design-typography.png)
+![|1920x1080](https://image.yesusu.top/PicGo/akusa-design-typography.png)
 
 **布局** ：可视情况混用布局，但要求优先使用通栏布局。
 
-![](https://image.yesusu.top/PicGo/akusa-design-layout.png)
+![|1920x1080](https://image.yesusu.top/PicGo/akusa-design-layout.png)
 
 **插画** ：强调品牌调性，迎合用户审美。刻画人物角色，传达用户情绪。
 
-![](https://image.yesusu.top/PicGo/akusa-design-illustration.png)
+![|1920x1080](https://image.yesusu.top/PicGo/akusa-design-illustration.png)
 
 ##### 3. 输出视觉稿
 
-![](https://image.yesusu.top/PicGo/akusa-design-page01.png)
+![|1920x1080](https://image.yesusu.top/PicGo/akusa-design-page01.png)
 
-![](https://image.yesusu.top/PicGo/akusa-design-page02.png)
+![|1920x1080](https://image.yesusu.top/PicGo/akusa-design-page02.png)
 
 ##### 4. 提炼组件库
 
 B 端产品覆盖多样化场景，对组件适用性有着更高要求。我们在设计中提炼了符合业务场景的组件，提升了设计效率。
 
-![](https://image.yesusu.top/PicGo/akusa-design-component.png)
+![|1920x1080](https://image.yesusu.top/PicGo/akusa-design-component.png)
 
 ## 数据反馈
 

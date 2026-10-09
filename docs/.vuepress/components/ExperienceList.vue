@@ -1,27 +1,15 @@
 <script setup>
 import { useBlogType } from "@vuepress/plugin-blog/client";
-import { usePageFrontmatter } from "vuepress/client";
+import { RouterLink } from "vue-router";
+import { formatDate } from "../utils/formatDate.js";
 
 const experArt = useBlogType("experience");
-
-const formatDate = (dateString) => {
-  const date = new Date(dateString);
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-
-  return `${year}-${month}-${day}`;
-};
 </script>
 <template>
   <div class="experArt-list">
     <div v-if="experArt.items?.length" class="experArt-wrapper">
-      <article
-        v-for="{ info, path } in experArt.items"
-        :key="path"
-        class="experArt-item"
-        @click="$router.push(path)"
-      >
+      <RouterLink v-for="{ info, path } in experArt.items" :key="path" :to="path" :aria-label="info.title"
+        class="experArt-item">
         <div class="experArt-info">
           <span class="title">
             {{ info.title }}
@@ -33,17 +21,10 @@ const formatDate = (dateString) => {
           <p v-if="info.date" class="date">
             发布于
             {{ formatDate(info.date) }}
-            <!-- {{
-              new Date(info.date).toLocaleDateString("zh-CN", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })
-            }} -->
           </p>
           <p v-if="info.excerpt" class="excerpt" v-html="info.excerpt" />
         </div>
-      </article>
+      </RouterLink>
     </div>
     <div v-else>Nothing in here.</div>
   </div>
@@ -62,42 +43,61 @@ const formatDate = (dateString) => {
   padding: 1.25rem 0;
   cursor: pointer;
 }
+
+.experArt-wrapper>a.experArt-item,
+.experArt-wrapper>a.experArt-item:hover {
+  color: inherit;
+  font-weight: normal;
+  text-decoration: none;
+}
+
 .experArt-item:last-child {
   padding-bottom: 0;
 }
+
 .experArt-info {
-  padding-right: 2rem;
+  /* padding-right: 2rem; */
 }
+
 .experArt-info .date {
   color: #6e6e75;
 }
+
 .experArt-info .title {
   font-weight: bold;
   font-size: 1.5rem;
 }
+
 .experArt-info p {
   line-height: 1.75rem;
   margin: 0.63rem 0 0;
 }
+
 .experArt-info .description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; /* 限制最多显示 2 行 */
-  overflow: hidden; /* 必须设置为 hidden */
+  -webkit-line-clamp: 2;
+  /* 限制最多显示 2 行 */
+  overflow: hidden;
+  /* 必须设置为 hidden */
   text-overflow: ellipsis;
 }
+
 @media (max-width: 720px) {
   .experArt-info .title {
     font-size: 1.25rem;
   }
+
   .experArt-info p {
     font-size: 0.875rem;
     line-height: 1.5rem;
     margin-top: 0.5rem;
   }
+
   .experArt-hero {
     width: 100%;
   }
+
   .experArt-item {
     align-items: flex-start;
     padding: 1rem 0;

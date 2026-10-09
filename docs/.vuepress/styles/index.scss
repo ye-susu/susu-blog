@@ -1,12 +1,12 @@
 :root {
     --vp-c-accent: rgb(60 60 67);
-    ;
     --content-width: 756px;
 }
 
 // navbar
 .vp-navbar {
-    width: 50.25rem;
+    width: 100%;
+    max-width: 50.25rem;
     border-bottom: 0;
     height: 4rem;
     margin: 0 auto;
@@ -36,7 +36,6 @@
     top: 0.9rem;
     font-size: 1rem;
     right: 0.75rem;
-    max-width: 720px !important;
 }
 
 .vp-navbar span {
@@ -52,23 +51,12 @@
 
 .vp-page {
     padding-top: 4.5rem;
-}
-
-.vp-theme-container.no-navbar [vp-content] h3 {
-    margin-top: 2rem;
-}
-
-.vp-meta-item span {
-    font-size: 0.9375rem;
+    padding-left: 0;
 }
 
 .vp-page h1 {
     font-size: 3rem;
     line-height: 1.5;
-}
-
-.vp-theme-container.no-navbar [vp-content] h2 {
-    margin-top: 2.5rem;
 }
 
 .vp-page h2 {
@@ -85,7 +73,7 @@
 }
 
 .vp-page ul,
-ol {
+.vp-page ol {
     line-height: 1.9rem;
 }
 
@@ -113,11 +101,17 @@ ol {
 }
 
 .vp-page th,
-td {
+.vp-page td {
     border-color: #EBEBEB;
     width: 10%;
     padding: 1rem;
 }
+
+// 正文图片按原始比例缩小，不影响卡片和 Figma 封面
+.vp-page [vp-content] img[width][height]:not(.no-zoom) {
+    max-width: 100%;
+    height: auto;
+  }
 
 .vp-back-to-top-button {
     color: rgb(60 60 67);
@@ -155,23 +149,75 @@ td {
     padding-bottom: 0;
 }
 
-.vp-page {
-    padding-left: 0;
+// 卡片链接保留原来的文字外观。
+// 避免现有 .vp-page a 把整张卡片的描述文字也加粗。
+.projects-container .projects-item > .projects {
+    color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+    display: block;
+  }
+
+// 键盘操作时显示焦点位置
+.articles-item:focus-visible,
+.experArt-item:focus-visible,
+.projects-item > .projects:focus-visible,
+.cate-list-item:focus-visible,
+.more-link:focus-visible,
+.my-footer a:focus-visible {
+  outline: 2px solid var(--vp-c-accent);
+  outline-offset: 4px;
+}
+
+// Figma 按钮位于深色背景上，使用白色焦点框
+.play-button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+@media (max-width: 1560px) {
+    // 有文章目录的页面显示菜单按钮
+    .vp-theme-container:not(.no-sidebar) > .vp-navbar {
+        padding-left: 4rem;
+
+        .vp-toggle-sidebar-button {
+            display: block;
+        }
+    }
+
+    // 目录改成左侧抽屉，默认收起
+    .vp-sidebar {
+        left: 0;
+        right: auto;
+        top: 4rem;
+        bottom: 0;
+        width: min(20rem, calc(100vw - 3rem));
+        padding-top: 0;
+        border-right: 1px solid #E2E2E3;
+        transform: translateX(-100%);
+    }
+
+    // 清除桌面目录原有的大幅顶部留白
+    .vp-sidebar-items {
+        margin: 1.5rem 0;
+        padding: 0 1.5rem;
+        border-left: 0;
+    }
+
+    // 点击菜单按钮后展开目录
+    .vp-theme-container.sidebar-open > .vp-sidebar {
+        transform: translateX(0);
+    }
+
+    // 点击遮罩关闭目录
+    .vp-theme-container.sidebar-open > .vp-sidebar-mask {
+        display: block;
+    }
 }
 
 @media (max-width: 720px) {
     .vp-page {
         padding-top: 3.25rem;
-    }
-
-    .vp-sidebar {
-        left: 0;
-        border-right: 1px solid #E2E2E3;
-    }
-
-    .vp-sidebar-items {
-        margin: 1.5rem 0;
-        padding-left: 1.5rem;
     }
 
     // navbar
@@ -182,14 +228,13 @@ td {
     .vp-navbar-item {
         margin-left: 0;
     }
-}
-
-@media (max-width: 430px) {
     .vp-page [vp-content] {
         padding-left: 1.25rem;
         padding-right: 1.25rem;
     }
+}
 
+@media (max-width: 430px) {
     .vp-page {
         padding-bottom: 1.25rem;
     }

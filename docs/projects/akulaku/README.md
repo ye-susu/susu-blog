@@ -36,13 +36,13 @@ heroImage: https://image.yesusu.top/PicGo/project-aku3.0-cover.png
 | **内容** | **电商频道** <br> <br> 搜索 <br>服务入口 <br>额度查询<br>个性化推荐 | **分期产品**<br/><br>分期场景<br/>支付工具<br/>生活服务<br/>积分兑换 | **金融频道**<br/><br>借贷<br/>转账汇款<br/>银行开户<br/>理财保险 | **个人中心**<br/><br>订单记录<br/>资产记录<br/>权益积分<br/>服务设置 |
 | **定位** | **电商业务** <br/><br>聚合商品频道、营销活动、常用服务分流。     | **分期业务** <br/><br>孵化新的分期产品、主打分期场景、支付获得积分，积分兑换优惠、促活留存。 | **金融业务** <br/><br>为用户提供借贷、存款、理财等综合金融服务。 | **个人中心** <br/><br>用户信息记录，方便用户查询、活动曝光。     |
 
-![](https://image.yesusu.top/PicGo/ui3.0-strategy-01-2.png)
+![|1920x1080](https://image.yesusu.top/PicGo/ui3.0-strategy-01-2.png)
 
-![](https://image.yesusu.top/PicGo/ui3.0-strategy-01-1.png)
+![|1920x1080](https://image.yesusu.top/PicGo/ui3.0-strategy-01-1.png)
 
-![](https://image.yesusu.top/PicGo/ui3.0-strategy-01-3.png)
+![|1920x1080](https://image.yesusu.top/PicGo/ui3.0-strategy-01-3.png)
 
-![](https://image.yesusu.top/PicGo/ui3.0-strategy-01.png)
+![|1920x1080](https://image.yesusu.top/PicGo/ui3.0-strategy-01.png)
 
 ## 视觉设计
 #### 一、升级设计语言
@@ -206,15 +206,15 @@ heroImage: https://image.yesusu.top/PicGo/project-aku3.0-cover.png
 
 **3️⃣ &nbsp; 布局** ：通栏布局，提供更多显示空间。
 
-![](https://image.yesusu.top/PicGo/ui3.0-layout.png)
+![|1920x1080](https://image.yesusu.top/PicGo/ui3.0-layout.png)
 
 **4️⃣ &nbsp; 图标** ：一级入口（ ✅ 多色  ✅ 斜侧视角）二级入口（ ✅ 单色  ✅ 斜侧视角）活动入口（ ✅ 多色 ✅ 轻质感）
 
-![](https://image.yesusu.top/PicGo/ui3.0-icons.png)
+![|1091x1036](https://image.yesusu.top/PicGo/ui3.0-icons.png)
 
 **5️⃣ &nbsp; 组件** ：升级组件样式，契合新的设计语言。
 
-![](https://image.yesusu.top/PicGo/ui3.0-component.png)
+![|1920x1080](https://image.yesusu.top/PicGo/ui3.0-component.png)
 
 #### 二、强化品牌基因
 
@@ -224,7 +224,7 @@ heroImage: https://image.yesusu.top/PicGo/project-aku3.0-cover.png
 ##### 2. 品牌 IP 使用
 IP 在品牌传播中更具穿透力，某些特殊触点可使用 IP 形象，确保品牌调性的同时也可提升产品好感度。
 
-![](https://image.yesusu.top/PicGo/ui3.0-brandexplore.png)
+![|1848x1080](https://image.yesusu.top/PicGo/ui3.0-brandexplore.png)
 
 #### 三、本地化探索
 ##### 1. 金刚区图标
@@ -235,7 +235,7 @@ IP 在品牌传播中更具穿透力，某些特殊触点可使用 IP 形象，�
 
 3.0 图标：更多色彩、强识别性、插画风格。
 
-![](https://image.yesusu.top/PicGo/ui3.0-slocalization-1.png)
+![|1848x1080](https://image.yesusu.top/PicGo/ui3.0-slocalization-1.png)
 
 ##### 2. 缺醒页插画
 
@@ -245,7 +245,7 @@ IP 在品牌传播中更具穿透力，某些特殊触点可使用 IP 形象，�
 
 我们在后续设计中也遵循了本地化特征，使用了丰富的高饱和色彩，突出 IP 形象传递用户情绪。
 
-![](https://image.yesusu.top/PicGo/ui3.0-slocalization-2.png)
+![|1848x1080](https://image.yesusu.top/PicGo/ui3.0-slocalization-2.png)
 
 ##### 3. banner 图片
 
@@ -255,7 +255,7 @@ IP 在品牌传播中更具穿透力，某些特殊触点可使用 IP 形象，�
 
 在后续设计中，我们遵循本地化特征，使用了单色背景、简洁的板式，突出信息。
 
-![](https://image.yesusu.top/PicGo/ui3.0-slocalization-3.png)
+![|1848x1080](https://image.yesusu.top/PicGo/ui3.0-slocalization-3.png)
 
 ## 数据反馈
 **Akulaku**：首页整体点击率提升 **4.25%**，电商渗透率提升 **4.81%**。

@@ -13,7 +13,7 @@ date: 2026-09-30
 
 有了 agent 的加持，编写 skill 其实并不困难。只要将整理好的诉求丢给它，便能得到一份还不错的初稿。接下来需要不断优化和测试，关于优化需要注意流程是否合理、内容是否简练、表达是否自然，关于测试则需要关注模型版本、上下文及agent 能力边界。经过一系列调整，agent 终于能够严格按照组件库搭建设计稿。
 
-![](https://image.yesusu.top/PicGo/agent-use-1.png)
+![|960x540](https://image.yesusu.top/PicGo/agent-use-1.png)
 
 解决组件库的问题后，我又想到两个可以提升效率的方向：文本翻译和页面命名。因为我们做的是海外项目，设计稿需要使用英文文本。过去的工作方式是一边搭建页面框架，一边进行翻译；现在可以将翻译流程加入 skill，让 agent 直接输出英文稿。至于页面命名，过去需要手动复制交互页面名称，再逐一粘贴；现在也可以将这步写入 skill，让 agent 一并完成。
 
@@ -27,7 +27,7 @@ date: 2026-09-30
 
 后来我想到了自己绘制图标的流程： 搜索参考 - 二次创意 - 按规范绘制。 如果我可以提供一些图标库，让 agent 帮我检索，然后将命中的 SVG 以项目规范写入 figma，那么我只需要进行二次创意并调整就行了。于是，我按照自己的想法向 agent 提供了图标库和具体要求，并让它协助编写 skill。后续效果比较理想：我只需要告诉 agent 生成什么图标，以及采用线性还是面性风格，它就会按照要求在 Figma 中写入一系列图标，我只需从中挑选合适的进行调整即可。
 
-![](https://image.yesusu.top/PicGo/agent-use-2.png)
+![|960x540](https://image.yesusu.top/PicGo/agent-use-2.png)
 
 当然，这个流程仍然存在一些限制和不足，主要集中在图标库方面。目前，绝大部分图标库只提供线性和面性图标，因此可以满足日常功能图标的需求，但复杂的个性化图标仍然需要自行绘制。另外，图标库中的 SVG 都已经转曲，写入后无法直接调整圆角；如果需要修改圆角，就必须对相关部位进行重绘。使用 skill 时，也可以尽量提供多个图标库用于检索，因为并不是每个图标库都能命中目标，多提供几个库可以获得更多选择。
 
@@ -43,7 +43,7 @@ date: 2026-09-30
 
 之后，我又将整个流程整理成 skill。最终效果也比较满意，虽然偶有犯错，但通常只需要进行少量调整即可。
 
-![](https://image.yesusu.top/PicGo/agent-use-3.png)
+![|960x540](https://image.yesusu.top/PicGo/agent-use-3.png)
 
 [skill：flow-connect](https://github.com/ye-susu/ui-design-skills/tree/main/skills/flow-connect)
 
@@ -77,7 +77,7 @@ date: 2026-09-30
 
 由于“设计需求”属于复杂任务，skill 没有采用单文件结构。单文件结构会使内容冗长、复杂，也不利于执行和管理。本次采用多文件模块化结构：主 skill 负责流程导航，references 中的文件负责具体细则。这样可以让整个流程更加清晰、直接、有效。
 
-![](https://image.yesusu.top/PicGo/agent-use-4.png)
+![|960x540](https://image.yesusu.top/PicGo/agent-use-4.png)
 
 [skill：requirement-design](https://github.com/ye-susu/ui-design-skills/tree/main/skills/requirement-design)
 

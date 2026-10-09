@@ -27,7 +27,7 @@ heroImage: https://image.yesusu.top/PicGo/art-cover-minimalist-design.png
 
 文字差异造成的问题是排版方式不同，中文可以使用多栏排版使内容更紧凑，而西文使用多栏排版就会遇到换行和显示空间不够的问题。例如国内电商产品的筛选功能，所有筛选项铺开展示在一个页面上，操作方便快捷。可将这种排版方式移植到西文语境下就会产生文本溢出、界面崩坏等问题。
 
-![](https://image.yesusu.top/PicGo/art-minimalist-design-1.png)
+![|960x600](https://image.yesusu.top/PicGo/art-minimalist-design-1.png)
 
 此外，欧美产品大多面向全球市场，除了西文之外还要适配其他地区文字，而简约、宽松的排版可以为不同文字提供充足的显示空间，从而在一定程度上解决文本适配的问题。
 

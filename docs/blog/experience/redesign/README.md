@@ -67,7 +67,7 @@ date: 2025-06-13
 - 调整卡内容，突出品牌信息，提升识别效率
 - 调整卡片样式，强化点击感，引导用户点击
 
-![](https://image.yesusu.top/PicGo/summary-redesign-Strategy.png)
+![|960x540](https://image.yesusu.top/PicGo/summary-redesign-Strategy.png)
 
 ## 四、执行方案
 
@@ -92,7 +92,7 @@ date: 2025-06-13
 
 参考图分为氛围图和界面图，氛围图直接反应产品所要营造的氛围，可以从图片中提取相关设计元素，如色彩、图形、质感等。界面图是风格类似的产品截图或概念稿，这类图片可以直接体现相应风格在界面中的效果，具有很大参考价值，省去了很多视觉探索的工作。
 
-![](https://image.yesusu.top/PicGo/summary-redesign-inspiration.png)
+![|960x540](https://image.yesusu.top/PicGo/summary-redesign-inspiration.png)
 
 ##### d. 建立情绪版
 
