@@ -15,7 +15,9 @@ export default defineUserConfig({
     shouldPrefetch: (file) => !file.includes("LottieHero-"),
     bundler: viteBundler(),
     theme: defaultTheme({
-        colorModeSwitch: false,
+        colorMode: 'auto',
+        colorModeSwitch: true,
+        toggleColorMode: '切换明暗模式',
         lastUpdated: false,
         contributors: false,
         themePlugins: {

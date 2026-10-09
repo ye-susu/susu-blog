@@ -55,12 +55,8 @@ const experArt = useBlogType("experience");
   padding-bottom: 0;
 }
 
-.experArt-info {
-  /* padding-right: 2rem; */
-}
-
 .experArt-info .date {
-  color: #6e6e75;
+  color: var(--blog-c-muted);
 }
 
 .experArt-info .title {

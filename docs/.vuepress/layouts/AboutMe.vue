@@ -63,7 +63,7 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
 .portrait {
   width: 10rem;
   aspect-ratio: 1 / 1;
-  background-color: #f6f6f6;
+  background-color: var(--blog-c-surface);
 }
 
 .portrait img {

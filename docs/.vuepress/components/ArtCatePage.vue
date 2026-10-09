@@ -110,7 +110,7 @@ const listPath = computed(() => {
   display: flex;
   gap: 0.125rem;
   flex-direction: column;
-  border: 1px solid #e9e9eb;
+  border: 1px solid var(--blog-c-card-border);
   box-sizing: border-box;
   width: 100%;
   background: transparent;
@@ -120,7 +120,7 @@ const listPath = computed(() => {
 }
 
 .cate-list-item.active {
-  border-color: #3c3c45;
+  border-color: var(--blog-c-selected);
 }
 
 .title {

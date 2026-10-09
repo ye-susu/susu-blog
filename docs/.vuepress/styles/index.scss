@@ -1,6 +1,35 @@
 :root {
-    --vp-c-accent: rgb(60 60 67);
+    --vp-t-color: 0s;
     --content-width: 756px;
+
+    // 保持灰色强调色，随主题文字颜色变化。
+    --vp-c-accent: var(--vp-c-text);
+    --vp-c-accent-hover: var(--vp-c-text);
+
+    // 浅色模式：使用现有颜色。
+    --blog-c-muted: #6e6e75;
+    --blog-c-surface: #f6f6f6;
+    --blog-c-border: #ebebeb;
+    --blog-c-card-border: #e9e9eb;
+    --blog-c-divider: #f0f0f0;
+    --blog-c-selected: #3c3c45;
+    --blog-c-link-hover: #3c3c43;
+    --blog-c-icon-hover: #000;
+}
+
+html[data-theme="dark"] {
+    --vp-c-accent: var(--vp-c-text);
+    --vp-c-accent-hover: var(--vp-c-text);
+
+    // 暗色模式：自定义组件使用的颜色。
+    --blog-c-muted: #a8a8b3;
+    --blog-c-surface: #252529;
+    --blog-c-border: #38383e;
+    --blog-c-card-border: #38383e;
+    --blog-c-divider: #303034;
+    --blog-c-selected: #e5e5eb;
+    --blog-c-link-hover: #fff;
+    --blog-c-icon-hover: #fff;
 }
 
 // navbar
@@ -18,7 +47,7 @@
 }
 
 .vp-navbar-item>.route-link.auto-link:hover {
-    background-color: #F6F6F6;
+    background-color: var(--blog-c-surface);
     border-radius: 0.25rem;
     border: none;
 
@@ -45,6 +74,10 @@
 
 .vp-toggle-sidebar-button {
     top: 0.825rem;
+}
+
+.vp-navbar .vp-toggle-color-mode-button {
+    margin-inline-start: 0.5rem;
 }
 
 // page
@@ -89,11 +122,11 @@
 }
 
 .vp-page thead tr {
-    background-color: #F6F6F6;
+    background-color: var(--blog-c-surface);
 }
 
 .vp-page tbody tr:nth-child(odd) {
-    background-color: #fff;
+    background-color: var(--vp-c-bg);
 }
 
 .vp-page tr td:not(:first-child) {
@@ -102,7 +135,7 @@
 
 .vp-page th,
 .vp-page td {
-    border-color: #EBEBEB;
+    border-color: var(--blog-c-border);
     width: 10%;
     padding: 1rem;
 }
@@ -114,11 +147,11 @@
   }
 
 .vp-back-to-top-button {
-    color: rgb(60 60 67);
+    color: var(--vp-c-text);
 }
 
 .vp-back-to-top-button:hover {
-    color: rgb(0, 0, 0);
+    color: var(--blog-c-icon-hover);
 }
 
 // sidebar
@@ -131,7 +164,7 @@
 .vp-sidebar-items {
     padding: 0 2rem;
     margin: 18rem 0;
-    border-left: 1px solid #EBEBEB;
+    border-left: 1px solid var(--blog-c-border);
     font-size: 0.875rem;
 }
 
@@ -175,7 +208,15 @@
   outline-offset: 4px;
 }
 
-@media (max-width: 1560px) {
+// home
+.more-link svg {
+    display: block;
+    width: 3rem;
+    height: auto;
+    color: var(--blog-c-link-hover);
+}
+
+@media (max-width: 1280px) {
     // 有文章目录的页面显示菜单按钮
     .vp-theme-container:not(.no-sidebar) > .vp-navbar {
         padding-left: 4rem;
@@ -193,7 +234,7 @@
         bottom: 0;
         width: min(20rem, calc(100vw - 3rem));
         padding-top: 0;
-        border-right: 1px solid #E2E2E3;
+        border-right: 1px solid var(--vp-c-divider);
         transform: translateX(-100%);
     }
 

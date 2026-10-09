@@ -42,7 +42,7 @@ const loadIframe = async () => {
 <style scoped>
 .figma-container {
   width: 100%;
-  border: 1px solid #e9e9eb;
+  border: 1px solid var(--blog-c-card-border);
   overflow: hidden;
   position: relative;
   margin-top: 1.25rem;

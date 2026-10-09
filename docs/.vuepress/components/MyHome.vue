@@ -1,11 +1,31 @@
 <script setup>
 import { ClientOnly } from "@vuepress/client";
-import { defineAsyncComponent, ref } from "vue";
+import { computed, defineAsyncComponent, ref, watch } from "vue";
+import { useDarkMode } from "@vuepress/theme-default/client";
 import ProjectCards from "./ProjectCards.vue";
 import Footer from "./Footer.vue";
 
 const animationReady = ref(false);
 const animationFailed = ref(false);
+
+// 使用网站当前模式，兼容手动切换和跟随系统
+const isDarkMode = useDarkMode();
+
+const heroSrc = computed(() =>
+  isDarkMode.value
+    ? "/lottie/home-hero-dark.lottie"
+    : "/lottie/home-hero.lottie"
+);
+
+// 切换素材时，重新显示封面，等待新动画绘制完成
+watch(
+  heroSrc,
+  () => {
+    animationReady.value = false;
+    animationFailed.value = false;
+  },
+  { flush: "sync" }
+);
 
 const showCover = () => {
   animationReady.value = false;
@@ -30,13 +50,17 @@ const LottieHero = defineAsyncComponent({
 <template>
   <main class="home">
     <div class="hero-image">
-      <!-- 放在 ClientOnly 外，静态 HTML 中也能显示封面 -->
-      <img v-if="!animationReady" src="/images/home-hero-cover.png" alt="" class="hero-cover" loading="eager"
-        fetchpriority="high" decoding="async" />
+      <!-- 两张封面都保留在静态 HTML 中，由 CSS 决定显示哪张 -->
+      <img v-if="!animationReady" src="/images/home-hero-cover.png" alt="" class="hero-cover hero-cover--light"
+        loading="eager" decoding="async" />
+
+      <img v-if="!animationReady" src="/images/home-hero-cover-dark.png" alt="" class="hero-cover hero-cover--dark"
+        loading="eager" decoding="async" />
 
       <ClientOnly>
-        <LottieHero v-if="!animationFailed" src="/lottie/home-hero.lottie" class="hero-animation"
-          @loading="animationReady = false" @ready="animationReady = true" @error="showCover" />
+        <LottieHero v-if="!animationFailed" :key="heroSrc" :src="heroSrc" class="hero-animation"
+          :class="{ 'is-loading': !animationReady }" @loading="animationReady = false" @ready="animationReady = true"
+          @error="showCover" />
       </ClientOnly>
     </div>
     <ArtList :homeShow="true" listTitle="文章" moreLink="/blog/?cate=art" />
@@ -59,7 +83,7 @@ const LottieHero = defineAsyncComponent({
   margin-bottom: 5rem;
   aspect-ratio: 1.9 / 1;
   text-align: center;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--blog-c-divider);
   overflow: hidden;
   position: relative;
 }
@@ -79,6 +103,22 @@ const LottieHero = defineAsyncComponent({
 
 .hero-cover {
   object-fit: contain;
+}
+
+.hero-cover--dark {
+  display: none;
+}
+
+:global(html[data-theme="dark"] .hero-cover--light) {
+  display: none;
+}
+
+:global(html[data-theme="dark"] .hero-cover--dark) {
+  display: block;
+}
+
+.hero-animation.is-loading {
+  opacity: 0;
 }
 
 @media (max-width: 720px) {

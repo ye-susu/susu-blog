@@ -35,27 +35,23 @@
   width: 100%;
   margin: 3rem auto auto;
   font-size: 0.875rem;
-  color: #6e6e75;
-  border-top: 1px solid #f0f0f0;
+  color: var(--blog-c-muted);
+  border-top: 1px solid var(--blog-c-divider);
   padding-top: 1.25rem;
 }
 
 .my-footer a {
-  color: #6e6e75;
+  color: var(--blog-c-muted);
   font-weight: 400;
 }
 
 .my-footer a:hover {
-  color: #3c3c43;
+  color: var(--blog-c-link-hover);
   font-weight: 500;
 }
 
 .my-footer .social-media svg {
-  color: #6e6e75;
-}
-
-.my-footer a:hover svg {
-  color: #3c3c43;
+  color: inherit;
 }
 
 .my-footer .social-media {
