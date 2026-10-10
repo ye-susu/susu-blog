@@ -61,6 +61,14 @@ export default defineUserConfig({
             __dirname,
             './components/MyHome.vue',
         ),
+        '@theme/VPLightIcon.vue': path.resolve(
+        __dirname,
+        './components/ThemeLightIcon.vue',
+        ),
+        '@theme/VPDarkIcon.vue': path.resolve(
+            __dirname,
+            './components/ThemeDarkIcon.vue',
+        ),
     },
     plugins: [
         blogPlugin({
