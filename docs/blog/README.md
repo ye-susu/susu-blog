@@ -1,7 +1,6 @@
 ---
 title: 博客
 sidebar: false
-artcate: true
 cates:
     - title: 设计文章
       cate: art

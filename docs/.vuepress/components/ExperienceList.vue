@@ -90,10 +90,6 @@ const experArt = useBlogType("experience");
     margin-top: 0.5rem;
   }
 
-  .experArt-hero {
-    width: 100%;
-  }
-
   .experArt-item {
     align-items: flex-start;
     padding: 1rem 0;

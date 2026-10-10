@@ -88,10 +88,6 @@ const LottieHero = defineAsyncComponent({
   position: relative;
 }
 
-.hero-image img {
-  width: 100%;
-}
-
 .hero-cover,
 .hero-animation {
   position: absolute;
@@ -129,10 +125,6 @@ const LottieHero = defineAsyncComponent({
   .hero-image {
     margin-bottom: 3rem;
     aspect-ratio: 1.3 / 1;
-  }
-
-  .hero-image img {
-    width: 100%;
   }
 
   .hero-cover {

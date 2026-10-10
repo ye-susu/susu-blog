@@ -15,6 +15,11 @@
     --blog-c-selected: #3c3c45;
     --blog-c-link-hover: #3c3c43;
     --blog-c-icon-hover: #000;
+    --blog-image-loading-a: #f9f9fa;
+    --blog-image-loading-b: #efeff1;
+
+    --blog-image-error-icon: url('/images/image-error-light.svg');
+    
 }
 
 html[data-theme="dark"] {
@@ -30,9 +35,14 @@ html[data-theme="dark"] {
     --blog-c-selected: #e5e5eb;
     --blog-c-link-hover: #fff;
     --blog-c-icon-hover: #fff;
+    --blog-image-loading-a: #222225;
+    --blog-image-loading-b: #2b2b31;
+
+    --blog-image-error-icon: url('/images/image-error-dark.svg');
 }
 
-// navbar
+// ---------- navbar ----------------------------------------------------------------------------------------------------
+
 .vp-navbar {
     width: 100%;
     max-width: 50.25rem;
@@ -80,7 +90,7 @@ html[data-theme="dark"] {
     margin-inline-start: 0.375rem;
 }
 
-// page
+// ---------- page ----------------------------------------------------------------------------------------------------
 
 .vp-page {
     padding-top: 4.5rem;
@@ -144,7 +154,7 @@ html[data-theme="dark"] {
 .vp-page [vp-content] img[width][height]:not(.no-zoom) {
     max-width: 100%;
     height: auto;
-  }
+}
 
 .vp-back-to-top-button {
     color: var(--vp-c-text);
@@ -154,7 +164,8 @@ html[data-theme="dark"] {
     color: var(--blog-c-icon-hover);
 }
 
-// sidebar
+// ---------- sidebar ----------------------------------------------------------------------------------------------------
+
 .vp-sidebar {
     border: 0;
     left: calc(50% + var(--content-width) / 2 + 4rem);
@@ -180,6 +191,32 @@ html[data-theme="dark"] {
 
 .vp-sidebar-children li:last-child .auto-link {
     padding-bottom: 0;
+}
+
+.vp-page [vp-content] a:not(
+    .header-anchor,
+    .articles-item,
+    .experArt-item,
+    .projects,
+    .more-link
+),
+.about-container .content a,
+.vp-sidebar a.vp-sidebar-item.auto-link {
+    transition: color 0.15s ease;
+
+    &:focus-visible {
+        color: var(--blog-c-icon-hover);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: var(--blog-c-icon-hover);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
 }
 
 // 卡片链接保留原来的文字外观。
@@ -208,7 +245,8 @@ html[data-theme="dark"] {
   outline-offset: 4px;
 }
 
-// home
+// ---------- home ----------------------------------------------------------------------------------------------------
+
 .more-link svg {
     display: block;
     width: 3rem;
@@ -222,6 +260,105 @@ html[data-theme="dark"] {
         color: var(--blog-c-icon-hover);
     }
 }
+
+// ---------- image loading ----------------------------------------------------------------------------------------------------
+
+img[data-image-state="pending"] {
+    background-color: var(--blog-image-loading-a);
+    color: transparent;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    img[data-image-state="pending"][data-image-visible="true"] {
+      animation:
+        blog-image-loading 0.7s ease-in-out infinite alternate;
+    }
+  }
+  
+  @keyframes blog-image-loading {
+    from {
+      background-color: var(--blog-image-loading-a);
+    }
+  
+    to {
+      background-color: var(--blog-image-loading-b);
+    }
+  }
+  
+  .blog-image-frame {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  // 文章封面、项目封面、个人头像。
+// 容器尺寸和比例仍由各组件原有样式决定。
+.blog-image-frame.blog-image-frame--thumbnail {
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  // 图片填满预留区域，加载之前也有完整的动画面积。
+  .blog-image-frame.blog-image-frame--thumbnail > img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+  }
+  
+  .blog-image-frame > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  // 隐藏浏览器默认破图，保留图片占位。
+  .blog-image-frame[data-image-state="error"] > img {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .blog-image-frame[data-image-state="error"] {
+    background-color: var(--blog-image-loading-a);
+  }
+  
+  // 居中的自定义错误图标。
+  .blog-image-frame[data-image-state="error"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 62px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+  
+    background-image: var(--blog-image-error-icon);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+    pointer-events: none;
+  }
+  
+  // 分享稿件封面维持原有比例和裁切方式。
+  .blog-image-frame.blog-image-frame--cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .blog-image-frame.blog-image-frame--cover > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+// ---------- mobile terminal ----------------------------------------------------------------------------------------------------
 
 @media (max-width: 1280px) {
     // 有文章目录的页面显示菜单按钮

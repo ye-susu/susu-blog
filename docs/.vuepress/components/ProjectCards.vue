@@ -54,8 +54,8 @@ const listShow = computed(() => {
     <div v-if="listShow.length" class="projects-item">
       <RouterLink v-for="({ info, path }, index) in listShow" :key="path" :to="path" :aria-label="info.title"
         class="projects">
-        <div class="projects-heroimage">
-          <img v-if="info.heroImage" :src="info.heroImage" :alt="info.title"
+        <div class="projects-heroimage blog-image-frame blog-image-frame--thumbnail">
+          <img v-if="info.heroImage" v-image-loading :src="info.heroImage" :alt="info.title"
             :loading="!homeShow && index < 2 ? 'eager' : 'lazy'" decoding="async" class="no-zoom" />
         </div>
         <div class="projects-info">
@@ -155,8 +155,6 @@ const listShow = computed(() => {
 }
 
 .projects-heroimage img {
-  width: 100%;
-  display: block;
   transition: transform 0.2s ease-in-out;
 }
 

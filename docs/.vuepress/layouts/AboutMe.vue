@@ -6,8 +6,8 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
   <ParentLayout>
     <template #page>
       <main class="about-container">
-        <div class="portrait">
-          <img src="/images/portrait.webp" alt="portrait" />
+        <div class="portrait blog-image-frame blog-image-frame--thumbnail">
+          <img v-image-loading src="/images/portrait.webp" alt="耶稣稣的个人头像" loading="eager" decoding="async" />
         </div>
         <div class="content">
           <h1>关于我</h1>
@@ -16,29 +16,29 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
           </p>
           <h2>项目经历</h2>
           <p>
-            <a href="/projects/goswak/">Goswak</a>
+            <a href="/projects/goswak/" class="vp-external-link-icon">Goswak</a>
             是我参与的第一个国际化项目，期间我完成了竞品调研、视觉风格设定、主要界面输出、设计规范建立等工作。通过此项目使我习得了海外产品的设计经验，并输出了<a
-              href="/blog/share/index.html#multilingual-design-guidelines">《多语言设计指南》</a>
+              href="/blog/share/index.html#multilingual-design-guidelines" class="vp-external-link-icon">《多语言设计指南》</a>
             ，为团队成员的工作提供参考。
           </p>
           <p>
             21年负责了公司主要产品
-            <a href="/projects/akulaku/">Akulaku</a>
+            <a href="/projects/akulaku/" class="vp-external-link-icon">Akulaku</a>
             改版，主动挖取机会点，提供设计策略，并输出了设计方案。上线后成功达成业务目标，各主要模块数据均有提升。
           </p>
           <p>
             23年负责
-            <a href="/projects/akulaku sa/">Akulaku SA</a>
+            <a href="/projects/akulaku sa/" class="vp-external-link-icon">Akulaku SA</a>
             销售管理系统的设计工作，该项目拓展了我 B
             端产品的设计经验，期间输出了
-            <a href="/blog/share/index.html#merchant-visual-research">《商户端竟品视觉调研》</a>
+            <a href="/blog/share/index.html#merchant-visual-research" class="vp-external-link-icon">《商户端竟品视觉调研》</a>
             并向团队分享。
           </p>
           <p>
             24年完成了
-            <a href="/projects/3.0 components/">UI 3.0 Flutter 组件库</a>
+            <a href="/projects/3.0 components/" class="vp-external-link-icon">UI 3.0 Flutter 组件库</a>
             的搭建，此组件库搭建之初旨在解决团队重复造轮子的问题，一套设计系统可供多项目使用。期间输出了<a
-              href="/blog/share/index.html#ui-30-flutter-component-design">《关于 UI 3.0 Flutter 组件库的设计思考》</a>
+              href="/blog/share/index.html#ui-30-flutter-component-design" class="vp-external-link-icon">《关于 UI 3.0 Flutter 组件库的设计思考》</a>
             ，并向团队分享。
           </p>
           <h2>联系方式</h2>
@@ -66,24 +66,12 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
   background-color: var(--blog-c-surface);
 }
 
-.portrait img {
-  display: block;
-  width: 10rem;
-}
-
 .content h1,
 .content h2,
 .content p {
   border: 0;
   margin-block-start: 0;
   margin-block-end: 0;
-}
-
-.content h2 {
-  font-size: 1.75rem;
-  line-height: normal;
-  margin: 3rem 0 1.5rem;
-  padding: 0;
 }
 
 .content h1,
@@ -111,6 +99,7 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
 }
 
 .content a {
+  --external-link-c-icon: currentColor;
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1.5px;
@@ -124,11 +113,6 @@ import ParentLayout from "@vuepress/theme-default/layouts/Layout.vue";
 
   .portrait {
     width: 8rem;
-  }
-
-  .portrait img {
-    width: 8rem;
-    margin: 0;
   }
 
   .content {

@@ -1,6 +1,4 @@
 <script setup>
-import { computed } from "vue";
-
 const props = defineProps({
   // colorsGroups 为多组颜色数组
   colorsGroups: {
@@ -57,7 +55,7 @@ const getBoxWidth = (group) => `calc(100% / ${group.length})`;
 }
 
 .spacing {
-  gap: 1rem !important; /* 仅当 gapSpacing = true 时，添加间距 */
+  gap: 1rem; /* 仅当 gapSpacing = true 时，添加间距 */
 }
 
 .color-box {

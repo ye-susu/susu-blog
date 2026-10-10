@@ -1,7 +1,10 @@
 <template>
   <div class="figma-container" :style="{ aspectRatio: ratio }">
     <div v-if="!isLoaded" class="figma-placeholder">
-      <img :src="coverImg" :alt="props.title" :loading="props.loading" decoding="async" class="cover-image no-zoom" />
+      <span class="blog-image-frame blog-image-frame--cover">
+        <img v-image-loading :src="coverImg" :alt="props.title" :loading="props.loading" decoding="async"
+          class="no-zoom" />
+      </span>
       <div class="overlay">
         <button type="button" class="play-button" :aria-label="`查看${props.title}`" @click="loadIframe">
           <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
@@ -52,13 +55,6 @@ const loadIframe = async () => {
   position: relative;
   width: 100%;
   height: 100%;
-}
-
-.cover-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .overlay {

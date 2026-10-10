@@ -58,9 +58,9 @@ const listShow = computed(() => {
           </p>
           <p v-if="info.excerpt" class="excerpt" v-html="info.excerpt" />
         </div>
-        <div class="ariticles-hero">
-          <img v-if="info.heroImage" :src="info.heroImage" :alt="info.title" :loading="index === 0 ? 'eager' : 'lazy'"
-            decoding="async" class="no-zoom" />
+        <div class="ariticles-hero blog-image-frame blog-image-frame--thumbnail">
+          <img v-if="info.heroImage" v-image-loading :src="info.heroImage" :alt="info.title"
+            :loading="index === 0 ? 'eager' : 'lazy'" decoding="async" class="no-zoom" />
         </div>
       </RouterLink>
     </div>
@@ -114,10 +114,6 @@ const listShow = computed(() => {
   border-radius: 0.5rem;
   background-color: var(--blog-c-surface);
   overflow: hidden;
-}
-
-.ariticles-hero img {
-  width: 100%;
 }
 
 .articles-info {
