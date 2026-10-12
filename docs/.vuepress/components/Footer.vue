@@ -1,3 +1,7 @@
+<script setup>
+import { RouteLink } from '@vuepress/client'
+</script>
+
 <template>
   <footer class="my-footer">
     <div class="copyright">
@@ -5,6 +9,9 @@
       <a href="/">Yesusu</a>
     </div>
     <div class="social-media">
+      <RouteLink to="/updates/" class="updates-entry">
+        更新记录
+      </RouteLink>
       <a href="https://www.instagram.com/yepan3/" aria-label="耶稣稣的 Instagram">
         <svg class="ins" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true" focusable="false">
@@ -30,14 +37,25 @@
 
 <style scoped>
 .my-footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.5rem;
   width: 100%;
   margin: 3rem auto auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--blog-c-divider);
   font-size: 0.875rem;
   color: var(--blog-c-muted);
-  border-top: 1px solid var(--blog-c-divider);
-  padding-top: 1.25rem;
+}
+
+.my-footer .copyright,
+.my-footer .social-media {
+  white-space: nowrap;
+}
+
+.my-footer .copyright {
+  min-width: 0;
 }
 
 .my-footer a {
@@ -50,19 +68,27 @@
   font-weight: 500;
 }
 
-.my-footer .social-media svg {
-  color: inherit;
-}
-
 .my-footer .social-media {
   display: flex;
+  align-items: center;
   gap: 1.5rem;
+}
+
+.my-footer .social-media a {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.my-footer .updates-entry {
+  text-decoration: none;
 }
 
 @media (max-width: 430px) {
   .my-footer {
     margin-top: 1rem;
     padding-top: 1rem;
+    font-size: 0.8125rem;
   }
 }
 </style>

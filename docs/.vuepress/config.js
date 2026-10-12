@@ -8,11 +8,14 @@ import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { seoPlugin } from '@vuepress/plugin-seo'
 import { sitemapPlugin } from '@vuepress/plugin-sitemap'
 import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
+import { updatesPlugin } from './plugins/updates.js'
 
 export default defineUserConfig({
     // 开发服务只允许本机访问，避免暴露到局域网。
     host: '127.0.0.1',
-    shouldPrefetch: (file) => !file.includes("LottieHero-"),
+    shouldPrefetch: (file) =>
+        !file.includes("LottieHero-") &&
+        !file.includes("UpdatesAnimation-"),
     bundler: viteBundler(),
     theme: defaultTheme({
         colorMode: 'auto',
@@ -199,6 +202,8 @@ export default defineUserConfig({
                 }
             },
         },
+
+        updatesPlugin(),
     ],
     extendsPageOptions: (page) => {
         if (page.path === '/projects/') {

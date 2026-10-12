@@ -1,45 +1,47 @@
-# workflow 名称，可以自定义
 name: Deploy GitHub Pages
 
-# 触发条件：在代码 push 到 master 分支后，自动执行该 workflow
 on:
   push:
-     branches:
-       - main
+    branches: [main]
 
-# 任务
+concurrency:
+  group: susu-blog-pages
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
-     # 服务器环境：最新版 Ubuntu，也可以自定义版本
-     runs-on: ubuntu-latest
-     steps:
-       # 拉取代码
-       - name: Checkout
-         uses: actions/checkout@v2
-         with:
-           fetch-depth: 0
-           
-       # 设置 Node.js 版本
-       - name: Setup Node.js environment
-         uses: actions/setup-node@v4
-         with:
-           node-version: "24"
-           cache: "npm"
-           
-       # 安装依赖（包含 devDependencies）
-       - name: Install dependencies
-         run: npm ci
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
 
-       # 生成静态文件
-       - name: Build
-         run:  npm run docs:build
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
 
-       # 部署到 GitHub Pages
-       - name: Deploy
-         uses: crazy-max/ghaction-github-pages@v2
-         env:
-           GITHUB_TOKEN: ${{ secrets.BLOG_TOKEN }} # ACCESS_TOKEN 是创建的 Secret 名称，替换为你自己创建的名称
-         with:
-           target_branch: blog-pages # 部署到 gh-pages 分支，master 分支存放的是项目源码，而 gh-pages 分支则用来存放生成的静态文件
-           build_dir: docs/.vuepress/dist # vuepress 生成的静态文件存放的地方
-           fqdn: yesusu.top
+      - name: Install dependencies
+        run: npm ci
+
+      # 获取失败就停止，防止把既有历史当成空记录覆盖。
+      - name: Read previous deployment
+        run: git fetch --no-tags --depth=1 origin blog-pages
+
+      - name: Build
+        run: npm run docs:build
+        env:
+          UPDATES_HISTORY_REF: FETCH_HEAD
+          UPDATES_SOURCE_SHA: ${{ github.sha }}
+
+      - name: Deploy
+        uses: crazy-max/ghaction-github-pages@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.BLOG_TOKEN }}
+        with:
+          target_branch: blog-pages
+          build_dir: docs/.vuepress/dist
+          fqdn: yesusu.top

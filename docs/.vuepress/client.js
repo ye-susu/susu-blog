@@ -11,12 +11,14 @@ import ExperienceList from './components/ExperienceList.vue'
 import Footer from './components/Footer.vue'
 import FigmaEmbed from './components/FigmaEmbed.vue'
 import { createImageLoadingDirective } from './directives/imageLoading.js'
+import Updates from './layouts/Updates.vue'
 
 export default defineClientConfig({
   layouts: {
     AboutMe,
     ProjectList,
     Layout,
+    Updates,
   },
 
   setup() {
