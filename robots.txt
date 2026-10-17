@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /
+Sitemap: https://yesusu.top/sitemap.xml
+
+User-agent:*
+Disallow:
