@@ -1,6 +1,7 @@
 ---
 title: 经验总结目录
 sidebar: false
+pageTitleHidden: true
 sitemap: false
 head:
   - - meta
@@ -8,4 +9,4 @@ head:
       content: "noindex, follow"
 ---
 
-<ExperienceList/>
+<ContentList type="experience" />

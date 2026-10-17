@@ -16,10 +16,12 @@
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "docs:preview": "vite preview --outDir docs/.vuepress/dist --host 127.0.0.1 --port 8081 --strictPort"
   },
   "dependencies": {
     "@lottiefiles/dotlottie-vue": "^0.11.15",
+    "@lottiefiles/dotlottie-web": "0.74.0",
     "vue": "^3.5.43",
     "vue-router": "^5.2.0"
   }

@@ -1,4 +1,4 @@
-export const shareItems = [
+[
   {
     "id": "apple-system-font-histroy",
     "title": "《苹果系统字体变迁史》",
@@ -41,4 +41,4 @@ export const shareItems = [
     "coverImg": "https://image.yesusu.top/PicGo/ppt-cover-color-management.png",
     "ratio": "16 / 10.06"
   }
-];
+]

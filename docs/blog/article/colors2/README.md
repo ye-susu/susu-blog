@@ -3,6 +3,9 @@ title: 产品配色那些事2-了解选色逻辑
 description: 如何选出更适用的色彩？— 色彩的选择逻辑。
 date: 2025-02-19 
 heroImage: https://image.yesusu.top/PicGo/art-cover-color-pick.png
+heroImageSrcset: >-
+  https://image.yesusu.top/PicGo/art-cover-color-pick-480.png 480w,
+  https://image.yesusu.top/PicGo/art-cover-color-pick.png 960w
 ---
 # 产品配色那些事2-了解选色逻辑
 <ReadingTime/>

@@ -6,11 +6,11 @@ import ProjectList from './layouts/ProjectList.vue'
 import ArtCatePage from './components/ArtCatePage.vue'
 import ReadingTime from './components/ReadingTime.vue'
 import ColorPalette from './components/ColorPalette.vue'
-import ArtList from './components/ArtList.vue'
-import ExperienceList from './components/ExperienceList.vue'
+import ContentList from './components/ContentList.vue'
 import Footer from './components/Footer.vue'
 import FigmaEmbed from './components/FigmaEmbed.vue'
 import { createImageLoadingDirective } from './directives/imageLoading.js'
+import { createSidebarAccessibilityDirective } from './directives/sidebarAccessibility.js'
 import Updates from './layouts/Updates.vue'
 
 export default defineClientConfig({
@@ -43,11 +43,11 @@ export default defineClientConfig({
 
   enhance({ app }) {
     app.directive('image-loading', createImageLoadingDirective())
+    app.directive('sidebar-accessibility', createSidebarAccessibilityDirective())
     app.component('ReadingTime', ReadingTime)
     app.component('ColorPalette', ColorPalette)
     app.component('ArtCatePage', ArtCatePage)
-    app.component('ArtList', ArtList)
-    app.component('ExperienceList', ExperienceList)
+    app.component('ContentList', ContentList)
     app.component('Footer', Footer)
     app.component('FigmaEmbed', FigmaEmbed)
   },

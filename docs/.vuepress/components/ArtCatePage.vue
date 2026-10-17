@@ -1,94 +1,66 @@
+<script setup>
+import { computed } from "vue";
+import { RouteLink } from "@vuepress/client";
+import { useBlogType } from "@vuepress/plugin-blog/client";
+import ContentList from "./ContentList.vue";
+import FigmaEmbed from "./FigmaEmbed.vue";
+import shareItems from "@share-items";
+
+defineProps({
+  category: {
+    type: String,
+    default: "art",
+    validator: (value) => ["art", "experience", "share"].includes(value),
+  },
+});
+
+const articles = useBlogType("blog");
+const experiences = useBlogType("experience");
+
+const cateList = computed(() => [
+  { cate: "art", title: "设计文章", path: "/blog/", count: articles.value.items.length },
+  { cate: "experience", title: "经验总结", path: "/blog/experience/", count: experiences.value.items.length },
+  { cate: "share", title: "分享稿件", path: "/blog/share/", count: shareItems.length },
+]);
+</script>
+
 <template>
   <div>
     <ul class="cate-list">
       <li v-for="item in cateList" :key="item.cate">
-        <button type="button" class="cate-list-item" :class="{ active: activeCate === item.cate }"
-          :aria-pressed="activeCate === item.cate" @click="goCate(item.cate)">
+        <RouteLink
+          :to="item.path"
+          class="cate-list-item"
+          :class="{ active: category === item.cate }"
+          :aria-current="category === item.cate ? 'page' : undefined"
+        >
           <span class="title">{{ item.title }}</span>
-          <span class="count">{{ item.count }}</span>
-        </button>
+          <span class="count">共 {{ item.count }} 篇</span>
+        </RouteLink>
       </li>
     </ul>
   </div>
+
   <div class="art-list">
-    <Content v-if="listPath && listPath !== $route.path" :path="listPath" />
+    <ContentList v-if="category === 'art'" type="blog" />
+    <ContentList v-else-if="category === 'experience'" type="experience" />
+
+    <template v-else-if="category === 'share'">
+      <template v-for="(item, index) in shareItems" :key="item.id">
+        <h5 :id="item.id">{{ item.title }}</h5>
+        <FigmaEmbed
+            :iframeSrc="item.iframeSrc"
+            :coverImg="item.coverImg"
+            :ratio="item.ratio"
+            :title="item.title"
+            :loading="index === 0 ? 'eager' : 'lazy'"
+            :fetch-priority="index === 0 ? 'high' : 'auto'"
+        />
+        <br v-if="index < shareItems.length - 1" />
+      </template>
+    </template>
   </div>
 </template>
-
-<script setup>
-import { ref, computed, onMounted } from "vue";
-import { usePageData } from "@vuepress/client";
-import { useRouter, useRoute } from "vue-router";
-import { useBlogType } from "@vuepress/plugin-blog/client";
-import { shareItems } from "../data/shareItems.js";
-
-const pageData = usePageData();
-const router = useRouter();
-const route = useRoute();
-const articles = useBlogType("blog");
-const experiences = useBlogType("experience");
-
-const cateList = computed(() => {
-  const counts = {
-    art: articles.value.items.length,
-    experience: experiences.value.items.length,
-    share: shareItems.length,
-  };
-
-  return (pageData.value.frontmatter.cates || []).map((item) => ({
-    ...item,
-    count:
-      counts[item.cate] !== undefined
-        ? `共 ${counts[item.cate]} 篇`
-        : item.count,
-  }));
-});
-
-// 保持静态 HTML 与客户端首次渲染一致
-const mounted = ref(false);
-
-onMounted(() => {
-  mounted.value = true;
-});
-
-// 选中分类只由 URL 决定
-const activeCate = computed(() => {
-  const defaultCate = cateList.value[0]?.cate || "";
-
-  // 构建静态 HTML、客户端首次渲染时，都显示默认分类
-  if (!mounted.value) return defaultCate;
-
-  // 挂载后，再根据 URL 切换到指定分类
-  const queryCate = route.query.cate;
-  const isValid =
-    typeof queryCate === "string" &&
-    cateList.value.some((item) => item.cate === queryCate);
-
-  return isValid ? queryCate : defaultCate;
-});
-
-// 点击时只更新 URL，不再直接修改 activeCate
-const goCate = (cate) => {
-  if (!cateList.value.some((item) => item.cate === cate)) return;
-  if (route.query.cate === cate) return;
-
-  router.push({
-    path: pageData.value.path,
-    query: { ...route.query, cate },
-  });
-};
-
-const listPath = computed(() => {
-  if (!activeCate.value) return "";
-
-  const cateItem = cateList.value.find(
-    (item) => item.cate === activeCate.value
-  );
-
-  const path = cateItem?.path || "";
-  return path === pageData.value.path ? "" : path;
-});
-</script>
 
 <style scoped>
 .cate-list {
@@ -103,7 +75,7 @@ const listPath = computed(() => {
   width: 100%;
 }
 
-.cate-list-item {
+.cate-list .cate-list-item {
   cursor: pointer;
   border-radius: 0.5rem;
   padding: 1rem 1.25rem;
@@ -117,6 +89,7 @@ const listPath = computed(() => {
   color: inherit;
   font: inherit;
   text-align: left;
+  text-decoration: none;
 }
 
 .cate-list-item.active {
@@ -142,7 +115,7 @@ const listPath = computed(() => {
     font-size: 0.875rem;
   }
 
-  .cate-list-item {
+  .cate-list .cate-list-item {
     padding: 0.75rem 1rem;
   }
 }

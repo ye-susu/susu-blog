@@ -1,139 +1,55 @@
 <script setup>
-import {
-  computed,
-  onMounted,
-  onBeforeUnmount,
-  ref,
-  watch,
-  nextTick,
-} from "vue";
-import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
+import { ref } from "vue";
+import { DotLottieVue } from "../utils/lottiePlayer.js";
+import { useLottieLifecycle } from "../composables/useLottieLifecycle.js";
 
-const props = defineProps({
+defineProps({
   src: { type: String, default: "/lottie/home-hero.lottie" },
 });
 
-const wrapperRef = ref(null);
 const playerRef = ref(null);
 const emit = defineEmits(["loading", "ready", "error"]);
+const renderConfig = { autoResize: true };
+const layout = { fit: "contain", align: [0.5, 0.5] };
 
-watch(
-  playerRef,
-  async (component, _previous, onCleanup) => {
-    if (!component) return;
-
-    emit("loading");
-
-    let cancelled = false;
-    let instance = null;
-    let timer;
-
-    const onRender = () => {
-      clearTimeout(timer);
-      instance?.removeEventListener("render", onRender);
-      emit("ready");
-    };
-
-    const onError = () => {
-      clearTimeout(timer);
-      emit("error");
-    };
-
-    onCleanup(() => {
-      cancelled = true;
-      clearTimeout(timer);
-      instance?.removeEventListener("render", onRender);
-      instance?.removeEventListener("loadError", onError);
-      instance?.removeEventListener("renderError", onError);
-    });
-
-    await nextTick();
-    if (cancelled) return;
-
-    instance = component.getDotLottieInstance?.();
-
-    if (!instance) {
-      emit("error");
-      return;
-    }
-
-    // 实际绘制出画面后，才隐藏封面
-    instance.addEventListener("render", onRender);
-    instance.addEventListener("loadError", onError);
-    instance.addEventListener("renderError", onError);
-
-    // 长时间没有画面时，退回静态封面
-    timer = setTimeout(onError, 15000);
-  },
-  { flush: "post" }
-);
-const isMobile = ref(false);
-let mq;
-let ro;
-
-const playerKey = computed(() => (isMobile.value ? "mobile" : "desktop"));
-
-const currentLayout = computed(() =>
-  isMobile.value
-    ? { fit: "cover", align: [0.5, 0.5] } // 移动端：铺满并裁切
-    : { fit: "contain", align: [0.5, 0.5] } // PC：保持你原来的完整显示
-);
-
-const applyLayout = () => {
-  const instance = playerRef.value?.getDotLottieInstance?.();
-  if (!instance) return;
-  instance.setLayout(currentLayout.value);
-  instance.setRenderConfig?.({ autoResize: true, devicePixelRatio: window.devicePixelRatio || 1 });
-};
-
-const onMediaChange = (e) => {
-  isMobile.value = e.matches; // 触发 key 变化 -> 重新挂载播放器
-  requestAnimationFrame(() => applyLayout());
-};
-
-onMounted(() => {
-  mq = window.matchMedia("(max-width: 720px)");
-  isMobile.value = mq.matches;
-  mq.addEventListener("change", onMediaChange);
-
-  ro = new ResizeObserver(() => {
-    requestAnimationFrame(() => applyLayout());
-  });
-  if (wrapperRef.value) ro.observe(wrapperRef.value);
-});
-
-onBeforeUnmount(() => {
-  mq?.removeEventListener?.("change", onMediaChange);
-  ro?.disconnect?.();
-});
+useLottieLifecycle(playerRef, emit, 15000);
 </script>
 
 <template>
-  <div ref="wrapperRef" class="lottie-hero" :class="{ mobile: isMobile }">
-    <DotLottieVue :key="playerKey" ref="playerRef" :src="src" autoplay loop :layout="currentLayout"
-      class="lottie-player" />
+  <div class="lottie-hero">
+    <DotLottieVue ref="playerRef" :src="src" autoplay loop :layout="layout"
+      :render-config="renderConfig" class="lottie-player" />
   </div>
 </template>
 
 <style scoped>
 .lottie-hero {
+  position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-/* PC 保持原样 */
 .lottie-player {
-  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* 素材原始尺寸为 760 × 400，缩放期间也保持画布比例。 */
+  aspect-ratio: 760 / 400;
+  width: auto;
   height: 100%;
   display: block;
-  transform: scale(1);
+  transform: translate(-50%, -50%);
   transform-origin: center center;
 }
 
-/* 移动端放大一点，超出部分裁掉 */
-.lottie-hero.mobile .lottie-player {
-  transform: scale(1.1);
-  /* 1.1~1.3 自行微调 */
+.lottie-player :deep(canvas) {
+  display: block;
+}
+
+@media (max-width: 45rem) {
+  .lottie-player {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 }
 </style>

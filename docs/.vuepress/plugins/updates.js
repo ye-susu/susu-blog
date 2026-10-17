@@ -2,10 +2,12 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
+import { getContentType } from '../utils/contentRules.js';
 
 const exec = promisify(execFile);
 const HISTORY_FILE = 'updates/history.json';
-const SHARE_FILE = 'docs/.vuepress/data/shareItems.js';
+const SHARE_FILE = 'docs/.vuepress/data/shareItems.json';
+const LEGACY_SHARE_FILE = 'docs/.vuepress/data/shareItems.js';
 const BASE = 'https://updates.invalid';
 
 async function git(cwd, args) {
@@ -28,22 +30,66 @@ async function readGitFile(cwd, commit, file) {
   return git(cwd, ['show', `${commit}:${file}`]);
 }
 
-// 只解析项目当前的静态 JSON 数组格式，绝不执行历史 JavaScript。
+// 当前数据格式：直接解析 JSON，并保留原有字段校验。
 export function parseShareItems(source) {
   if (source == null) return [];
-  const match = source.match(/^\s*export\s+const\s+shareItems\s*=\s*(\[[\s\S]*\])\s*;?\s*$/);
-  if (!match) throw new Error('[updates] shareItems 必须保持当前的静态 JSON 数组格式。');
-  const items = JSON.parse(match[1]);
-  if (!Array.isArray(items)) throw new Error('[updates] shareItems 必须是数组。');
+
+  const items = JSON.parse(source);
+
+  if (!Array.isArray(items)) {
+    throw new Error('[updates] shareItems 必须是数组。');
+  }
+
   const ids = new Set();
+
   for (const item of items) {
-    if (!item || typeof item.id !== 'string' || !item.id.trim() ||
-        typeof item.title !== 'string' || !item.title.trim() || ids.has(item.id)) {
+    if (
+      !item ||
+      typeof item.id !== 'string' ||
+      !item.id.trim() ||
+      typeof item.title !== 'string' ||
+      !item.title.trim() ||
+      ids.has(item.id)
+    ) {
       throw new Error('[updates] 稿件的 id、title 无效，或 id 重复。');
     }
+
     ids.add(item.id);
   }
+
   return items;
+}
+
+// 仅兼容历史提交中的旧文件，不执行 JavaScript。
+function parseLegacyShareItems(source) {
+  if (source == null) return [];
+
+  const match = source.match(
+    /^\s*export\s+const\s+shareItems\s*=\s*(\[[\s\S]*\])\s*;?\s*$/
+  );
+
+  if (!match) {
+    throw new Error('[updates] 历史 shareItems.js 格式无法识别。');
+  }
+
+  return parseShareItems(match[1]);
+}
+
+// 每个提交分别判断格式，优先读取新文件。
+async function readShareItems(cwd, commit) {
+  const jsonSource = await readGitFile(cwd, commit, SHARE_FILE);
+
+  if (jsonSource !== null) {
+    return parseShareItems(jsonSource);
+  }
+
+  const legacySource = await readGitFile(
+    cwd,
+    commit,
+    LEGACY_SHARE_FILE
+  );
+
+  return parseLegacyShareItems(legacySource);
 }
 
 export function validateHistory(value) {
@@ -79,19 +125,6 @@ async function loadHistory(cwd, ref, required) {
   const source = await readGitFile(cwd, commit, HISTORY_FILE);
   if (source == null) return []; // 发布分支存在但尚无历史：首次上线。
   return validateHistory(JSON.parse(source));
-}
-
-function isContentPage(file) {
-  if (typeof file !== 'string' || !file.endsWith('.md')) return false;
-  return (
-    (file.startsWith('blog/article/') && ![
-      'blog/article/README.md', 'blog/article/articlelist/README.md',
-    ].includes(file)) ||
-    (file.startsWith('blog/experience/') && ![
-      'blog/experience/README.md', 'blog/experience/experiencelist/README.md',
-    ].includes(file)) ||
-    (file.startsWith('projects/') && file !== 'projects/README.md')
-  );
 }
 
 export function resolveCandidateLinks(candidates, message, warn = console.warn) {
@@ -131,13 +164,21 @@ async function makeCurrentRecord(cwd, sha, pages) {
   const candidates = [];
   for (const page of pages) {
     const file = page.filePathRelative?.replaceAll('\\', '/');
-    if (!isContentPage(file) || !added.has(`docs/${file}`) || page.frontmatter?.draft === true) continue;
+    if (
+      !getContentType(file) ||
+      !added.has(`docs/${file}`) ||
+      page.frontmatter?.draft === true
+    ) {
+      continue;
+    }
     const text = String(page.frontmatter?.title || page.title || '').trim();
     const path = sitePath(page.path);
     if (text && path) candidates.push({ text, path });
   }
-  const currentShares = parseShareItems(await readGitFile(cwd, sha, SHARE_FILE));
-  const oldShares = parent ? parseShareItems(await readGitFile(cwd, parent, SHARE_FILE)) : [];
+  const currentShares = await readShareItems(cwd, sha);
+  const oldShares = parent
+    ? await readShareItems(cwd, parent)
+    : [];
   const oldIds = new Set(oldShares.map((item) => item.id));
   const sharePage = pages.find((page) => page.filePathRelative === 'blog/share/README.md');
   if (sharePage) {

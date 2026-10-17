@@ -3,10 +3,14 @@ import { ClientOnly } from "@vuepress/client";
 import { computed, defineAsyncComponent, ref, watch } from "vue";
 import { useDarkMode } from "@vuepress/theme-default/client";
 import ProjectCards from "./ProjectCards.vue";
+import ContentList from "./ContentList.vue";
+import SectionHeader from "./SectionHeader.vue";
 import Footer from "./Footer.vue";
+import { useMediaQuery } from "../composables/useMediaQuery.js";
 
 const animationReady = ref(false);
 const animationFailed = ref(false);
+const prefersReducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
 
 // 使用网站当前模式，兼容手动切换和跟随系统
 const isDarkMode = useDarkMode();
@@ -19,7 +23,7 @@ const heroSrc = computed(() =>
 
 // 切换素材时，重新显示封面，等待新动画绘制完成
 watch(
-  heroSrc,
+  [heroSrc, prefersReducedMotion],
   () => {
     animationReady.value = false;
     animationFailed.value = false;
@@ -48,26 +52,35 @@ const LottieHero = defineAsyncComponent({
 </script>
 
 <template>
-  <main class="home">
-    <div class="hero-image">
-      <!-- 两张封面都保留在静态 HTML 中，由 CSS 决定显示哪张 -->
-      <img v-if="!animationReady" src="/images/home-hero-cover.png" alt="" class="hero-cover hero-cover--light"
-        loading="eager" decoding="async" />
+  <main class="home blog-page-shell">
+    <div class="blog-page-body">
+      <h1 class="blog-sr-only">耶稣稣的设计博客与作品集</h1>
+      <div class="hero-image">
+        <!-- 两张封面都保留在静态 HTML 中，由 CSS 决定显示哪张 -->
+        <img v-if="!animationReady" src="/images/home-hero-cover.png" alt="" class="hero-cover hero-cover--light"
+          loading="eager" decoding="async" />
 
-      <img v-if="!animationReady" src="/images/home-hero-cover-dark.png" alt="" class="hero-cover hero-cover--dark"
-        loading="eager" decoding="async" />
+        <img v-if="!animationReady" src="/images/home-hero-cover-dark.png" alt="" class="hero-cover hero-cover--dark"
+          loading="eager" decoding="async" />
 
-      <ClientOnly>
-        <LottieHero v-if="!animationFailed" :key="heroSrc" :src="heroSrc" class="hero-animation"
-          :class="{ 'is-loading': !animationReady }" @loading="animationReady = false" @ready="animationReady = true"
-          @error="showCover" />
-      </ClientOnly>
+        <ClientOnly>
+          <LottieHero v-if="!animationFailed && !prefersReducedMotion" :key="heroSrc" :src="heroSrc"
+            class="hero-animation" :class="{ 'is-loading': !animationReady }" @loading="animationReady = false"
+            @ready="animationReady = true" @error="showCover" />
+        </ClientOnly>
+      </div>
+      <section class="home-articles">
+        <SectionHeader title="文章" more-link="/blog/" more-label="查看更多文章" />
+        <ContentList type="blog" :limit="3" title-tag="h3" />
+      </section>
+
+      <section class="home-projects">
+        <SectionHeader title="项目" more-link="/projects/" more-label="查看更多项目" />
+        <ProjectCards :home-show="true" />
+      </section>
     </div>
-    <ArtList :homeShow="true" listTitle="文章" moreLink="/blog/?cate=art" />
 
-    <ProjectCards :homeShow="true" listTitle="项目" moreLink="/projects/" :paddingShow="false" scene="home">
-      <Footer />
-    </ProjectCards>
+    <Footer />
   </main>
 </template>
 <style scoped>
@@ -117,6 +130,18 @@ const LottieHero = defineAsyncComponent({
   opacity: 0;
 }
 
+.home-articles > .section-header {
+  margin-bottom: 0.5rem;
+}
+
+.home-projects {
+  margin-top: 5rem;
+}
+
+.home-projects > .section-header {
+  margin-bottom: 0.25rem;
+}
+
 @media (max-width: 720px) {
   .home {
     padding: 5rem 1.25rem 0;
@@ -130,6 +155,14 @@ const LottieHero = defineAsyncComponent({
   .hero-cover {
     object-fit: cover;
     transform: scale(1.1);
+  }
+
+  .home-articles > .section-header {
+    margin-bottom: 0.25rem;
+  }
+
+  .home-projects {
+    margin-top: 3rem;
   }
 }
 </style>

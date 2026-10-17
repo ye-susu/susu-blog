@@ -3,6 +3,9 @@ title: 为什么欧美的产品设计很简约？
 description: 本文将从审美、商业、文字角度来回答这个问题。
 date: 2026-04-13
 heroImage: https://image.yesusu.top/PicGo/art-cover-minimalist-design.png
+heroImageSrcset: >-
+  https://image.yesusu.top/PicGo/art-cover-minimalist-design-480.png 480w,
+  https://image.yesusu.top/PicGo/art-cover-minimalist-design.png 960w
 ---
 # 为什么欧美的产品设计很简约？
 <ReadingTime/>

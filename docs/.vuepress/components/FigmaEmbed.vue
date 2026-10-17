@@ -2,8 +2,8 @@
   <div class="figma-container" :style="{ aspectRatio: ratio }">
     <div v-if="!isLoaded" class="figma-placeholder">
       <span class="blog-image-frame blog-image-frame--cover">
-        <img v-image-loading :src="coverImg" :alt="props.title" :loading="props.loading" decoding="async"
-          class="no-zoom" />
+        <img v-image-loading :src="coverImg" :alt="props.title" :loading="props.loading"
+          :fetchpriority="props.fetchPriority" decoding="async" class="no-zoom" />
       </span>
       <div class="overlay">
         <button type="button" class="play-button" :aria-label="`查看${props.title}`" @click="loadIframe">
@@ -28,6 +28,7 @@ const props = defineProps({
   ratio: { type: String, default: "16 / 10" },
   title: { type: String, default: "Figma 设计预览" },
   loading: { type: String, default: "lazy" },
+  fetchPriority: { type: String, default: "auto" },
 });
 
 const isLoaded = ref(false);

@@ -4,6 +4,9 @@ description: 苹果三十多年来，品牌字体的变迁史。
 date: 2025-02-27
 category: 专题文章
 heroImage: https://image.yesusu.top/PicGo/art-cover-brand-font.png
+heroImageSrcset: >-
+  https://image.yesusu.top/PicGo/art-cover-brand-font-480.png 480w,
+  https://image.yesusu.top/PicGo/art-cover-brand-font.png 960w
 ---
 # 苹果品牌字体变迁史
 <ReadingTime/>

@@ -1,6 +1,7 @@
 ---
 title: 文章目录
 sidebar: false
+pageTitleHidden: true
 sitemap: false
 head:
   - - meta
@@ -8,4 +9,4 @@ head:
       content: "noindex, follow"
 ---
 
-<ArtList/>
+<ContentList type="blog" />

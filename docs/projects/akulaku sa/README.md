@@ -3,6 +3,9 @@ title: Akulaku SA 销售管理系统
 description: Sales management system
 date: 2025-03-20
 heroImage: https://image.yesusu.top/PicGo/project-sa-cover2.png
+heroImageSrcset: >-
+  https://image.yesusu.top/PicGo/project-sa-cover-552.png 552w,
+  https://image.yesusu.top/PicGo/project-sa-cover2.png 736w
 ---
 # Akulaku SA 销售管理系统
 <ReadingTime/>
@@ -135,5 +138,4 @@ B 端产品覆盖多样化场景，对组件适用性有着更高要求。我们
   coverImg=https://image.yesusu.top/PicGo/ppt-cover-project-sa.png
   ratio="16 / 10.06" 
 />
-
 

@@ -3,6 +3,9 @@ title: UI 3.0 Flutter 组件库
 description: UI 3.0 Flutter Components
 date: 2025-04-10
 heroImage: https://image.yesusu.top/PicGo/project-component-cover.png
+heroImageSrcset: >-
+  https://image.yesusu.top/PicGo/project-component-cover-552.png 552w,
+  https://image.yesusu.top/PicGo/project-component-cover.png 736w
 ---
 # UI 3.0 Flutter 组件库 
 <ReadingTime/>

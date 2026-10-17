@@ -3,6 +3,9 @@ title: 苹果系统字体变迁史
 description: 从苹果第一台图形界面计算机聊聊系统字体。
 date: 2025-02-25 
 heroImage: https://image.yesusu.top/PicGo/art-cover-system-font.png
+heroImageSrcset: >-
+  https://image.yesusu.top/PicGo/art-cover-system-font-480.png 480w,
+  https://image.yesusu.top/PicGo/art-cover-system-font.png 960w
 ---
 # 苹果系统字体变迁史
 <ReadingTime/>

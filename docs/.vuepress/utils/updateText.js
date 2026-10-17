@@ -1,8 +1,8 @@
-// 每个非空行成为一个列表项。已有无序列表符号只去掉重复装饰。
+// 先去掉行首无序列表符号，再过滤空行，避免生成空列表项。
 export function messageLines(message) {
     return message.split(/\r?\n/)
-      .filter((line) => line.trim())
-      .map((line) => line.replace(/^(\s*)[-*+]\s+/, '$1'));
+      .map((line) => line.replace(/^(\s*)[-*+](?:\s+|$)/, '$1'))
+      .filter((line) => line.trim());
   }
   
   // 不执行 Markdown/HTML，也不做模糊匹配。较长标题优先。
@@ -25,4 +25,3 @@ export function messageLines(message) {
     if (buffer) result.push({ text: buffer });
     return result;
   }
-  

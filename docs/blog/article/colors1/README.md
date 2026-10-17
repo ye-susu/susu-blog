@@ -3,6 +3,9 @@ title: 产品配色那些事1-学会色彩管理
 description: 聊产品配色之前，笔者深感有必要专门花一章先来说说“色彩管理”。
 date: 2025-02-17
 heroImage: https://image.yesusu.top/PicGo/art-cover-color-manager.png
+heroImageSrcset: >-
+  https://image.yesusu.top/PicGo/art-cover-color-manager-480.png 480w,
+  https://image.yesusu.top/PicGo/art-cover-color-manager.png 960w
 ---
 # 产品配色那些事1-学会色彩管理
 <ReadingTime/>
@@ -102,5 +105,4 @@ Figma 的 Color Profile 提供了 Unmanaged 和 SRGB 两种选项，即只能使
 ![|1000x600](https://image.yesusu.top/PicGo/color1-13.png)
 
 最后色彩管理属于比较复杂的知识模块，本篇文章介绍的并不全面，只是将和我们工作相关的部份进行了梳理。希望这篇文章可以帮助大家明白色彩管理背后的逻辑，学会正确的色彩管理。
-
 

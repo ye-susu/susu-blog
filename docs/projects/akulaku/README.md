@@ -3,6 +3,9 @@ title: Akulaku UI 3.0 改版
 description: Credit installment online shop 
 date: 2025-03-12
 heroImage: https://image.yesusu.top/PicGo/project-aku3.0-cover.png
+heroImageSrcset: >-
+  https://image.yesusu.top/PicGo/project-aku3.0-552.png 552w,
+  https://image.yesusu.top/PicGo/project-aku3.0-cover.png 736w
 ---
 # Akulaku UI 3.0 改版
 <ReadingTime/>
